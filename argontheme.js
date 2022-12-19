@@ -430,31 +430,58 @@ if (argonConfig.headroom){
 		toggleDarkmode();
 	});
 
-	//简繁转换 By 暗梦先生呀~ 
-	$("#blog-setting-simp-chinese-lang").on("click" , function(){
-		//切换简体中文
-		$("html").removeClass("use-tran-chinese");
-		localStorage['use-tran-chinese'] = "false";
-	});
-	$("#blog-setting-tran-chinese-lang").on("click" , function(){
-		$("html").addClass("use-tran-chinese");
-		localStorage['use-tran-chinese'] = "true";
-	});
-
 	// 字体
-	$("#blog_setting_font_sans_serif").on("click" , function(){
+	$("#blog_setting_font_myzymyqx").on("click" , function(){
+		$("html").removeClass("use-unifont");
+		$("html").addClass("use-myzymyqx");
 		$("html").removeClass("use-serif");
 		localStorage['Argon_Use_Serif'] = "false";
+		localStorage['FantasyLand_DarkDream_Use_myzymyqx'] = "true";
+		localStorage['FantasyLand_DarkDream_Use_Unifont'] = "false";
+	});
+	$("#blog_setting_font_unifont").on("click" , function(){
+		$("html").addClass("use-unifont");
+		$("html").removeClass("use-myzymyqx");
+		$("html").removeClass("use-serif");
+		localStorage['Argon_Use_Serif'] = "false";
+		localStorage['FantasyLand_DarkDream_Use_Unifont'] = "true";
+		localStorage['FantasyLand_DarkDream_Use_myzymyqx'] = "false";
+	});
+	$("#blog_setting_font_sans_serif").on("click" , function(){
+		$("html").removeClass("use-serif");
+		$("html").removeClass("use-myzymyqx");
+		$("html").removeClass("use-unifont");
+		localStorage['Argon_Use_Serif'] = "false";
+		localStorage['FantasyLand_DarkDream_Use_Unifont'] = "false";
+		localStorage['FantasyLand_DarkDream_Use_myzymyqx'] = "false";
 	});
 	$("#blog_setting_font_serif").on("click" , function(){
 		$("html").addClass("use-serif");
+		$("html").removeClass("use-myzymyqx");
+		$("html").removeClass("use-unifont");
 		localStorage['Argon_Use_Serif'] = "true";
+		localStorage['FantasyLand_DarkDream_Use_Unifont'] = "false";
+		localStorage['FantasyLand_DarkDream_Use_myzymyqx'] = "false";
 	});
+
 	if (localStorage['Argon_Use_Serif'] == "true"){
 		$("html").addClass("use-serif");
+		$("html").removeClass("use-unifont");
+		$("html").removeClass("use-myzymyqx");
+	}else if (localStorage['FantasyLand_DarkDream_Use_myzymyqx'] == "true"){
+		$("html").removeClass("use-serif");
+		$("html").addClass("use-myzymyqx");
+		$("html").removeClass("use-unifont");
+	}else if (localStorage['FantasyLand_DarkDream_Use_Unifont'] == "true"){
+		$("html").removeClass("use-serif");
+		$("html").addClass("use-unifont");
+		$("html").removeClass("use-myzymyqx");
 	}else if (localStorage['Argon_Use_Serif'] == "false"){
 		$("html").removeClass("use-serif");
+		$("html").removeClass("use-unifont");
+		$("html").removeClass("use-myzymyqx");
 	}
+
 	// 阴影
 	$("#blog_setting_shadow_small").on("click" , function(){
 		$("html").removeClass("use-big-shadow");

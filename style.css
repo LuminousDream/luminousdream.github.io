@@ -191,9 +191,28 @@ article table > thead > tr > th{
 *::-webkit-selection{
 	background-color: #cce2ff;
 }
+
+/* 满眼醉意梦屿千寻 */
+@font-face{ 
+	font-family:myzymyqx; 
+	src:url('https://luminousdream.pages.dev/font.ttf') format("truetype");
+	font-weight:normal;
+}
+
+html.use-myzymyqx p , html.use-myzymyqx span , html.use-myzymyqx div{
+	font-family: 'myzymyqx';
+}
+
+/* Unifont字体 */
+html.use-unifont p , html.use-unifont span , html.use-unifont div{
+	font-family: 'Unifont',serif !important;
+}
+
+/* Serif字体 */
 html.use-serif p , html.use-serif span , html.use-serif div{
 	font-family: 'Noto Serif SC',serif !important;
 }
+
 html.use-big-shadow *.shadow-sm{
 	box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07)!important;
 }
@@ -1117,7 +1136,7 @@ html.darkmode #fabtn_toggle_darkmode i.fa-lightbulb-o{
 	opacity: 0;
 	width: max-content;
 	width: -moz-max-content;
-	min-width: 350px;
+	min-width: 420px;
 	max-width: calc(100vw - 170px);
 	max-height: calc(100vh - 70px);
 	pointer-events: none;
@@ -1216,14 +1235,27 @@ html.amoled-dark #blog_setting_toggle_darkmode_and_amoledarkmode:before{
 	transform: none !important;
 	border-left: 0;
 }
-html:not(.use-serif) #blog_setting_font_sans_serif{
+
+html.use-unifont #blog_setting_font_unifont{
 	color: #fff;
 	background: var(--themecolor);
 }
+
+html.use-myzymyqx #blog_setting_font_myzymyqx{
+	color: #fff;
+	background: var(--themecolor);
+}
+
+html:not(.use-serif):not(.use-unifont):not(.use-myzymyqx) #blog_setting_font_sans_serif{
+	color: #fff;
+	background: var(--themecolor);
+}
+
 html.use-serif #blog_setting_font_serif{
 	color: #fff;
 	background: var(--themecolor);
 }
+
 html:not(.use-big-shadow) #blog_setting_shadow_small{
 	color: #fff;
 	background: var(--themecolor);
@@ -1232,6 +1264,9 @@ html.use-big-shadow #blog_setting_shadow_big{
 	color: #fff;
 	background: var(--themecolor);
 }
+
+
+
 .blog-setting-filter-btn {
 	border-radius: 50%;
 	outline: none !important;
