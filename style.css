@@ -204,6 +204,12 @@ html.use-myzymyqx p , html.use-myzymyqx span , html.use-myzymyqx div{
 }
 
 /* Unifont字体 */
+@font-face{ 
+	font-family:unifont; 
+	src:url('https://luminousdream.pages.dev/unifont.ttf') format("truetype");
+	font-weight:normal;
+}
+
 html.use-unifont p , html.use-unifont span , html.use-unifont div{
 	font-family: 'Unifont',serif !important;
 }
@@ -1128,6 +1134,8 @@ html.darkmode #fabtn_toggle_darkmode i.fa-lightbulb-o{
 	display: none;
 	opacity: 0;
 }
+
+@media screen and (orientation:landscape) {
 #fabtn_blog_settings_popup {
 	position: fixed;
 	right: 85px;
@@ -1136,6 +1144,7 @@ html.darkmode #fabtn_toggle_darkmode i.fa-lightbulb-o{
 	opacity: 0;
 	width: max-content;
 	width: -moz-max-content;
+	/* min-width: 420px; */
 	min-width: 420px;
 	max-width: calc(100vw - 170px);
 	max-height: calc(100vh - 70px);
@@ -1144,6 +1153,28 @@ html.darkmode #fabtn_toggle_darkmode i.fa-lightbulb-o{
 	transition: all .3s ease;
 	animation: none !important;
 }
+}
+
+@media screen and (orientation:portrait) {
+	#fabtn_blog_settings_popup {
+		position: fixed;
+		right: 85px;
+		bottom: 35px;
+		padding: 10px 25px;
+		opacity: 0;
+		width: max-content;
+		width: -moz-max-content;
+		/* min-width: 420px; */
+		min-width: 350px;
+		max-width: calc(100vw - 170px);
+		max-height: calc(100vh - 70px);
+		pointer-events: none;
+		transform: translateX(10px);
+		transition: all .3s ease;
+		animation: none !important;
+	}
+}
+
 #float_action_buttons.fabtns-float-left #fabtn_blog_settings_popup {
 	left: 85px;
 	right: unset;
