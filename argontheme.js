@@ -430,6 +430,25 @@ if (argonConfig.headroom){
 		toggleDarkmode();
 	});
 
+	//简繁转换 By 暗梦先生呀~ 
+	$("#blog_setting_lang_tc").on("click" , function(){
+		$("html").addClass("use-tc");
+		localStorage['FantasyLand_DarkDream_Use_tc'] = "true";
+		zh_tran('t');
+	});
+	$("#blog_setting_lang_sc").on("click" , function(){
+		$("html").removeClass("use-tc");
+		localStorage['FantasyLand_DarkDream_Use_tc'] = "false";
+		zh_tran('s');
+	});
+	if (localStorage['FantasyLand_DarkDream_Use_tc'] == "true"){
+		$("html").addClass("use-tc");
+		zh_tran('t');
+	}else if (localStorage['FantasyLand_DarkDream_Use_tc'] == "false"){
+		$("html").removeClass("use-tc");
+		zh_tran('s');
+	}
+
 	// 字体
 	$("#blog_setting_font_myzymyqx").on("click" , function(){
 		$("html").removeClass("use-unifont");
@@ -700,6 +719,22 @@ $(document).pjax("a[href]:not([no-pjax]):not(.no-pjax):not([target='_blank']):no
 	}
 }).on('pjax:complete', function() {
 	NProgress.inc();
+	
+	//暗梦的天空之琴重载
+	try{
+		change_echo_suzaku_piano_button("char","piano_btn");
+		enable_keypiano();
+	}catch(err){disable_keypiano();}
+
+	//Pjax加载完毕后判断并自动进行简繁转换，避免通过Pjax加载完毕后，部分内容未转换的问题。
+	if (localStorage['FantasyLand_DarkDream_Use_tc'] == "true"){
+		$("html").addClass("use-tc");
+		zh_tran('t');
+	}else if (localStorage['FantasyLand_DarkDream_Use_tc'] == "false"){
+		$("html").removeClass("use-tc");
+		zh_tran('s');
+	}
+
 	try{
 		if (MathJax != undefined){
 			MathJax.typeset();
