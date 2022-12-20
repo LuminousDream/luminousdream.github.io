@@ -1259,12 +1259,31 @@ html.amoled-dark #blog_setting_toggle_darkmode_and_amoledarkmode:before{
 	border-bottom-right-radius: 0;
 	transform: none !important;
 }
+.blog-setting-selector-center{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	margin-left: 0 !important;
+	transform: none !important;
+	border-left: 0;
+}
 .blog-setting-selector-right{
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	margin-left: 0 !important;
 	transform: none !important;
 	border-left: 0;
+}
+
+html.use-tc #blog_setting_lang_tc{
+	color: #fff;
+	background: var(--themecolor);
+}
+
+html:not(.use-tc) #blog_setting_lang_sc{
+	color: #fff;
+	background: var(--themecolor);
 }
 
 html.use-unifont #blog_setting_font_unifont{
