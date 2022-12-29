@@ -719,6 +719,7 @@ $(document).pjax("a[href]:not([no-pjax]):not(.no-pjax):not([target='_blank']):no
 	}
 }).on('pjax:complete', function() {
 	NProgress.inc();
+	calc_blogertime();
 	
 	//暗梦的天空之琴 重载
 	try{
