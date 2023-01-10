@@ -9,6 +9,32 @@
 
 @charset "utf-8";
 
+/*删除线变遮挡*/
+s {
+	text-decoration: none;
+	color: rgba(0,0,0,0);
+	background-color: black;
+	transition: all 0.25s ease-in-out;
+}
+s:hover{
+	background-color: black;
+	color: white;
+}
+
+/*s:hover:after{
+	content: "";
+    font-size:12px;
+	position: absolute;
+	float:left;
+    margin-top:25px;
+    margin-left:-25px;
+    background-color: #FFFFFF;
+    color:black;
+    border:1px solid black;
+    padding: 0px 5px;
+    z-index:9;
+} */
+
 :root{
 	--themecolor: #5e72e4;
 	--card-radius: 4px;

@@ -721,31 +721,19 @@ $(document).pjax("a[href]:not([no-pjax]):not(.no-pjax):not([target='_blank']):no
 	NProgress.inc();
 	calc_blogertime();
 	
-	//暗梦的天空之琴 重载
+	//暗梦的 天空之琴 重载
 	try{
 		change_echo_suzaku_piano_button("char","piano_btn");
 		enable_keypiano();
-	}catch(err){disable_keypiano();}
-
-	//hexo-githubcalendar 重载
-	try{
-        function GithubCalendarConfig(){
-            var git_githubapiurl ="https://gitcalendar.zfe.space/api?LuminousDream";
-            var git_color =['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c'];
-            var git_user ="LuminousDream";
-            var parent_div_git = document.getElementById('recent-posts');
-            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
-            if(parent_div_git && location.pathname =='/'){
-                console.log('已挂载github calendar')
-                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
-                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
-            };
-            GithubCalendar(git_githubapiurl,git_color,git_user)
-        }
-        if(document.getElementById('recent-posts')){
-            GithubCalendarConfig()
-        }
 	}catch(err){}
+
+	try{
+		echo_inject_tips();
+		enable_keypiano();
+	}catch(err){
+	if(window.location.href != 'https://darkace.netlify.app/suzaku_piano' && window.location.href != 'https://luminousdream.pages.dev/suzaku_piano')
+	{disable_keypiano();}
+	}
 
 	//Pjax加载完毕后判断并自动进行简繁转换，避免通过Pjax加载完毕后，部分内容未转换的问题。
 	if (localStorage['FantasyLand_DarkDream_Use_tc'] == "true"){
