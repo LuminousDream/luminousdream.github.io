@@ -731,7 +731,9 @@ $(document).pjax("a[href]:not([no-pjax]):not(.no-pjax):not([target='_blank']):no
 		echo_inject_tips();
 		enable_keypiano();
 	}catch(err){
-	if(window.location.href != 'https://darkace.netlify.app/suzaku_piano' && window.location.href != 'https://luminousdream.pages.dev/suzaku_piano')
+	if(window.location.href != 'https://darkace.netlify.app/suzaku_piano')
+	{disable_keypiano();}
+	else if (window.location.href != 'https://luminousdream.pages.dev/suzaku_piano')
 	{disable_keypiano();}
 	}
 
