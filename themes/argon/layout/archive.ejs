@@ -1,0 +1,390 @@
+<%
+        function convertToNumber(str) {
+	  str = String(str);
+          if (str.slice(-1) === 'k') {
+            return parseInt(parseFloat(str) * 1000);
+          } else {
+            return parseInt(str);
+          }
+        }
+
+	var post_wordcount = 0;
+	var post_count = 0;
+	var page_wordcount = 0;
+	var shuoshuo_wordcount = 0;
+	var shuoshuo_count = 0;
+	var blog_total_wordcount = convertToNumber(totalcount(site));
+		site.posts.sort("type", -1).each(function(post){
+			if(post.type != "shuoshuo")
+			{
+				post_wordcount = post_wordcount + convertToNumber(wordcount(post.content));
+				post_count = post_count + 1;
+
+			}else
+			{
+				shuoshuo_wordcount = shuoshuo_wordcount + convertToNumber(wordcount(post.content));
+				shuoshuo_count = shuoshuo_count + 1;
+			}
+		});
+	page_wordcount = (blog_total_wordcount - post_wordcount) - shuoshuo_wordcount;
+%>
+<div class="post post-full card bg-white shadow-sm border-0">
+	<header class="post-header text-center">
+		<i class="fa fa-archive"></i>&nbsp;&nbsp
+		<a class="post-title" href="<%= url_for(page.path).replace(/index\.html$/g, '') %>">归档</a>
+		&nbsp;&nbsp;<span style="font-size:9px;color:gray;">Suzaku · Archives</span>
+	</header>
+
+	<div class="post-content" id="post_content">
+		<style>
+		#chart,#chart1,#chart2 {width:100% !important;height:300px !important;margin-top: 10px !important;}
+		.archive_charts{
+			position: relative;
+			background: url("/background.jpg");
+			background-size: 100% 100%;
+            border-radius:var(--card-radius) var(--card-radius) var(--card-radius) var(--card-radius);
+			padding: 10px 10px 10px 10px !important;
+		}
+
+		.archive_charts::before {
+			content: "";
+  			display: block;
+  			position: absolute;
+  			top: 0;
+  			left: 0;
+  			width: 100%;
+  			height: 100%;
+			z-index:0;
+			background-color: rgba(255,255,255,.5);
+			border-radius:var(--card-radius) var(--card-radius) var(--card-radius) var(--card-radius);
+		}
+
+		#archive_calendar {width:100% !important;height:250px !important;margin-top: 10px !important;}
+
+		@media screen and (orientation: landscape) {
+		  .archive_charts_triple_group{display: grid !important;
+		    grid-template-columns: repeat(3, 2fr) !important;
+		    grid-gap: 0px !important;
+		  }
+		}
+
+		@media screen and (orientation: portrait) {
+			.archive_charts,#archives_charts_tip {display:none;}
+		}
+
+		</style>
+		<div class="archive_charts">
+		<div class="archive_charts_triple_group">
+		  <div id="chart"></div>
+		  <div id="chart1"></div>
+		  <div id="chart2"></div>
+		  </div>
+		  <div id="archive_calendar"></div>
+		</div>
+		  <span id="archives_charts_tip" style="float:right !important;font-align: right !important;font-size: 10px !important;color: #ABABAB;">&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>&nbsp;文章统计数据来源于 <a href="/" target="_blank">@FantasyLand の 暗梦</a> 博客的 <a href="/meta.json"  target="_blank">元数据</a>，本数据仅供参考。&nbsp;&nbsp;&nbsp;</span>
+		<script>
+
+		// 获取博客元数据
+		var url = "/meta.json"
+		var request = new XMLHttpRequest();
+		var metadata = new Array();
+		request.open("get", url);
+	        request.send(null);
+		request.onload = function () {
+		  var json = jQuery.parseJSON(request.responseText);
+		  metadata = json;
+		  // 将元数据里面的标签数据转为 Echarts 的 Data 数组
+		  var categories_data = new Array();
+		  for(i=0;i <= metadata.categories.length;i++)
+		  {
+		    categories_data.push({name: metadata.categories[i], value: metadata.categories_count[i]})
+		  }
+
+		    var option = {
+		        tooltip: { trigger: 'item'},
+				textStyle: {
+    				fontFamily: 'LXGW WenKai'
+				},
+				legend: {
+			    	left: 'center'
+				},
+		        series: [{
+		            name: '分类饼状图',
+		            type: 'pie',
+			    label: {
+        		      show: false,
+        		      position: 'center'
+      			    },
+			    //itemStyle: {
+        		      //borderRadius: 10,
+		      	      //borderColor: '#fff',
+			      //borderWidth: 2
+			    //},
+		            areaStyle: {normal: {}},
+		            data: categories_data,
+			    radius: ['30%','45%'],
+		        }]
+		    };
+		    var myChart = echarts.init(document.getElementById('chart'));
+		    myChart.setOption(option);
+			
+           var option1 = {
+			textStyle: {
+    				fontFamily: 'LXGW WenKai'
+			},
+		    xAxis: {
+		        type: 'value',
+		      },
+		      yAxis: {
+			type: 'category',
+                        data: metadata.tags,
+			axisLabel: { fontSize: 10 }
+		      },
+  		      legend: {
+    			show: true
+		      },
+		      tooltip: {},
+		      series: [
+		        {
+			  name: "标签统计图",
+		          data: metadata.tags_count,
+		          type: 'bar',
+			  color: '#F05B85',
+			  label: {
+		            show: true,
+        		    position: 'right',
+		            valueAnimation: true
+		          },
+		          smooth: true
+		        }
+  		    ]
+                    };
+
+                    var myChart1 = echarts.init(document.getElementById('chart1'));
+                    myChart1.setOption(option1);
+
+		    var option2 = {
+				textStyle: {
+    				fontFamily: 'LXGW WenKai'
+				},
+			  tooltip: { trigger: 'item'},
+			  xAxis: {
+			    type: 'category',
+			    axisLabel: { rotate: -45 },
+			    data: ['文章总字数','说说总字数','页面总字数','博客总字数']
+			  },
+			  yAxis: {
+			    type: 'value',
+			    axisLabel: { rotate: 45 },
+			  },
+			  legend: {
+                            show: true
+                          },
+			  series: [
+			    {
+			      name: "字数统计图",
+			      data: [<%= post_wordcount %>,<%= shuoshuo_wordcount %>,<%= page_wordcount %>,<%= blog_total_wordcount %>],
+			      type: 'line',
+			      color: '#F05B85',
+			      smooth: true,
+                              label: {
+                                show: true,
+                                position: 'right',
+                                valueAnimation: true
+                              },
+	 		    }
+		      ]
+			};
+			
+			<%
+    		// calculate range.
+    		var startDate = moment().subtract(1, 'years');
+    		var endDate = moment();
+		    var rangeArr = '["' + startDate.format('YYYY-MM-DD') + '", "' + endDate.format('YYYY-MM-DD') + '"]';
+
+    		// post and count map.
+    		var dateMap = new Map();
+    		site.posts.forEach(function (post) {
+		        var date = post.date.format('YYYY-MM-DD');
+		        var count = dateMap.get(date);
+				if(post.type != "shuoshuo") {
+					dateMap.set(date, count == null || count == undefined ? 1 : count + 1);
+				}
+    		});
+
+    		// loop the data for the current year, generating the number of post per day
+    		var i = 0;
+    		var datePosts = '[';
+    		var dayTime = 3600 * 24 * 1000;
+    		for (var time = startDate; time <= endDate; time += dayTime) {
+		        var date = moment(time).format('YYYY-MM-DD');
+		        datePosts = (i === 0 ? datePosts + '["' : datePosts + ', ["') + date + '", '
+		                + (dateMap.has(date) ? dateMap.get(date) : 0) + ']';
+        		i++;
+    		}
+    		datePosts += ']';
+    		%>
+
+			var option3 = {
+				textStyle: {
+    				fontFamily: 'LXGW WenKai'
+				},
+        		tooltip: {
+            		padding: 10,
+            		backgroundColor: '#ffffff',
+            		borderColor: '#F05B85',
+            		borderWidth: 1,
+            		formatter: function (obj) {
+                		var value = obj.value;
+                		return '<div style="font-size: 14px;"><i class="fa fa-calendar" aria-hidden="true" /></i>&nbsp;&nbsp;都市看客暗梦 の 博客文章日历<br>' + value[0] + '：' + value[1] + ' 篇文章</div>';
+            		}
+        		},
+        		visualMap: {
+            		show: true,
+            		showLabel: true,
+            		categories: [0, 1, 2, 3, 4],
+            		calculable: true,
+            		inRange: {
+                		symbol: 'rect',
+                		color: ['#EBEDF0', '#F7ABC1', '#F596B1', '#F37C9D', '#F05B85']
+            		},
+            		itemWidth: 12,
+            		itemHeight: 12,
+            		orient: 'horizontal',
+            		left: 'center',
+            		bottom: 0
+        		},
+        		calendar: [{
+            		left: 'center',
+            		range: <%- rangeArr %>,
+            		cellSize: [13, 13],
+            		splitLine: {
+                		show: false
+            		},
+            		itemStyle: {
+                		color: '#196127'
+            		},
+            		yearLabel: {
+                		show: false
+            		},
+            		monthLabel: {
+                		fontSize: 11,
+						nameMap: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+            		},
+            		dayLabel: {
+                		formatter: '{start}  1st',
+						nameMap: ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+                		fontSize: 11
+            		}
+        		}],
+        		series: [{
+            		type: 'heatmap',
+            		coordinateSystem: 'calendar',
+            		calendarIndex: 0,
+            		data: <%- datePosts %>
+        		}]
+    		};
+
+		    var myChart2 = echarts.init(document.getElementById('chart2'));
+            myChart2.setOption(option2);
+			var myChart3 = echarts.init(document.getElementById('archive_calendar'));
+            myChart3.setOption(option3);
+			//拖动窗口时自适应统计图大小
+			window.addEventListener('resize', function() {
+				myChart.resize();
+			  	myChart1.resize();
+			  	myChart2.resize();
+			  	myChart3.resize();
+			});
+
+		    //回退时重新绘制统计图
+		    $(document).on('pjax:end', function (event) {
+			//判断是否在归档页面
+			if (event.currentTarget.URL.includes('/archives')) {
+			  myChart.dispose();
+			  myChart1.dispose();
+			  myChart2.dispose();
+			  myChart3.dispose();
+              myChart = echarts.init(document.getElementById('chart'));
+              myChart1 = echarts.init(document.getElementById('chart1'));
+              myChart2 = echarts.init(document.getElementById('chart2'));
+			  myChart3 = echarts.init(document.getElementById('archive_calendar'));
+              myChart.setOption(option);
+              myChart1.setOption(option1);
+              myChart2.setOption(option2);
+			  myChart3.setOption(option3);
+			}
+		});
+		}
+		</script>
+		<br>
+		<div class="admonition shadow-sm admonition-success"><div class="admonition-title"><i class="fa fa-info"></i>
+		暗梦：em......
+		<br>在这段时间总共写了 <%= post_count %> 篇文章，在这一年里也要好好加油哈，诶嘿~
+		</div></div>
+
+		<div class="archive_setting">
+		<span><i class="fa fa-archive"></i>&nbsp;显示文章 分类 & 标签&nbsp;&nbsp;</span>
+		<label class="mdui-switch" onclick="check_archive_show_category_and_tags();">
+  			<input id="show_category_and_tags" type="checkbox"/>
+  				<i class="mdui-switch-icon"></i>
+		</label>
+		<script>
+		function check_archive_show_category_and_tags(){
+		  if($("#show_category_and_tags").prop("checked")){
+		    $(".post-tags").show();
+		  } else {
+		    $(".post-tags").hide();
+		  }
+		}
+		</script>
+		</div>
+
+		<div class='argon-timeline archive-timeline'>
+			<%
+				let last_year = 0;
+				let last_month = 0;
+				site.posts.sort('date', -1).each(function(post){ 
+					let year = post.date.format('YYYY');
+					let month = post.date.format('M');
+					let fullmonth = post.date.format('MM');
+					if(post.type != "shuoshuo") {
+					if (year != last_year){ %>
+						<div class='argon-timeline-node'>
+							<h2 class='argon-timeline-time archive-timeline-year'><a href="/archives/<%= year %>"><%= year %></a></h2>
+							<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'></div>
+						</div>
+						<% last_year = year;
+					} %>
+ 					<% if(month != last_month) { %>
+						<div class="argon-timeline-node">
+								<h3 class="argon-timeline-time archive-timeline-month first-month-of-year"><a href="/archives/<%= year %>/<%= fullmonth %>"><%= month %> 月</a></h3>
+								<div class="argon-timeline-card card bg-gradient-secondary archive-timeline-title"></div>
+						</div>
+					<% last_month = month; } %>
+					<% } if(post.type != "shuoshuo") { %>
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'><%= post.date.format('M-D') %></div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="<%= url_for(post.path) %>"><%- post.title %></a>
+							<div class="post-tags" style="display:none;">
+								<i class="fa fa-user" aria-hidden="true"></i>
+									<span class="tag badge badge-secondary post-meta-detail-tag archive_tag">暗梦先生呀~</span>
+								<div class="post-meta-devide">|</div>
+								<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+								<% post.categories.sort('name', -1).each(function(category){ %>
+									<a class="tag badge badge-secondary post-meta-detail-tag archive_tag" href="<%= url_for(category.path) %>"><%= category.name %></a>
+								<% }); %>
+								<div class="post-meta-devide">|</div>
+								<i class="fa fa-tags" aria-hidden="true"></i>
+								<% post.tags.sort('name', -1).each(function(tag){ %>
+									<a class="tag badge badge-secondary post-meta-detail-tag archive_tag" href="<%= url_for(tag.path) %>"><%= tag.name %></a>
+							  	<% }); %>
+							</div>
+						</div>
+					</div>
+					<% } %>
+			<% }); %>
+		</div>
+	</div>
+</div>
