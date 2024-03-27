@@ -1,0 +1,43 @@
+/* Artalk 评论系统美化样式表 (正在测试中 ...) */
+.artalk, .atk-layer-wrap {--at-color-main: var(--themecolor);}
+.atk-send-btn:before {font-family: FontAwesome;content: '\f061';margin-right: 7.5px;}
+.atk-copyright:before {font-family: FontAwesome;content: '\f085';margin-right: 7.5px;}
+.atk-comment-closed:before {font-family: FontAwesome;content: '\f00d';margin-right: 7.5px;}
+
+.atk-send-btn {border-radius: var(--card-radius) !important;}
+.atk-main-editor>.atk-bottom .atk-plug-btn.active {color: rgb(var(--themecolor-rgbstr)) !important;}
+.atk-main-editor>.atk-bottom .atk-plug-btn.active svg.markdown path {fill: var(--themecolor) !important;}
+.atk-dropdown-item.active {color: var(--themecolor) !important;}
+.atk-main-editor,
+.atk-error-layer{background-color: rgba(var(--color-tint-92),0.75) !important;border-radius: var(--card-radius) !important;}
+
+.atk-comment-closed,
+.atk-grp-switcher {background-color: rgba(var(--color-tint-92),0.75) !important;}
+
+.atk-textarea {background-color: rgba(0,0,0,0) !important;}
+html.darkmode .atk-textarea {color:white !important;}
+
+html.darkmode .atk-main-editor {background-color: rgba(var(--color-shade-90),0.9) !important;border-radius: var(--card-radius) !important;border: none !important;}
+html.darkmode.amoled-dark .atk-main-editor {background-color: rgba(66,66,66,0.75) !important;border-radius: var(--card-radius) !important;border: none !important;}
+html.darkmode .atk-error-layer,
+html.darkmode .atk-comment-closed,
+html.darkmode .atk-grp-switcher {background-color: rgba(var(--color-shade-90),0.9) !important; color:white;}
+html.darkmode.amoled-dark .atk-error-layer,
+html.darkmode.amoled-dark .atk-comment-closed,
+html.darkmode.amoled-dark .atk-grp-switcher {background-color: rgba(66,66,66,0.75) !important; color:white;}
+
+html.darkmode .atk-plug-btn,
+html.darkmode .atk-comment-count,
+html.darkmode .atk-list-no-comment,
+html.darkmode .atk-main-editor>.atk-header input,
+html.darkmode .atk-comment>.atk-main>.atk-body>.atk-content,
+html.darkmode .atk-editor-plug-emoticons>.atk-grp-wrap>.atk-grp>.atk-item,
+html.darkmode .atk-error-layer .atk-error-text * {color:white !important;}
+
+html.darkmode .atk-editor-plug-emoticons>.atk-grp-wrap>.atk-grp>.atk-item:hover,
+html.darkmode .atk-plug-btn:hover,
+html.darkmode .atk-editor-plug-emoticons>.atk-grp-switcher>span:hover, .atk-editor-plug-emoticons>.atk-grp-switcher>span.active {color:black !important;}
+
+.atk-avatar {border-radius: 100px !important;}
+.atk-arrow-down-icon,.atk-dropdown {display:none !important;}
+.artalk>.atk-list>.atk-list-header .atk-dropdown-wrap {cursor: url("/cursor/Arrow.cur"),default !important;}
