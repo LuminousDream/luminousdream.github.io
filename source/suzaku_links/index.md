@@ -135,14 +135,6 @@ var blogLinks = [
     linkstatus: "ok"
   },
   {
-    name: "令如律 | Aloner's Ink",
-    link: "https://aloner.ink",
-    description: "随便写写",
-    avatar: "/static/avatar/aloner.ink.webp",
-    type: "life",
-    linkstatus: "ok"
-  },
-  {
     name: "半截の诗",
     link: "https://sweetjing.cc",
     description: "保持热爱，奔赴山海。",

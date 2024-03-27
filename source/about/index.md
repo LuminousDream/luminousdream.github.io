@@ -121,11 +121,21 @@ realImg.onload = function() {
 
 {% tlnode '2023-06-21' %}
 <ul>
-<li><font color="orange"><i class="fa fa-star"></i>&nbsp;anmeng.eu.org (Tip: em...... 暗梦我开始用这个域名作为主链接了，好吧，亲爱的旅行者们~ )&nbsp;<i class="fa fa-star"></i></font></br>不过总是使用这个域名也不是办法，em...... 后续可能会在 Dnspod 购入一个 .work 域名<br>旅行者们可以来看 <a href="/2c9586b5">暗梦我写的文章之其 IV</a> <i>(tip:此处为罗马数字的 4)</i><br><br></li>
+<li>anmeng.eu.org ~~(Tip: em...... 暗梦我开始用这个域名作为主链接了，好吧，亲爱的旅行者们~ )</br>不过总是使用这个域名也不是办法，em...... 后续可能会在 Dnspod 购入一个 .work 域名<br>旅行者们可以来看 <a href="/2c9586b5">暗梦我写的文章之其 IV</a> <i>(tip:此处为罗马数字的 4)~~</i><br><br></li>
 <div class="badge my_blog_moment_tag tag"><i class="fa fa-github"></i>&nbsp;静态博客托管：Github</div>
 <div class="badge my_blog_moment_tag tag"><i class="fa fa-server"></i>&nbsp;评论系统数据库 & 后端：MongoDB & Deta</div>
-<div class="badge my_blog_moment_tag tag"><i class="fa fa-server"></i>&nbsp;评论系统备用后端：Vercel (暂不使用)</div>
+<div class="badge my_blog_moment_tag tag"><i class="fa fa-server"></i>&nbsp;评论系统备用后端：Vercel (已注销帐号)</div>
 <div class="badge my_blog_moment_tag tag"><i class="fa fa-list-alt"></i>&nbsp;域名：EU.org</div>
+<div class="badge my_blog_moment_tag tag"><i class="fa fa-globe"></i>&nbsp;DNS 解析：Cloudflare</div>
+</ul>
+{% endtlnode %}
+
+{% tlnode '2024-03-27' %}
+<ul>
+<li><font color="orange"><i class="fa fa-star"></i>&nbsp;anmeng.asia (Tip: em...... 本来想买 .work 域名的，不过有点贵，再加上现在 EU.Org 无法访问，索性选择 & 购入了 .asia 域名 [10 年] ，好吧 (。-ω-)... [梦之无奈] )</i><br><br></li>
+<div class="badge my_blog_moment_tag tag"><i class="fa fa-github"></i>&nbsp;静态博客托管：Github</div>
+<div class="badge my_blog_moment_tag tag"><i class="fa fa-server"></i>&nbsp;评论系统数据库 & 后端：MongoDB & Deta</div>
+<div class="badge my_blog_moment_tag tag"><i class="fa fa-list-alt"></i>&nbsp;域名：DNSPod</div>
 <div class="badge my_blog_moment_tag tag"><i class="fa fa-globe"></i>&nbsp;DNS 解析：Cloudflare</div>
 </ul>
 {% endtlnode %}
