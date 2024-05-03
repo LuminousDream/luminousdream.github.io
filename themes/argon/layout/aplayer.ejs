@@ -1,0 +1,47 @@
+<div class="blog_musicbox_control no-pjax" style="z-index:100000;position:relative;">
+<div id="aplayer" class="blog_musicbox no-pjax hidden" style="display:none;"></div>
+</div>
+<% if(theme.enable_musicbox) { %>
+<script no-pjax>
+try {
+var metingapi_url="https://api.injahow.cn/meting/?server=netease&type=song&id=";
+var songid_data = ['531253053','687506','33682739','22636640','447303772','1942909267','1404596131','520242026','29017078','34613438','1928521973','1458664808','1915699293','1915700989','191252','537787665','1500439504']
+
+const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+	fixed: false,
+	lrcType: 3,
+	order: 'list',
+	preload: 'none',
+	theme: '#F05B85',
+	listFolded: true
+});
+
+songid_data.forEach((item) => {
+fetch(metingapi_url+item)
+  .then(function(response) {
+      var temp_songdata = [];
+      temp_songdata.push(response.json())
+      Promise.all(temp_songdata).then(function(results) {
+      for (i = 0 ;i < results.length;i++)
+	{
+	    ap.list.add({
+   	      name: results[i][0].name,
+   	      artist: results[i][0].artist,
+  	      url: results[i][0].url,
+   	      cover: results[i][0].pic,
+   	      lrc: results[i][0].lrc,
+	      theme: '#ebd0c2'
+	    });
+	}
+    });
+  })
+});
+
+if ($("#float_action_buttons").hasClass("fabtns-float-left")){
+	$("#aplayer").addClass("align-left");
+}
+$("#aplayer").addClass("mdui-shadow-6");
+}catch(err){}
+</script>
+<% } %>

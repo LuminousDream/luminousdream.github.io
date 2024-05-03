@@ -1,0 +1,94 @@
+/* Twikoo 评论系统美化样式表 */
+.el-input__count::before {font-family: FontAwesome;content: '\f040';margin-right: 7.5px;}
+.tk-panel-anmeng-modified-tip {text-transform:none !important;}
+.tk-send::before {font-family: FontAwesome;content: '\f061';margin-right: 7.5px;}
+.tk-cancel::before {font-family: FontAwesome;content: '\f104';margin-right: 7.5px;}
+.tk-footer::before {font-family: FontAwesome;content: '\f085';margin-right: 2.5px;}
+.tk-time::before {font-family: FontAwesome;content: '\f017';margin-left:3px;margin-right: 5px;}
+.tk-avatar {border-radius: 999px !important;}
+.tk-replies {margin-top:5px;}
+.tk-time {color: #999999 !important;}
+.tk_anmeng_reply_info *{font-size: .9em;}
+.tk-input, .el-textarea {transition: none !important;} 
+.tk-comment {border-inline-start: 0px;margin-top: 10px;margin-right: 10px;}
+.tk-anmeng-replied-comment-icon::before {font: normal normal normal 14px/1 FontAwesome;content: '\f064';margin:0px 10px 0px 5px;}
+.tk-anmeng-replied-comment-icon {height:18px;max-height:18px;font-size:0.8em;--webkit-transform: scale(1, -1);transform: scale(1, -1);}
+.tk-meta-input .el-input:nth-child(1) div::before {font-family: FontAwesome;content: '\f2bd';margin-left:3px;margin-right: 5px;}
+.tk-meta-input .el-input:nth-child(2) div::before {font-family: FontAwesome;content: '\f003';margin-left:3px;margin-right: 5px;}
+.tk-meta-input .el-input:nth-child(3) div::before {font-family: FontAwesome;content: '\f0c1';margin-left:3px;margin-right: 5px;}
+.tk-panel .tk-tabs .tk-tab:nth-child(1)::before {font-family: FontAwesome;content: '\f0ca';margin-left:3px;margin-right: 5px;}
+.tk-panel .tk-tabs .tk-tab:nth-child(2)::before {font-family: FontAwesome;content: '\f085';margin-left:3px;margin-right: 5px;}
+.tk-panel .tk-tabs .tk-tab:nth-child(3)::before {font-family: FontAwesome;content: '\f115';margin-left:3px;margin-right: 5px;}
+.tk-panel .tk-tabs .tk-tab:nth-child(4)::before {font-family: FontAwesome;content: '\f0c7';margin-left:3px;margin-right: 5px;}
+.tk-panel .tk-tabs .tk-tab:nth-child(5)::before {font-family: FontAwesome;content: '\f05a';margin-left:3px;margin-right: 5px;}
+.tk-panel-logout::before {font-family: FontAwesome;content: '\f08b';margin-left:3px;margin-right: 5px;}
+.tk-action .tk-action-link:nth-child(1),.tk-preview {display:none !important;}
+:not(.tk-replies) > .tk-comment,.tk-admin-comment-item {background-color: rgba(var(--color-tint-92),0.75);margin-top:5px;margin-bottom:15px;padding:10px 10px 10px 10px;border-radius: var(--card-radius);transition: all .8s;box-shadow: 0 1px 20px 2px #e8e8e8;border: 1.5px solid rgba(var(--color-tint-95),1);}
+:not(.tk-replies) > .tk-comment:hover,.tk-admin-comment-item:hover {box-shadow: 0 10px 20px 10px #e8e8e8;}
+html.darkmode:not(.amoled-dark) :not(.tk-replies) > .tk-comment,html.darkmode:not(.amoled-dark) .tk-admin-comment-item {background-color: rgba(var(--color-shade-90),0.9);margin-top:5px;margin-bottom:15px;padding:10px 10px 10px 10px;border-radius: var(--card-radius);-webkit-transition: all .8s;transition: all .8s;box-shadow: 0 1px 20px 2px rgba(26, 26, 26, 0.8);border: 1.5px solid #7d7d7d30;}
+html.darkmode:not(.amoled-dark) :not(.tk-replies) > .tk-comment:hover,html.darkmode:not(.amoled-dark) .tk-admin-comment-item:hover {box-shadow: 0 10px 20px 10px rgba(26, 26, 26, 0.8);}
+html.darkmode.amoled-dark :not(.tk-replies) > .tk-comment,html.darkmode.amoled-dark .tk-admin-comment-item  {background-color: #27272790;margin-top:5px;margin-bottom:15px;padding:10px 10px 10px 10px;border-radius: var(--card-radius);box-shadow: 0 1px 30px -4px rgba(26,26,26,0.8);border: 1.5px solid #7d7d7d30;}
+html.darkmode.amoled-dark :not(.tk-replies) > .tk-comment:hover,html.darkmode.amoled-dark .tk-admin-comment-item:hover {box-shadow: 0 10px 20px 10px rgba(26, 26, 26, 0.8);}
+.tk-replies > .tk-comment {border-top: #666 dashed 1.2px;margin:5px 0px;padding: 10px 0px;}
+html.darkmode .tk-replies > .tk-comment {border-top: #fff dashed 1.2px;margin:5px 0px;padding: 10px 0px;}
+/* 猫猫 */
+.el-input-group__prepend {background-color: rgba(var(--themecolor-rgbstr), 0.13) !important;}
+.el-input-group__prepend,.el-textarea__inner,.el-input__inner {border-color: rgba(var(--themecolor-rgbstr), 0.3) !important;}
+.tk-tag {margin-left:5px;}
+.tk-admin-anmeng-about {padding: 15px;display: grid !important;grid-template-columns: auto 1fr !important;grid-gap: 0px !important;}
+.tk-admin-anmeng-about-content {padding: 15px;}
+.tk-admin-anmeng-about:not(:last-child) {margin-bottom: 15px;}
+.tk-anmeng-master-icon-img,.tk-anmeng-about-iMaeGoo-icon {width: 50px;border-radius: var(--card-radius);}
+.tk-meta .tk-tag.tk-anmeng-tag-guest::before {font-family: FontAwesome;content: '\f005';margin-left:3px;margin-right: 5px;}
+.tk-meta .tk-tag.tk-tag-green::before {font-family: FontAwesome;content: '\f007';margin-left:3px;margin-right: 5px;}
+.tk-meta .tk-tag.tk-tag-red::before {font-family: FontAwesome;content: '\f106';margin-left:3px;margin-right: 5px;}
+.tk-meta .tk-tag.tk-tag-yellow::before {font-family: FontAwesome;content: '\f044';margin-left:3px;margin-right: 5px;}
+.twikoo .el-input__inner:not([type="password"]),.twikoo .tk-password .el-input-group__append,.twikoo .tk-password .el-button {border-radius: 0px var(--card-radius) var(--card-radius) 0px !important}
+.twikoo .tk-admin .el-input__inner:not([type="password"]),.tk-panel select,.tk-admin-container {border-radius: var(--card-radius) !important}
+.twikoo .el-input__inner:focus, .twikoo .el-textarea__inner:focus,.tk-admin-anmeng-comment-editor:focus {border-color: rgba(var(--themecolor-rgbstr),1) !important;}
+.tk-panel .tk-tab.__active {color:var(--themecolor) !important;border-bottom: 2px solid var(--themecolor) !important;}
+.tk-admin-anmeng-comment-content-meta {color:var(--themecolor) !important;border-bottom: 1.5px solid var(--themecolor) !important;}
+.el-input-group__append, .el-input-group__prepend {border-radius: var(--card-radius) 0px 0px var(--card-radius) !important;}
+.tk-login .el-input-group__append,.tk-pagination-pager {border-radius: var(--card-radius) !important;}
+.el-button--text,.tk-action-count,.tk-admin-close,.tk-nick-link:hover {color:var(--themecolor) !important;}
+.tk-pagination-pager.__current {background-color: var(--themecolor) !important;color: #fff !important;}
+.tk-anmeng-tag-guest {border: 1px solid rgba(var(--themecolor-rgbstr), 0.50);}
+.twikoo .el-textarea__inner,.el-button,.tk-anmeng-tag-guest,.tk-tag-green,.tk-tag-red,.tk-tag-yellow,.el-input {border-radius: var(--card-radius) var(--card-radius) var(--card-radius) var(--card-radius) !important;}
+.tk-tag-green,.tk-anmeng-tag-guest,.tk-action-icon,.tk-icon.__comments {color: rgba(var(--themecolor-rgbstr),1) !important; border-color: rgba(var(--themecolor-rgbstr),1) !important; background-color:rgba(0,0,0,0) !important;}
+.tk-tag-red,.tk-tag-yellow {background-color:rgba(0,0,0,0) !important;}
+.twikoo .el-button--primary {background-color: rgba(var(--themecolor-rgbstr),1) !important; border-color: rgba(var(--themecolor-rgbstr),1) !important;}
+.twikoo .el-button--primary.is-disabled {background-color: rgba(var(--themecolor-rgbstr),0.3) !important; border-color: rgba(var(--themecolor-rgbstr),0.3) !important;}
+.twikoo .el-button:not(.el-button--primary):not(.el-button--text):active, .twikoo .el-button:not(.el-button--primary):not(.el-button--text):focus, .twikoo .el-button:not(.el-button--primary):not(.el-button--text):hover {color: rgba(var(--themecolor-rgbstr),1) !important; background-color: rgba(var(--themecolor-rgbstr),0.063) !important;border-color: rgba(var(--themecolor-rgbstr),.5) !important; }
+.tk-content table > tbody > tr > td:not(.hljs-ln-line), .tk-content table > tbody > tr > th:not(.hljs-ln-line), .tk-content table > tfoot > tr > td:not(.hljs-ln-line), .tk-content table > tfoot > tr > th:not(.hljs-ln-line), .tk-content table > thead > tr > td:not(.hljs-ln-line), .tk-content table > thead > tr > th:not(.hljs-ln-line) {border: 1.25px dashed rgba(66,66,66,.2) !important;}
+html.darkmode .tk-content table > tbody > tr > td:not(.hljs-ln-line),html.darkmode  .tk-content table > tbody > tr > th:not(.hljs-ln-line),html.darkmode  .tk-content table > tfoot > tr > td:not(.hljs-ln-line),html.darkmode  .tk-content table > tfoot > tr > th:not(.hljs-ln-line),html.darkmode  .tk-content table > thead > tr > td:not(.hljs-ln-line),html.darkmode  .tk-content table > thead > tr > th:not(.hljs-ln-line) {border: 1.25px dashed #ffffff !important;}
+.tk-content table {margin:2px;width:90%;word-wrap: break-word;}
+.tk-content table {margin: 2px auto 15px auto;width:95%;}
+.tk-content table > thead > tr > th,.tk-content table > tbody > tr > td {padding:5px;}
+.tk-content table > :not(thead) > tr:nth-child(2n - 1) {background-color: rgba(var(--themecolor-rgbstr), .10);}
+.tk-content table > :not(thead) > tr:last-child > td:first-child {border-radius:0px 0px 0px var(--card-radius) !important;}
+.tk-content table > :not(thead) > tr:last-child > td:last-child {border-radius:0px 0px var(--card-radius) 0px !important;}
+.tk-content blockquote {padding-left: 1em;margin: 1em 3em 1em 0;font-weight: 400;border-left: 4px solid rgba(0, 0, 0, .12);}
+html.darkmode .tk-content blockquote {border-left: 4px solid rgba(255, 255, 255, .12);}
+.tk-avatar-img,.tk-extras,.tk-meta,.tk-action-count,.tk-footer,.tk-error-message,.tk-comments-no,.el-input-group__prepend,.el-input__count {user-select: none;}
+html:not(.darkmode) .tk-panel-logout {color:#000 !important;}
+.OwO-body {background-color: rgba(var(--color-tint-92),.75)!important;border-radius: var(--card-radius) !important;}
+html.darkmode .OwO-body {background-color: rgba(var(--color-shade-90),.9) !important;}
+html.darkmode.amoled-dark .OwO-body {background-color: #27272790 !important;}
+.tk-panel .tk-panel-logout {text-decoration: none;}
+.tk-admin-actions {padding: 0px 15px;border-bottom: none !important;margin-bottom:0px !important;margin-top: 10px !important;}
+.__markdown {display: none !important;}
+.tk-admin-anmeng-comment-editor,.tk-admin-anmeng-comment-editor-preview {height:200px;background-color: transparent;border-radius: var(--card-radius);resize: none;}
+html.darkmode .tk-admin-anmeng-comment-editor {color: #fff !important;border-color: #fff !important;}
+@media screen and (max-width: 900px){.tk-anmeng-admin-comment-item-object{padding:15px;}.OwO-body {width: 280px !important;}.el-textarea__inner {min-height: 100px!important;padding: 16px 16px 40px 16px!important;box-shadow: none!important}.tk-row-actions-start {position: absolute;top: -48px;left: 17px;}.tk-comment .tk-row-actions-start {position: absolute;top: -48px;left: 10px;}.tk-comment .OwO-body {width: 200px !important;}.tk-comments .el-button--primary,.tk-comment .tk-cancel {width:50%}.tk-comment .tk-row.actions {margin-left: 2.8rem !important;}.tk-comment .tk-submit {margin-bottom: 35px !important;}}
+
+@media screen and (orientation:landscape) { .tk-anmeng-admin-comment-item-object { display: flex; height: 200px; max-height: 200px; padding: 15px; } .tk-anmeng-admin-comment-item-object .tk-admin-comment-meta { width: 30%; max-width: 30%; height: 100%; margin: 0px 10px; border-right: 1px solid rgba(66,66,66, 0.5); } html.darkmode .tk-anmeng-admin-comment-item-object .tk-admin-comment-meta { border-right: 1px solid rgba(255, 255, 255, 0.5); } .tk-anmeng-admin-comment-item-object .tk-content { width: 100%; } .OwO-body { width: 500px !important; } #twikoo .tk-row .tk-col { flex-direction: column-reverse !important; } .tk-comments .el-button--primary { transition: .3s; width: 5rem; position: absolute; top: -55px; right: 0; margin-left: 0.5rem !important; height: 32px; } .tk-meta-input { position: relative !important; margin-top: 8px; width: calc(100% - 5.5rem); } .tk-comment .tk-meta-input { position: relative !important; margin-top: 8px; width: calc(100% - (5.5rem * 2)); } .tk-comment .tk-cancel { transition: .3s; width: 5rem; position: absolute; top: -55px; right: 87px; margin-left: 0.5rem !important; height: 32px; } .el-textarea__inner { min-height: 100px !important; padding: 16px 16px 40px 16px !important; box-shadow: none !important } .tk-row-actions-start { position: absolute; top: -95px; left: 17px; } .tk-comment .tk-row-actions-start { position: absolute; top: -95px; left: 0px; } .tk-row.actions { margin-bottom: 0px !important; } .tk-anmeng-captcha { right: 85px !important; width: 150px !important; } }
+
+.tk-login-title:before {font-family: FontAwesome;content: '\f2bd';margin-right: 7.5px;}
+.tk-password .el-input-group__prepend::before {font-family: FontAwesome;content: '\f084';margin-right: 2.5px;}
+.tk-panel .tk-tabs {justify-content:space-around;}
+.tk-admin,.tk-panel,html:not(.darkmode) .tk-login *,.tk-admin-comment-filter-type {color: #000000 !important;background-color: rgba(var(--color-tint-92),0.60) !important;}
+html.darkmode:not(.amoled-dark) .tk-admin,html.darkmode:not(.amoled-dark) .tk-panel,html.darkmode:not(.amoled-dark) .tk-admin-comment-filter-type {color: #ffffff !important;background-color: rgba(var(--color-shade-90),0.60) !important;}
+html.darkmode.amoled-dark .tk-admin,html.darkmode .tk-panel,html.darkmode.amoled-dark .tk-admin-comment-filter-type {color: #ffffff !important;background-color: rgba(66,66,66,0.60) !important;}
+
+/* Waline 表情自适应于 Twikoo */
+.wl-emoji {display: inline-block;vertical-align: middle;max-width: 1.5em !important;max-height: 1.5em !important;}

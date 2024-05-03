@@ -1,0 +1,99 @@
+<%- partial('_partial/cc.ejs') %>
+
+<% if (theme.comment_function.enable) { %>
+	<% if (post.type != "shuoshuo") { %>
+<div id="post_comment" class="card shadow-sm" style="opacity: 0.87;padding:30px 30px;padding-bottom: 35px;">
+<h2 class="comments-title" style="margin-bottom:20px;"><i class="fa fa-comments"></i>评论</h2>
+<div class="mdui-progress">
+	<div class="mdui-progress-indeterminate mdui-follow-argon-color"></div>
+</div>
+<div class="post-outdated-info"><i class="fa fa-info-circle" aria-hidden="true"></i>
+Tip: 评论前请先查看<a onclick="comment_info();" class="comment_info_button"> 《本站评论特别声明》 </a> ，且所有评论均需审核后才能显示，谢谢~<br>
+</div>
+
+<% if (theme.test_comment.enable) { %>
+		<%- partial('_comment/test_comment') %>
+<% } else if (theme.gitalk.enable) { %>
+		<%- partial('_comment/gitalk') %>
+<% } else if (theme.giscus.enable) { %>
+		<%- partial('_comment/giscus') %>
+<% } else if (theme.waline.enable) { %>
+		<%- partial('_comment/waline') %>
+<% } else if (theme.twikoo.enable) { %>
+		<%- partial('_comment/twikoo') %>
+<% } else if (theme.artalk.enable) { %>
+	<%- partial('_comment/artalk') %>
+<% } %>
+	</div>
+<% }} %>
+
+<% if (theme.shuoshuo_comment.enable) { %>
+	<% if (post.type == "shuoshuo") { %>
+<div id="post_comment" class="card shadow-sm" style="opacity: 0.87;padding:30px 30px;padding-bottom: 35px;">
+<h2 class="comments-title" style="margin-bottom:20px;"><i class="fa fa-comments"></i>评论</h2>
+<div class="mdui-progress">
+	<div class="mdui-progress-indeterminate mdui-follow-argon-color"></div>
+</div>
+<div class="post-outdated-info"><i class="fa fa-info-circle" aria-hidden="true"></i>
+Tip: 评论前请先查看<a onclick="comment_info();" class="comment_info_button"> 《本站评论特别声明》 </a> ，且所有评论均需审核后才能显示，谢谢~<br>
+</div>
+
+<% if (theme.test_comment.enable) { %>
+		<%- partial('_comment/test_comment') %>
+<% } else if (theme.gitalk.enable) { %>
+		<%- partial('_comment/gitalk') %>
+<% } else if (theme.giscus.enable) { %>
+		<%- partial('_comment/giscus') %>
+<% } else if (theme.waline.enable) { %>
+		<%- partial('_comment/waline') %>
+<% } else if (theme.twikoo.enable) { %>
+		<%- partial('_comment/twikoo') %>
+<% } else if (theme.artalk.enable) { %>
+	<%- partial('_comment/artalk') %>
+<% } %>
+	</div>
+<% }} %>
+
+<%
+	function get_prev_next_post_card(){
+		let res = "";
+		if (post.prev != undefined || post.next != undefined) {
+			res += '<div class="post-navigation card shadow-sm">';
+			if (post.prev != undefined){
+				res += '<div class="post-navigation-item post-navigation-pre">';
+				res += '<span style="color:gray;font-size:12px;">Previous</span><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span>';
+				if(post.prev.type == "shuoshuo")
+				{
+					res += '<span class="badge badge-primary" id="shuoshuo_label"><i class="fa fa-quote-left"></i> 说说</span><a href="' + url_for(post.prev.path) +'" rel="prev"> ' + post.prev.title + '</a>';
+				}
+				else
+				{
+					res += '<a href="' + url_for(post.prev.path) +'" rel="prev"> ' + post.prev.title + '</a>';
+				}
+				res += '</div>';
+			}else{
+				res += '<div class="post-navigation-item post-navigation-pre"></div>';
+			}
+			if (post.next != undefined){
+				res += '<div class="post-navigation-item post-navigation-next">';
+				res += '<span style="color:gray;font-size:12px;">Next</span><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span>';
+				if(post.next.type == "shuoshuo")
+				{
+					res += '<a href="' + url_for(post.next.path) +'" rel="next"> ' + post.next.title + '</a>&nbsp;&nbsp;<span class="badge badge-primary" id="shuoshuo_label"><i class="fa fa-quote-left"></i> 说说 </span>';
+				}
+				else
+				{
+					res += '<a href="' + url_for(post.next.path) +'" rel="next"> ' + post.next.title + '</a>';
+				}
+				res += '</div>';
+			}else{
+				res += '<div class="post-navigation-item post-navigation-next"></div>';
+			}
+			res += '</div>';
+		}
+		return res;
+	}
+%>
+<% if(post.type != "shuoshuo") { %>
+<%- get_prev_next_post_card() %>
+<% } %>
