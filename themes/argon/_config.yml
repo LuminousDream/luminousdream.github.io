@@ -44,6 +44,7 @@ leftbar_menu: # 侧栏顶部菜单，支持无限层级菜单嵌套
   <i class="fa fa-book"></i> 喵星使者的自我修养: /categories/喵星使者的自我修养/
   <i class="fa fa-music"></i> 天空之琴乐谱分享: /categories/天空之琴乐谱分享/
   <i class="fa fa-star"></i> 暗梦&nbsp;の&nbsp;随心说: /categories/暗梦-の-随心说
+  <i class="fa fa-database"></i> 暗梦&nbsp;の&nbsp;自制游戏库: https://mygame.anmeng.asia
   <i class="fa fa-archive"></i> 都市看客暗梦&nbsp;の&nbsp;归档: /archives
 enable_sidebar_function_page: true # 是否启用侧边栏功能页
 
