@@ -23,6 +23,7 @@ toolbar_menu: # 顶栏菜单，支持二级菜单
   <i class="fa fa-comment mr-1"></i>&nbsp;留言板: /liuyanban
   <i class="fa fa-address-book mr-1"></i>&nbsp;友人账: /suzaku_links
   <i class="fa fa-music mr-1"></i>&nbsp;暗梦的天空之琴: /suzaku_piano
+  <i class="fa fa-subway mr-1"></i>&nbsp;开往: https://www.travellings.cn/go.html
   <i class="fa fa-user mr-1"></i>&nbsp;关于我: /about
 
 # Banner
