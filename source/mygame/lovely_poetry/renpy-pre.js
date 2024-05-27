@@ -319,7 +319,7 @@ Module.preRun = Module.preRun || [ ];
         if (dataDownloaded < dataSize || gameZipSize == 0) {
             if (!dataPrompt) {
                 printMessage("");
-                printMessage("Downloading engine...");
+                printMessage("正在加载 Ren'Py 引擎...");
                 dataPrompt = true;
             }
 
@@ -329,7 +329,7 @@ Module.preRun = Module.preRun || [ ];
 
         if (!gameZipPrompt) {
             printMessage("");
-            printMessage("Downloading game data...");
+            printMessage("正在加载游戏数据压缩档...");
             gameZipPrompt = true;
         }
 
