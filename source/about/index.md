@@ -43,6 +43,15 @@ english_name: "About AnMeng"
 <li>《原神 [国际服 TW,HK,MO]》<i>(Android)</i></li>
 </ul>
 {% endfoldnotebox %}
+
+{% foldnotebox "都市看客暗梦 の 自制游戏" default_legacy 'fa fa-book' %}
+{% tip %} 暗梦：这里都是我自己制作的游戏，虽然做的不怎么好啦<br>
+相关游戏介绍请见 <a href="https://mygame.anmeng.asia" target="_blank">暗梦我的自制游戏库</a> 哈，诶嘿~
+{% endtip %}
+<ul>
+<li><a href="/mygame/lovely_poetry" target="_blank">《都市挚爱者物语》</a> (Ren'Py，Web 测试版，移动端暂未优化)</li>
+</ul>
+{% endfoldnotebox %}
   - <i class="fa fa-user" aria-hidden="true" /></i>&nbsp;&nbsp;都市看客暗梦 の 联系方式:
     + <i class="fa fa-qq" aria-hidden="true" /></i>&nbsp;&nbsp;QQ：壹捌柒玖捌，伍柒肆捌玖~
     + <i class="fa fa-envelope" aria-hidden="true" /></i>&nbsp;&nbsp;E-mail：dreamstar906@126.com

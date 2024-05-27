@@ -30,6 +30,7 @@ i18n_dir: :lang
 skip_render:
   - 404.html
   - 403.html
+  - mygame/**
   - assets/**
 
 permalink: :abbrlink/
