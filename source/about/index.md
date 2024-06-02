@@ -28,19 +28,19 @@ english_name: "About AnMeng"
 <li>《CS:GO》 (Windows)</li>
 <li>《Undertale》 (Windows & Android)</li>
 <li>《Deltarune Chapter 1&2》 (macOS & Android)</li>
-</ul>
-{% endfoldnotebox %}
-
-{% foldnotebox "都市看客暗梦 の 目前在玩的游戏" blue 'fa fa-gamepad' %}
-{% note orange %} 暗梦：游戏或许能让旅行者们心情舒畅，不过一定要适度，因为在现实中也有那些爱你的人需要你守护哦~ {% endnote %}
-<ul>
 <li>逆转裁判 & 怪物猎人系列：</li>
 <ul>
 <li>其中逆转裁判嘛，玩的是 3DS 的 6 部曲 (Tip:逆转裁判前三部是成步堂精选集，不包含大逆转裁判系列)</li> 
 <li>怪物猎人系列呢目前只玩过 3DS 中的 DoubleCross & 怪物猎人日记:暖洋洋的猫猫村 (PSP)</li>
 </ul>
+</ul>
+{% endfoldnotebox %}
+
+{% foldnotebox "都市看客暗梦 の 目前在玩的游戏" blue 'fa fa-gamepad' %}
+{% note orange %} 暗梦：游戏或许能让旅行者们心情舒畅，不过一定要适度，因为在现实中也有那些爱你的人需要你守护哦~ {% endnote %}
 <li>星露谷物语 (macOS，暗梦我玩这个游戏嘛，也纯粹是在打法时间 & 放松压力而已啦 [≡ω≡] ~)</li>
 <li>《原神 [国际服 TW,HK,MO]》<i>(Android)</i></li>
+<li>《火焰纹章 if 特别版》 (3DS)</li>
 </ul>
 {% endfoldnotebox %}
 

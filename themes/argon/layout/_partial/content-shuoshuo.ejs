@@ -13,6 +13,11 @@
                 <div class="post-meta-devide">|</div>
                     <%- post.info %>
             <% } %>
+            <% if (!post.location == "") { %>
+                <div class="post-meta-devide">|</div>
+                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                <%- post.location %> 
+            <% } %>
         </span>
     </div>
 
