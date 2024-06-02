@@ -1,10 +1,10 @@
 ---
-title: Re. 如何从零开始在 Deta Space 部署 Twikoo 评论系统
+title: Re. 从零开始在 Deta Space 部署 Twikoo 评论系统的过程
 categories: 技术分享
 thumbnail: /static/20240601_07596.webp
 excerpt: >-
   给旅行者们从零讲述部署 Twikoo 评论系统到 Deta Space 的过程哈，诶嘿~<br><br><font
-  color="#F05B85"><strong>✦此部署方式涉及终端操作等高级操作，如果部分旅行者们对这些不太了解，还请不要参照此方式部署
+  color="#F05B85"><strong>✦ 此部署方式涉及终端操作等高级操作，如果部分旅行者们对这些不太了解，还请不要参照此方式部署
   Twikoo，谢谢~ ✦</strong></font>
 abbrlink: cad9d0fd
 date: 2024-06-02 14:31:22
