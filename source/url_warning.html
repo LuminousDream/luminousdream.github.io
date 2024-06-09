@@ -153,6 +153,14 @@ permalink: "go/"
 		border-color: #0a7f94;
 		color: #eee;
 	}
+
+	.section-shaped .shape-style-1.shape-default {
+    	background: linear-gradient(150deg, #F05B85 15%, #d45076 70%, #b34463 94%);
+	}
+	.btn-info {
+		border-color: #F05B85 !important;
+    	background-color: #F05B85 !important;
+	}
 	html.darkmode.amoled-dark .section-shaped .shape {
 		background: #000;
 	}
@@ -162,7 +170,11 @@ permalink: "go/"
   const urlParams = new URLSearchParams(window.location.search);
   const redirectUrl = urlParams.get('url');
 
-  if (redirectUrl.startsWith("https://anmeng.eu.org/") || redirectUrl.startsWith("http://anmeng.eu.org/")){
+  if (redirectUrl == undefined || redirectUrl == "" || redirectUrl == null){
+    $('.continue_go').hide()
+    $(".card-title").html('<i class="fa fa-info-circle"></i>&nbsp;&nbsp;FantasyLand の 暗梦 页面跳转安全提示 请求错误')
+    $(".lead").html("Reason: url 参数为空 / undefined")
+}else if (redirectUrl.startsWith("https://anmeng.asia") || redirectUrl.startsWith("http://anmeng.asia")){
 	let finalRedirectUrl = redirectUrl;
 	$('.card-title').html('<i class="fa fa-info-circle"></i>&nbsp;&nbsp;即将离开 FantasyLand の 暗梦，然而跳转后的目标还是 FantasyLand の 暗梦 ？')
 	$('.card-content').html(`嗯？ 亲爱的旅行者，这不是我的博客吗？<br>
@@ -176,10 +188,6 @@ permalink: "go/"
     let finalRedirectUrl = redirectUrl;
     $('.link').html(finalRedirectUrl)
     $('.continue_go').attr("href",finalRedirectUrl)
-  }else if (redirectUrl == undefined || redirectUrl == ""){
-    $('.continue_go').hide()
-    $(".card-title").html('<i class="fa fa-info-circle"></i>&nbsp;&nbsp;FantasyLand の 暗梦 页面跳转安全提示 请求错误')
-    $(".lead").html("Reason: url 参数为空 / undefined")
   }
 </script>
 </body></html>
