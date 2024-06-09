@@ -1,0 +1,189 @@
+
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link href="/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+	<link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+	<script src="/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="/assets/js/argon.min.js"></script>
+	<title>页面跳转安全提示 - FantasyLand の 暗梦</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css" />
+        <style>
+         body{
+            	font-family: 'LXGW WenKai' !important;
+         }
+	</style>
+	<script>
+		var darkmodeAutoSwitch = "system";
+		function setDarkmode(enable){
+			if (enable == true){
+				$("html").addClass("darkmode");
+			}else{
+				$("html").removeClass("darkmode");
+			}
+			$(window).trigger("scroll");
+		}
+		function toggleDarkmode(){
+			if ($("html").hasClass("darkmode")){
+				setDarkmode(false);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "false");
+			}else{
+				setDarkmode(true);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "true");
+			}
+		}
+		if (sessionStorage.getItem("Argon_Enable_Dark_Mode") == "true"){
+			setDarkmode(true);
+		}
+		function toggleDarkmodeByPrefersColorScheme(media){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			if (media.matches){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		function toggleDarkmodeByTime(){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			let hour = new Date().getHours();
+			if (hour < 7 || hour >= 22){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		if (darkmodeAutoSwitch == 'system'){
+			var darkmodeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			darkmodeMediaQuery.addListener(toggleDarkmodeByPrefersColorScheme);
+			toggleDarkmodeByPrefersColorScheme(darkmodeMediaQuery);
+		}
+		if (darkmodeAutoSwitch == 'time'){
+			toggleDarkmodeByTime();
+		}
+		if (darkmodeAutoSwitch == 'alwayson'){
+			setDarkmode(true);
+		}
+
+		function toggleAmoledDarkMode(){
+			$("html").toggleClass("amoled-dark");
+			if ($("html").hasClass("amoled-dark")){
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "true");
+			}else{
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "false");
+			}
+		}
+		if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "true"){
+			$("html").addClass("amoled-dark");
+		}else if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "false"){
+			$("html").removeClass("amoled-dark");
+		}
+	</script>
+</head>
+<body>
+	<div class="position-relative">
+		<section class="section section-lg section-shaped pb-250" style="height: 100vh !important;">
+			<div class="shape shape-style-1 shape-default">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="container py-lg-md d-flex">
+				<div class="col px-0">
+					<div class="row">
+						<div class="col-lg-6 col-sm-12">
+							<div class="card-title display-1 text-white"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;即将离开 FantasyLand の 暗梦</div>
+							<p class="card-content lead text-white">亲爱的旅行者，您即将进行页面跳转，请注意甄别链接安全性，以维护网络安全。<br>
+                <i><span class="link"></span></i>
+              </p>
+							<div class="btn-wrapper">
+                <a href="/" class="btn btn-white btn-icon mb-3 mb-sm-0">
+									<span class="btn-inner--icon"><i class="fa fa-home"></i></span>
+									<span class="btn-inner--text">返回博客首页</span>
+								</a>
+								<a class="continue_go btn btn-info btn-icon mb-3 mb-sm-0">
+									<span class="btn-inner--icon"><i class="fa fa-angle-right"></i></span>
+									<span class="btn-inner--text">继续访问</span>
+								</a>
+							</div>
+							<p class="text-white"><br>CopyRight © 2021 FantasyLand の 暗梦 All Rights Reserved.<br>Powered By Hexo & GitHub Pages</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+
+<style>
+	body{
+		overflow: hidden;
+	}
+	html.darkmode .section-shaped .shape {
+		background: #262626;
+	}
+	html.darkmode .text-white {
+		opacity: .75;
+	}
+	html.darkmode .btn-white {
+		background: #424242;
+		border-color: #424242;
+		color: #eee;
+	}
+	html.darkmode .btn-info {
+		background: #0a7f94;
+		border-color: #0a7f94;
+		color: #eee;
+	}
+
+	.section-shaped .shape-style-1.shape-default {
+    	background: linear-gradient(150deg, #F05B85 15%, #d45076 70%, #b34463 94%);
+	}
+	.btn-info {
+		border-color: #F05B85 !important;
+    	background-color: #F05B85 !important;
+	}
+	html.darkmode.amoled-dark .section-shaped .shape {
+		background: #000;
+	}
+  .display-1 {font-size:1.2em !important;}.lead{font-size: 1rem !important;}
+</style>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const redirectUrl = urlParams.get('url');
+
+  if (redirectUrl == undefined || redirectUrl == "" || redirectUrl == null){
+    $('.continue_go').hide()
+    $(".card-title").html('<i class="fa fa-info-circle"></i>&nbsp;&nbsp;FantasyLand の 暗梦 页面跳转安全提示 请求错误')
+    $(".lead").html("Reason: url 参数为空 / undefined")
+}else if (redirectUrl.startsWith("https://anmeng.asia") || redirectUrl.startsWith("http://anmeng.asia")){
+	let finalRedirectUrl = redirectUrl;
+	$('.card-title').html('<i class="fa fa-info-circle"></i>&nbsp;&nbsp;即将离开 FantasyLand の 暗梦，然而跳转后的目标还是 FantasyLand の 暗梦 ？')
+	$('.card-content').html(`嗯？ 亲爱的旅行者，这不是我的博客吗？<br>
+	或许你已经知道这个页面跳转安全提示的原理了吧，其实也仅靠原生 JavaScript 实现。<br>
+	<del>在人生的每一种选择，都有不同的推测，可让暗梦我完全没想到的是，你在 url 函数中定义的是我博客的链接</del><br>
+	那么现在，你可以返回到我的寒舍来坐坐吧，让我们来观赏夜空，来回忆曾经的诗与远方。<br>
+	em...... 本来想给你沏一杯茶的，不过金银花茶好像没有了，那旅行者，你认为蜂蜜柚子茶怎么样？`)
+	$(".continue_go .btn-inner--text").html("继续访问指向本博客的文章 & 页面")
+	$('.continue_go').attr("href",finalRedirectUrl)
+  }else if (redirectUrl) {
+    let finalRedirectUrl = redirectUrl;
+    $('.link').html(finalRedirectUrl)
+    $('.continue_go').attr("href",finalRedirectUrl)
+  }
+</script>
+</body></html>
