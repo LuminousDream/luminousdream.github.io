@@ -126,6 +126,14 @@ var blogLinks = [
     type: "tech + life",
     linkstatus: "ok"
   },
+    {
+    name: "浅小兮の梦",
+    link: "https://zxwlove.xyz",
+    description: "从相遇的刹那开始就注定了别离！",
+    avatar: "/static/avatar/zxwlove.xyz.webp",
+    type: "tech",
+    linkstatus: "ok"
+  },
   {
     name: "Pinpe 的云端",
     link: "https://pinpe.top",
