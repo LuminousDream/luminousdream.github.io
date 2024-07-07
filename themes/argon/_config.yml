@@ -1,0 +1,227 @@
+# 全局
+theme_color: '#F05B85' # 主题色
+show_customize_theme_color_picker: true # 允许用户自定义主题色
+darkmode_autoswitch: system # 自动切换夜间模式，可选: false 默认使用日间, alwayson 默认使用夜间, system 跟随系统, time 随时间切换
+darkmode_timemode_config: # 当夜间模式随时间切换的配置 (darkmode_autoswitch 为 time 时生效)
+  night_start_time: 21 # 夜间开始的时间 (Tip：24 小时制，只需要输入几点钟后开启夜间模式)
+  night_end_time: 7 # 夜间结束的时间 (Tip：和上述同理，只需要输入几点钟后关闭夜间模式)
+enable_amoled_dark: false # 夜间模式样式，false 为灰黑，true 则为暗黑
+card_radius: 15 # 默认卡片圆角大小
+card_shadow: small # 默认卡片阴影大小，可选 small 和 big
+font: lxgw-wk # 默认字体，可选: lxgw-wk 霞鹜文楷 , serif 思源宋体
+enable_headroom: false # 滚动时是否自动折叠顶栏
+announcement: '' # 首页公告内容，留空则不显示
+
+# 顶栏
+toolbar_icon: '' # 顶栏图标图片地址，留空则不显示
+toolbar_icon_link: '' # 顶栏图标链接，点击时跳转
+toolbar_title: '' # 顶栏标题，留空则跟随博客标题
+toolbar_menu: # 顶栏菜单，支持二级菜单
+  <i class="fa fa-home mr-1"></i>&nbsp;首页: /
+  <i class="fa fa-quote-left mr-1"></i>&nbsp;说说: /shuoshuo
+  <i class="fa fa-archive mr-1"></i>&nbsp;归档: /archives
+  <i class="fa fa-comment mr-1"></i>&nbsp;留言板: /liuyanban
+  <i class="fa fa-address-book mr-1"></i>&nbsp;友人账: /suzaku_links
+  <i class="fa fa-music mr-1"></i>&nbsp;暗梦的天空之琴: /suzaku_piano
+  <i class="fa fa-subway mr-1"></i>&nbsp;开往: https://www.travellings.cn/go.html
+  <i class="fa fa-user mr-1"></i>&nbsp;关于我: /about
+
+# Banner
+banner_title: '' # Banner 标题，留空则跟随博客标题
+enable_banner_title_typing_effect: true # 是否启用 Banner 打字效果
+theme.banner_typing_effect_interval: 100 # Banner 打字间隔时长，单位 ms/字
+banner_subtitle: '人生如戏，故事如诗。' # Banner 子标题，留空则不显示
+banner_background_url: '/background.jpg' # Banner 背景图，留空则不显示
+banner_background_hide_shapes: false # 是否隐藏 Banner 背景圆形
+enable_banner_background_shape: false # 是否开启 Banner 背景渐变样式
+banner_background_color_type: 'shape-default' # Banner 渐变样式，Banner 背景图会覆盖该选项，可选值: shape-primary, shape-default, shape-dark, bg-gradient-success, bg-gradient-info, bg-gradient-warning, bg-gradient-danger
+
+# 侧栏
+sidebar_banner_title: 'FantasyLand の 暗梦' # 侧栏标题，留空则跟随博客标题
+#sidebar_banner_subtitle: '' # 侧栏子标题，留空则不显示，设为 --hitokoto-- 调用一言
+leftbar_menu: # 侧栏顶部菜单，支持无限层级菜单嵌套
+  <i class="fa fa-home"></i> 首页: /
+  <i class="fa fa-code"></i> 技术分享: /categories/技术分享/
+  <i class="fa fa-book"></i> 喵星使者的自我修养: /categories/喵星使者的自我修养/
+  <i class="fa fa-music"></i> 天空之琴乐谱分享: /categories/天空之琴乐谱分享/
+  <i class="fa fa-star"></i> 暗梦&nbsp;の&nbsp;随心说: /categories/暗梦-の-随心说
+  <i class="fa fa-database"></i> 暗梦&nbsp;の&nbsp;自制游戏库: https://mygame.anmeng.asia
+  <i class="fa fa-archive"></i> 都市看客暗梦&nbsp;の&nbsp;归档: /archives
+enable_sidebar_function_page: true # 是否启用侧边栏功能页
+
+sidebar_auther_image: '/icon.jpg' # 侧栏作者头像
+sidebar_auther_name: '暗梦先生呀~ ' # 侧栏作者名，留空则跟随博客名
+sidebar_auther_desc: '一枚众神眷恋的都市看客 & 吟游诗人' # 侧栏作者描述
+leftbar_author_links: # 侧栏作者链接列表
+  <span style="color:#2196F3;"><i class="fa fa-qq"></i></span>: 
+    tooltip: "QQ"
+    url: tencent://message/?uin=1879857489
+  <span style="color:#FCB44C;"><i class="fa fa-envelope"></i></span>: 
+    tooltip: "E-mail"
+    url: mailto://dreamstar906@126.com
+  <i class="fa fa-github"></i>: 
+    tooltip: "GitHub"
+    url: https://github.com/LuminousDream/
+  <span style="color:#82ABBF;"><i class="fa fa-key"></i></span>: 
+    tooltip: "OpenPGP & GnuPG 公钥"
+    url: https://keys.openpgp.org/search?q=4C1B5377CDF813F3E0771E829CC6C2CEC729058D
+  <span style="color:#FF9700;"><i class="fa fa-rss"></i></span>: 
+    tooltip: "RSS"
+    url: /atom.xml
+  <span style="color:#F05B85;"><i class="fa fa-rss"></i></span>: 
+    tooltip: "说说 RSS"
+    url: /atom_shuoshuo.xml
+leftbar_friend_links: false # 侧栏友链列表
+show_headindex_number: false # 侧栏文章目录是否显示章节编号
+blogstyle: "default"
+waterflow: true
+waterflow_columns: '2and3'
+banner_format: 'banner-as-cover'
+
+# PWA (Progressive Web App) [暗梦：em...... 目前暂时没有必要使用这种功能。]
+pwa:
+    enable: false
+    pwa_offline_resource_list:
+        - "/style.css"
+    name: "FantasyLand の 暗梦"
+    description: "人生如戏，故事如诗。"
+    theme_color: "#F05B85"
+    background_color: "#F05B85"
+    start_url: "/"
+    pwa_icon: /pwa_icon.png
+    pwa_icon_size: "256x256"
+
+# 文章
+excerpt: true # 是否显示文章摘要，为 false 则显示全文
+first_image_as_thumbnail: false # 自动取文章第一张图为特色图片
+article_meta: time|categories|read|words|readingtime|info
+reading_speed_cn: 300 # 每分钟中文阅读字数，用于计算预计阅读时间
+reading_speed_en: 160 # 每分钟英文阅读单词数，用于计算预计阅读时间
+donate_qrcode_url: '' # 赞赏二维码地址，留空则不显示
+additional_content_after_post: '' # 文末追加信息，支持 HTML，留空则不显示
+article_header_style: 2 # 文章内小标题样式，可选值: default, 1, 2
+
+# 背景
+page_background_url: '/background.jpg' # 页面背景地址，留空则不设页面背景
+page_background_dark_url: '/background_darkmode.jpg' # 夜间模式页面背景地址，留空则跟随日间模式
+page_background_opacity: 1 # 页面背景不透明度，0 ~ 1的小数
+transparent_banner: true # Banner 透明化，如果设置了背景以后推荐开启该选项
+show_toolbar_mask: true # 顶栏遮罩，如背景图片影响了顶栏文字显示对比度建议开启
+
+# 浮动操作按钮
+fab_show_darkmode_button: false # 是否显示日夜间模式切换浮动操作按钮
+fab_show_settings_button: true # 是否显示博客设置浮动操作按钮
+fab_show_gotocomment_button: false # 是否显示跳转到评论区浮动操作按钮
+
+# 平滑滚动
+smoothscroll: 1-pulse # 可选值: disabled, 1, 1-pulse, 2, 3
+
+# Zoomify
+enable_zoomify: false # 是否启用 Zoomify 图片放大预览
+zoomify_duration: 200 # 图片放大动画时长
+zoomify_easing: cubic-bezier(0.4,0,0,1) # 图片放大动画曲线
+zoomify_scale: 0.9 # 图片放大后最大占页面大小的百分比, 0 ~ 1 的小数
+
+# FancyBox
+enable_fancybox: true # 是否启用 FancyBox
+
+# Lazyload
+enable_lazyload: false # 是否启用 Lazyload
+lazyload_threshold: 800 # 图片滚动到距离页面底部多少像素开始加载
+lazyload_effect: fadeIn # 图片显示动画
+lazyload_loading_style: 1 # 图片加载的动画, 可选值 1 ~ 11, none
+
+# Pangu.js
+enable_pangu: false # 是否启用 Pangu.js 自动用空格分隔文章中的中英文字符
+
+# 其他
+pjax_disabled: false # 是否禁用 Pjax
+enable_into_article_animation: true # 是否启用进入文章动画
+enable_mobile_scale: false # 是否允许手机端缩放页面
+
+# 页脚
+footer_html: '' # 页脚 HTML
+
+# 数学公式
+math_render: '' # 数学公式渲染方案，留空则不渲染，可选值: mathjax3, mathjax2, katex
+mathjax_cdn_url: //cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js # Mathjax 3 CDN 地址
+argon_mathjax_v2_cdn_url: //cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-AMS_HTML # Mathjax 2 CDN 地址
+katex_cdn_url: //cdn.jsdelivr.net/npm/katex@0.11.1/dist/ # Katex CDN 地址
+
+# 背景粒子效果
+enable_particles: false # 是否启用 particles.js 实现背景粒子效果
+particles_config_data: '' # particles.js 所需的 JSON 配置
+
+# 代码高亮
+enable_code_highlight: true # 是否启用 Highlight.js 代码高亮
+code_theme: vs2015_anmeng # 代码高亮主题
+
+# 脚本
+custom_html_head: '' # 页头脚本，HTML
+custom_html_foot: '' # 页尾脚本，HTML
+
+# 文章 & 留言板评论
+comment_function: 
+  enable: true # 文章评论功能开关，此项不打开下列的评论系统将不会显示。
+liuyanban_comment:
+  enable: true # 留言板评论功能开关
+shuoshuo_comment:
+  enable: true # 说说评论功能开关
+test_comment:
+  enable: false  # 本机测试
+gitalk:
+  enable: false # 是否启用 Gitalk 评论系统
+  owner: ''
+  repo: ''
+  admin: ''
+  clientID: ''
+  clientSecret: ''
+giscus: # https://giscus.app/zh-CN
+  enable: false # 是否启用 Giscus 评论系统
+  repo: ''
+  repo_id: ''
+  category: ''
+  category_id: ''
+  mapping: 'pathname'
+  input_position: 'top'
+  theme: 'light'
+  lang: 'zh-CN'
+waline: # https://waline.js.org/guide/get-started.html
+  enable: false # 是否启用 Waline 评论系统
+  waline_url: "" # Waline 后端 URL
+twikoo:
+  enable: true # 是否启用 Twikoo 评论系统
+  twikoo_url:  "https://twikoo.anmeng.asia" # Twikoo 后端 URL (Tip: 包括留言板的评论。)
+artalk:
+  enable: false # 是否启用 Artalk 评论系统 (暗梦：em...... 这种评论系统暂时派不上用场，而且目前正在测试中 ... )
+  artalk_url: "testing ..." # Artalk 后端 URL
+
+# 分析
+# 百度统计
+baidu_analytics:
+  enable: false # 是否启用 百度统计
+  id: '' # hm.js? 后的一串字符
+
+# gtag 谷歌全局网络代码
+# Google Analytics  Universal Analytics(old) 与 Google Analytics（分析）4 均使用 gtag
+gtag:
+  enable: false # 是否启用 gtag
+  id: '' # 请包含 G- 或 UA-
+
+# mermaid chart
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true  # default true
+  version: "7.1.2" # default v7.1.2
+  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    #startOnload: true  // default true
+
+# 都市看客暗梦 の 一些自定义配置
+enable_randompost: true # 是否启用随机文章功能
+enable_show_fps: true # 是否显示博客帧率 (FPS)
+enable_musicbox: true # 是否启用博客的 Aplayer 音乐播放器
+shuoshuo_atom: # 说说 RSS (Atom) 配置 (无需 hexo-generator-feed 独立生成)
+  enable: true # 是否生成说说 RSS
+  atom_title: "FantasyLand の 暗梦 的说说" # 说说 RSS 标题
+  atom_subtitle: "人生如戏，故事如诗。" # 说说 RSS 描述
+  atom_entry: "/atom_shuoshuo.xml" # 生成后说说 RSS 的路径
+  limit: 5 # 最多生成 RSS 内的说说篇数

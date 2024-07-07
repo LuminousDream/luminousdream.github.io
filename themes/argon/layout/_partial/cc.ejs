@@ -1,0 +1,24 @@
+<% if(post.type != "shuoshuo") { %>
+<div class="card" id="cc_info">
+<br>
+<div id="cc_post_title" style="margin-left:20px;"><strong><%- post.title %></strong></div>
+<div id="cc_post_link" style="margin-left:20px;font-size:14px;"><i class="fa fa-link"></i> <a id="localurl"></a></div>
+<div id="cc_post_info" style="margin-left:20px;font-size:14px;"><i class="fa fa-flag"></i> 商业转载请联系作者获得授权，非商业转载请注明出处，转载请注明来自 <a href="/"><%= config.title %></a>！</div>
+
+<br>
+<table style="margin-left:20px;word-wrap: normal;" id="cc_post_table">
+<tr><td style="font-size:14px;"><i class="fa fa-user"></i> 作者</td><td style="font-size:14px;"><i class="fa fa-clock-o"></i> 发布于</td><td style="font-size:14px;"><i class="fa fa-copy"></i> 许可协议</td></tr>
+<tr><td><%= theme.sidebar_auther_name %></td>
+<td><%= full_date(post.date,"YYYY-M-D") %></td>
+<td><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" id="cc_link" title="署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) " ><i class="fa fa-creative-commons"></i> CC BY-NC-SA 4.0</a></td></tr>
+</table>
+<br>
+</div>
+
+
+<script>
+	document.querySelector("#localurl").innerHTML = window.location.href;
+	document.querySelector("#localurl").href = window.location.href;
+</script>
+<br>
+<% } %>

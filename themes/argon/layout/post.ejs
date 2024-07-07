@@ -1,0 +1,11 @@
+<% if (is_post()) { %>
+	<% if(page.type == "shuoshuo") { %>
+		<%- partial('_partial/content-shuoshuo', {post: page}) %>
+	<% }else{ %>
+		<%- partial('_partial/content-article', {post: page}) %>
+	<% } %>
+	<%- partial('_partial/article-bottom', {post: page}) %>
+<% } %>
+<% if (is_page()) { %>
+	<%- partial('_partial/content-page', {post: page}) %>
+<% } %>

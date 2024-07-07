@@ -1,0 +1,26 @@
+<div id="waline" style="padding: 5px 5px 5px 5px;"></div>
+<script>
+  var waline_object = Waline.init({
+		    el: '#waline',
+		    serverURL: '<%= theme.waline.waline_url %>',
+		    requiredMeta: ["nick","mail"],
+		    dark: 'html.darkmode',
+		    search: false,
+		    emoji: [
+      		    '//unpkg.com/@waline/emojis@1.1.0/weibo',
+		        '//unpkg.com/@waline/emojis@1.1.0/bilibili',
+		    ],
+		    locale: {
+		      admin: '都市看客兼吟游诗人',
+		      placeholder: '向着星辰与深渊，愿星辰皆因你而璀璨。',
+		    },
+		    });
+
+			// 美化留言板
+			document.querySelector("label[for='wl-nick']").innerHTML = "&nbsp;<i class='fa fa-user-circle'></i>&nbsp;&nbsp;昵称";
+			document.querySelector("label[for='wl-mail']").innerHTML = "&nbsp;<i class='fa fa-envelope-o'></i>&nbsp;&nbsp;邮箱"
+			document.querySelector("label[for='wl-link']").innerHTML = "&nbsp;<i class='fa fa-link'></i>&nbsp;&nbsp;网址(可选)";
+			document.querySelector(".wl-preview h4").innerHTML = "&nbsp;<i class='fa fa-file-o'></i>&nbsp;&nbsp;预览 :";
+			$('.wl-btn:contains("登录")').html("<i class='fa fa-key'></i>&nbsp;&nbsp;登录");
+			$('.wl-btn:contains("提交")').html("<i class='fa fa-arrow-right'></i>&nbsp;&nbsp;提交");
+</script>

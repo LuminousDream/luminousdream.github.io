@@ -1,0 +1,32 @@
+<div class="shuoshuo-container">
+    <div class="shuoshuo-meta shadow-sm" style="margin-bottom:5px;">
+        <span>
+            <i class="fa fa-user" aria-hidden="true"></i>
+             暗梦先生呀~
+            <div class="post-meta-devide">|</div>
+            <i class="fa fa-calendar-o" aria-hidden="true"></i> 
+            <%- full_date(post.date, 'YYYY-M-D') %>
+            <div class="post-meta-devide">|</div>
+            <i class="fa fa-clock-o" aria-hidden="true"></i> 
+            <%- full_date(post.date, 'H:mm') %>
+            <% if (!post.info == ""){ %>
+                <div class="post-meta-devide">|</div>
+                    <%- post.info %>
+            <% } %>
+            <% if (!post.location == "") { %>
+                <div class="post-meta-devide">|</div>
+                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                <%- post.location %> 
+            <% } %>
+        </span>
+    </div>
+
+    <article class="card shuoshuo-main bg-white shadow-sm border-0">
+    <% if (!post.title == ""){ %>
+              <a class="shuoshuo-title"><%- post.title %></a>
+            <% } %>
+        <div class="shuoshuo-content">
+            <%- argon_preprocess_article(post.content, theme, false) %>
+        </div>	
+</article>
+</div>

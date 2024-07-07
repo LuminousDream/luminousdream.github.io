@@ -1,0 +1,215 @@
+					<footer id="footer" class="site-footer card shadow-sm border-0">
+						<font id="footer_copyright">CopyRight © 2021 暗梦先生呀~ All Rights Reserved.</font>
+						<div>Theme <a href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> By solstice23 | Powered by <a href="https://hexo.io"><strong>Hexo</strong></a> | 
+							<a onclick='changetime();' id='datetime' style="font-size:15px;" class='serif'>
+								</a>
+								<a id='fantasy_time_help'></a>
+								<script>
+								var sw = 0;
+								var zqhelp=0;
+								</script>
+								<script type="text/javascript">
+								function time_help()
+								{
+								switch(zqhelp)
+								{
+								
+								case 0:
+								swal("关于鸥历的历法[1/3]","鸥历是在奥利恩斯世界通用的时间\n例如：鸥历842年为公历2011年(因为那是游戏的发布的那一年，剧情全部走完了)\n所以它的元年为1169年\n【另外，鸥历和公历的24小时制(24小时一天)不同，它一天则为12小时制(12小时一天)】","info");
+								zqhelp=zqhelp+1;
+								break;
+								
+								case 1:
+								swal("关于鸥历的历法[2/3]","鸥历月份换算表：\n1月份  火之月 ｜7月份 土之月\n2月份 水之月｜8月份 岚之月\n3月份 岩之月｜9月份 热之月\n4月份 风之月｜10月份 冷之月\n5月份 炎之月｜11月份 岩之月\n6月份 冰之月｜12月份 空之月","info");
+								zqhelp=zqhelp+1;
+								break;
+								
+								case 2:
+								swal("关于鸥历的历法[3/3]","\n\n该历法来源于PSP游戏《最终幻想·零式》，如有雷同纯属巧合","info",{buttons: {
+								button1:
+								{
+								text: "Get In RomsFun!",
+								value:"get"
+								},
+								button2:
+								{
+								text: "了解游戏剧情",
+								value:"info"
+								},
+								button3:
+								{
+								text: "OK",
+								value:"ok"
+								},
+								
+								},}).then(function(value){
+								if(value == "get"){
+								  window.open("https://romsfun.com/roms/playstation-portable/final-fantasy-reishiki.html");
+								}
+								else if(value == "info"){
+								  window.open("http://www.k73.com/psp/39029.html");
+								}
+								});
+								zqhelp=0;
+								break;
+								
+								}
+								
+								}
+								function changetime()
+								{
+								if(sw == 0)
+								{
+								document.getElementById("datetime").innerHTML = pangu.spacing(Fantasy_Now());
+								document.getElementById("fantasy_time_help").innerHTML = "<a onclick='time_help();' id='fantasy_time_help' style='font-size:15px;' class='serif'> [说明] </a>";
+								sw=1;
+								}else
+								{
+								document.getElementById("datetime").innerHTML = pangu.spacing(Real_Now());
+								document.getElementById("fantasy_time_help").innerHTML = "";
+								
+								sw=0;
+								}
+								}
+								
+								document.getElementById("datetime").innerHTML = pangu.spacing(Real_Now());
+								document.getElementById("fantasy_time_help").innerHTML = "";
+
+								</script>
+						</a>
+						</div>
+
+					</footer>
+				</main>
+			</div>
+		</div>
+
+		<script>
+		document.body.addEventListener('copy', function (e) {
+ 		   if (window.getSelection().toString() && window.getSelection().toString().length > 10) {
+   		     setClipboardText(e);
+  		  }
+		}); 
+
+		function setClipboardText(event) {
+			var clipboardData = event.clipboardData || window.clipboardData;
+			if (clipboardData) {
+				event.preventDefault();
+				var htmlData = ''
+					+ '*-----------------------------------------------------------------------*<br>'
+					+ '# 商业转载请联系作者获得授权，非商业转载请注明出处<br>'
+					+ '# For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source.<br>'
+					+ '# 协议(License)：署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)<br>'
+					+ '# 作者(Author)：暗梦先生呀~ <br>'
+					+ '# 链接(URL)：' + window.location.href + '<br>'
+					+ '# 来源(Source)： '+ window.location.hostname +' <br>'
+					+ '*-----------------------------------------------------------------------*<br><br>'
+					+ window.getSelection().toString();
+				var textData = ''
+					+ '*-----------------------------------------------------------------------*\n'
+					+ '# 商业转载请联系作者获得授权，非商业转载请注明出处\n'
+					+ '# For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source.\n'
+					+ '# 协议(License)：署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)\n'
+					+ '# 作者(Author)：暗梦先生呀~ \n'
+					+ '# 链接(URL)：' + window.location.href + '\n'
+					+ '# 来源(Source)： '+ window.location.hostname +' \n'
+					+ '*-----------------------------------------------------------------------*\n\n'
+					+ window.getSelection().toString();
+				  clipboardData.setData('text/html', htmlData);
+				  clipboardData.setData('text/plain',textData);
+				  mdui.snackbar({message: '<strong>Copied!</strong><br><i>tip:请尊重原创文章，非商业转载请注明出处。</i><br>作者(Author)：暗梦先生呀~ ',position: 'right-top'});
+			}
+		}
+
+		if (window.location.hostname === "anmeng.eu.org") {
+		  checkblogpush_and_print_lastmessage();
+		}
+		
+		</script>
+		<%- js('/argontheme.js') %>
+		<% if (theme.math_render == 'mathjax3') { /*Mathjax V3*/%>
+			<script>
+				window.MathJax = {
+					tex: {
+						inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+						displayMath: [['$$','$$']],
+						processEscapes: true,
+						packages: {'[+]': ['noerrors']}
+					},
+					options: {
+						skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+						ignoreHtmlClass: 'tex2jax_ignore',
+						processHtmlClass: 'tex2jax_process'
+					},
+					loader: {
+						load: ['[tex]/noerrors']
+					}
+				};
+			</script>
+			<script src="<%= theme.mathjax_cdn_url %>" id="MathJax-script" async></script>
+		<% } %>
+		<% if (theme.math_render == 'mathjax2') { /*Mathjax V2*/%>
+			<script type="text/x-mathjax-config" id="mathjax_v2_script">
+				MathJax.Hub.Config({
+					messageStyle: "none",
+					tex2jax: {
+						inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+						displayMath: [['$$','$$']],
+						processEscapes: true,
+						skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+					},
+					menuSettings: {
+						zoom: "Hover",
+						zscale: "200%"
+					},
+					"HTML-CSS": {
+						showMathMenu: "false"
+					}
+				});
+			</script>
+			<script src="<%= theme.mathjax_v2_cdn_url %>"></script>
+		<% } %>
+		<% if (theme.math_render == 'katex') { /*Katex*/%>
+			<link rel="stylesheet" href="<%= theme.katex_cdn_url %>katex.min.css">
+			<script src="<%= theme.katex_cdn_url %>katex.min.js"></script>
+			<script src="<%= theme.katex_cdn_url %>contrib/auto-render.min.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body,{
+						delimiters: [
+							{left: "$$", right: "$$", display: true},
+							{left: "$", right: "$", display: false},
+							{left: "\\(", right: "\\)", display: false}
+						]
+					});
+				});
+			</script>
+		<% } %>
+
+		<% if (theme.enable_code_highlight) { /*Highlight.js*/ %>
+			<script>
+				var argonEnableCodeHighlight = true;
+			</script>
+			<%- css('/assets/vendor/highlight/styles/' + theme.code_theme + '.css') %>
+		<% } %>
+
+	</div>
+</div>
+<noscript>
+	<style>
+		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+		.comment-item-text .comment-sticker.lazyload{display: none;}
+	</style>
+</noscript>
+</body>
+
+<% if(theme.enable_particles) { %>
+	<script>
+		particlesJS("particles-js", <%= theme.particles_config_data %>);
+	</script>
+<% } %>
+
+<%- include('pwa_sw.ejs') %>
+<%- theme.custom_html_foot %>
+<%- include('aplayer.ejs') %>
+</html>

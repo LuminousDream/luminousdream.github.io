@@ -1,0 +1,13 @@
+<!--  -->
+<script src="https://cdn.bootcdn.net/ajax/libs/artalk/2.6.4/Artalk.js"></script>
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/artalk/2.6.4/Artalk.css" />
+<link rel="stylesheet" href="/assets/css/artalk.anmeng.css" />
+<div id="artalk_comments"></div>
+<script>
+        var artalk = Artalk.init({
+    		el: '#artalk_comments',
+    		pageKey: '<%= page.permalink %>',
+    		pageTitle: '<%= page.title %>',
+    	    server: '<%= theme.artalk.artalk_url %>'
+ 	})
+</script>

@@ -1,0 +1,15 @@
+<div id="twikoo_comments"></div>
+<script>
+  var blog_comment_object = twikoo.init({
+				envId: "<%= theme.twikoo.twikoo_url %>",
+  				el: '#twikoo_comments',
+  				lang: 'zh-CN',
+				onCommentLoaded: function () {
+    			document.querySelectorAll('#twikoo a').forEach(function(aEl){
+      				if(!aEl.href.startsWith(window.location.origin) && !aEl.href.startsWith("<%= config.url %>")){
+        				aEl.href='/go/?url='+encodeURI(aEl.href.replace(/\/$/, ''));
+      				}
+    			});
+  				}
+})
+</script>
