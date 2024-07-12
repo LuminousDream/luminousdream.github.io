@@ -127,6 +127,14 @@ var blogLinks = [
     linkstatus: "ok"
   },
   {
+    name: "Pinpe 的云端",
+    link: "https://pinpe.top",
+    description: "一个属于自己的云朵。",
+    avatar: "/static/avatar/pinpe.top.webp",
+    type: "tech + life",
+    linkstatus: "ok"
+  },
+  {
     name: "竹春廿柒",
     link: "https://mojinxi.cn",
     description: "相视而笑，莫逆于心。",
@@ -147,13 +155,6 @@ var blogLinks = [
     link: "https://blog.dreamfall.cn",
     description: "因为不可能，所以才值得相信",
     avatar: "/static/avatar/mengluo.webp",
-    type: "tech",
-    linkstatus: "ok"
-  },{
-    name: "Qeem",
-    link: "https://itstarqeem.space",
-    description: "阿巴阿巴…",
-    avatar: "/static/avatar/itstarqeem.space.webp",
     type: "tech",
     linkstatus: "ok"
   }
