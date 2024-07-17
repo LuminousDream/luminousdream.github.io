@@ -59,7 +59,7 @@ english_name: "About AnMeng"
   - <i class="fa fa-lock" aria-hidden="true" /></i>&nbsp;&nbsp;都市看客暗梦 の OpenPGP & GnuPG 公钥:
     + <i class="fa fa-key" aria-hidden="true" /></i>&nbsp;&nbsp;公钥指纹：`4C1B 5377 CDF8 13F3 E077 1E82 9CC6 C2CE C729 058D`
     + <i class="fa fa-link" aria-hidden="true" /></i>&nbsp;&nbsp;URL：https://keys.openpgp.org/search?q=4C1B5377CDF813F3E0771E829CC6C2CEC729058D
-  - <i class="fa fa-gamepad" aria-hidden="true" /></i>&nbsp;&nbsp;原神 [国际服 TW,HK,MO] UID: 908309763 *(Tip: 都市看客暗梦正在从 0 开始探索提瓦特中......)*
+  - <i class="fa fa-gamepad" aria-hidden="true" /></i>&nbsp;&nbsp;原神 [国际服 TW,HK,MO] UID: 908309763 *(Tip: ~~都市看客暗梦正在从 0 开始探索提瓦特中~~ 虽然冒险等级已经来到了 55，但世界探索度不高，正在继续探索中......)*
   > Tip: **不接受旅行者们来我世界多人游戏**，毕竟暗梦我也只是把国际服原神当单机游戏，在闲暇之余，偶尔做做主线 & 偶尔来逛逛也就足够了，好吧 (o-ωｑ)).oO [梦之无奈]
 
 <div class="alert alert-danger">
@@ -129,7 +129,7 @@ realImg.onload = function() {
 
 {% tlnode '2023-06-21' %}
 <ul>
-<li>anmeng.eu.org <del>(Tip: em...... 暗梦我开始用这个域名作为主链接了，好吧，亲爱的旅行者们~ )</br>不过总是使用这个域名也不是办法，em...... 后续可能会在 Dnspod 购入一个 .work 域名<br>旅行者们可以来看 <a href="/2c9586b5">暗梦我写的文章之其 IV</a> <i>(tip:此处为罗马数字的 4)</del></i><br><br></li>
+<li><del>anmeng.eu.org (Tip: em...... 暗梦我开始用这个域名作为主链接了，好吧，亲爱的旅行者们~ )</br>不过总是使用这个域名也不是办法，em...... 后续可能会在 Dnspod 购入一个 .work 域名<br>旅行者们可以来看 <a href="/2c9586b5">暗梦我写的文章之其 IV</a> <i>(tip:此处为罗马数字的 4)</del></i><br><br></li>
 <div class="badge my_blog_moment_tag tag"><i class="fa fa-github"></i>&nbsp;静态博客托管：Github</div>
 <div class="badge my_blog_moment_tag tag"><i class="fa fa-server"></i>&nbsp;评论系统数据库 & 后端：MongoDB & Deta</div>
 <div class="badge my_blog_moment_tag tag"><i class="fa fa-server"></i>&nbsp;<del>评论系统备用后端：Vercel (已再次注销帐号)</del></div>
