@@ -120,7 +120,7 @@ var blogLinks = [
   },
   {
     name: "Vinking",
-    link: "https://vinking.top",
+    link: "https://www.vinking.top",
     description: "一个安静的地方",
     avatar: "/static/avatar/vinking.top.webp",
     type: "tech + life",
