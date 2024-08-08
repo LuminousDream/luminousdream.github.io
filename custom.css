@@ -1,0 +1,10 @@
+body {
+   cursor:url(/arrow.cur),
+         default;
+ }
+
+ 
+a,img,.mdui-ripple {
+   cursor:url(/link.cur),
+         default;
+}

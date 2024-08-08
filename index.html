@@ -1,0 +1,4631 @@
+<!DOCTYPE html>
+
+
+<html class="use-lxgw_wk banner-as-cover article-header-style-2">
+<head>
+	
+	<title>FantasyLand の 暗梦 - 人生如戏，故事如诗。</title>
+	<meta charset="utf-8">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<meta property="og:type" content="website">
+<meta property="og:title" content="FantasyLand の 暗梦">
+<meta property="og:url" content="https://anmeng.asia/index.html">
+<meta property="og:site_name" content="FantasyLand の 暗梦">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="暗梦先生呀~">
+<meta name="twitter:card" content="summary">
+	
+	<meta name="theme-color" content="#F05B85">
+	<meta name="theme-color-rgb" content="240,91,133">
+	<meta name="theme-color-origin" content="#F05B85">
+	<meta name="argon-enable-custom-theme-color" content="true">
+	<meta name="theme-card-radius" content="15">
+	<meta name="theme-version" content="1.0.2">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<script src="/assets/vendor/mdui/mdui.min.js"></script>
+    <script src="/assets/vendor/sweetalert/sweetalert.min.js"></script>
+	<script src="/assets/vendor/marked/marked.min.js"></script>
+	<script src="/assets/js/APlayer.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/APlayer.min.css" />
+	<script src="/assets/vendor/echarts/echarts.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/twikoo.anmeng.css"/>
+	<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.7.0/style.css">
+	<script src="/assets/js/darkdream_piano.js"></script>
+	<script src="/assets/js/ff_clock.js"></script>
+	<script src="/assets/js/darkdream_blog.js"></script>
+	<script src="/assets/js/darkdream_roman_clock.js"></script>
+	<script src="/assets/js/calendar.js"></script>
+	<script src="/assets/js/echarts.min.js"></script>
+	<script src="/assets/vendor/twikoo/twikoo.all.anmeng.min.js"></script>
+	
+		<script async src="/assets/js/darkdream_blog_fps.js"></script>
+	
+	<div id="fps"></div>
+	<style id="fancybox-style-noscroll" type="text/css">
+		.compensate-for-scrollbar{
+			margin-right:15px;
+		}
+	</style>
+	
+<link rel="stylesheet" href="/assets/vendor/mdui/mdui.min.css">
+
+	
+<link rel="stylesheet" href="/assets/argon_css_merged.css">
+
+	
+<link rel="stylesheet" href="/style.css">
+
+	
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Noto+Serif+SC:300,600&display=swap.css">
+
+	
+<script src="/assets/argon_js_merged.js"></script>
+
+	
+<script src="/assets/js/argon.min.js"></script>
+
+
+	
+	
+
+	<script>
+		var argonConfig = {
+			language: "zh_CN",
+			
+				zoomify: false,
+			
+			
+				fancybox: {},
+			
+			pangu: "false",
+			
+				lazyload: false,
+			
+			disable_pjax: false,
+			headroom: false,
+			
+				waterflow_columns: "2and3"
+			
+		}
+
+		
+		
+		
+		var anmeng_blog_config = {
+			twikoo: {
+				twikoo_url: "https://twikoo.anmeng.asia"
+			},
+			blog_last_update_time: "2024-08-07"
+		};
+	</script>
+	<script no-pjax="">
+	function yearprogress_refresh(){
+		let year = new Date().getFullYear();
+		$("#yearprogress_yearname").text(year);
+		let from = new Date(year, 0, 1, 0, 0, 0);
+		let to = new Date(year, 11, 31, 23, 59, 59);
+		let now = new Date();
+		let progress = ((now - from) / (to - from + 1) * 100).toFixed(7);
+		let progressshort = ((now - from) / (to - from + 1) * 100).toFixed(2);
+		$("#yearprogress_progresstext").text(progressshort + "%");
+		$("#yearprogress_progresstext_full").text(progress + "%");
+		$("#yearprogress_progressbar").css("width" , progress + "%");
+	}
+		yearprogress_refresh();
+		if (typeof(yearProgressIntervalHasSet) == "undefined"){
+   		 var yearProgressIntervalHasSet = true;
+   		 setInterval(function(){yearprogress_refresh();},500);
+	}
+</script>
+	<script>
+		window.addEventListener("scroll", function (e) {
+		  if (window.scrollY > window.innerHeight * 0.3) {
+		    document.querySelector("#content").classList.add("scrolled");
+		  } else {
+		    document.querySelector("#content").classList.remove("scrolled");
+		  }
+		});
+	</script>
+	<script>
+		var darkmodeAutoSwitch = "system";
+		
+ 		function setDarkmode(enable){
+			if (enable == true){
+				$("html").addClass("darkmode");
+			}else{
+				$("html").removeClass("darkmode");
+			}
+			$(window).trigger("scroll");
+		}
+		function toggleDarkmode(){
+			if ($("html").hasClass("darkmode")){
+				setDarkmode(false);
+				$("#cc_info").removeClass("cc_info_darkmode");
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "false");
+			}else{
+				setDarkmode(true);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "true");
+				$("#cc_info").addClass("cc_info_darkmode");
+			}
+		}
+		if (sessionStorage.getItem("Argon_Enable_Dark_Mode") == "true"){
+			setDarkmode(true);
+		}
+		function toggleDarkmodeByPrefersColorScheme(media){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			if (media.matches){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		
+		if (darkmodeAutoSwitch == 'system'){
+			var darkmodeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			darkmodeMediaQuery.addListener(toggleDarkmodeByPrefersColorScheme);
+			toggleDarkmodeByPrefersColorScheme(darkmodeMediaQuery);
+		}
+		
+		if (darkmodeAutoSwitch == 'alwayson'){
+			setDarkmode(true);
+		}
+
+		function toggleAmoledDarkMode(){
+			$("html").toggleClass("amoled-dark");
+			if ($("html").hasClass("amoled-dark")){
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "true");
+			}else{
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "false");
+			}
+		}
+		if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "true"){
+			$("html").addClass("amoled-dark");
+		}else if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "false"){
+			$("html").removeClass("amoled-dark");
+		}
+	</script>
+	<script>
+		if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1){
+			$("html").addClass("using-safari");
+		}
+	</script>
+
+	
+		
+<script src="/assets/vendor/smoothscroll/smoothscroll1.js"></script>
+
+	
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+
+<style id="themecolor_css">
+	
+	:root{
+		--themecolor: #F05B85;
+		--themecolor-dark0: #EF4F7C;
+		--themecolor-dark: #EE4474;
+		--themecolor-dark2: #EC2C62;
+		--themecolor-dark3: #E91551;
+		--themecolor-light: #F48AA8;
+		--themecolor-R: 240;
+		--themecolor-G: 91;
+		--themecolor-B: 133;
+		--themecolor-rgbstr: 240,91,133;
+		--theme-opacity: .65;
+		--themecolor-gradient: linear-gradient(150deg,var(--themecolor-light) 15%, var(--themecolor) 70%, var(--themecolor-dark0) 94%);
+
+	}
+</style>
+<style id="theme_cardradius_css">
+	:root{
+		--card-radius: 15px;
+	}
+</style>
+<body>
+
+<div id="toolbar">
+	<header class="header-global">
+		<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light bg-primary headroom--not-bottom headroom--not-top headroom--pinned">
+			<div class="container">
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="/">FantasyLand の 暗梦</a>
+				<div class="navbar-collapse collapse" id="navbar_global">
+					<div class="navbar-collapse-header">
+						<div class="row">
+							<div class="col-6 collapse-brand"></div>
+							<div class="col-6 collapse-close">
+								<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+									<span></span>
+									<span></span>
+								</button>
+							</div>
+						</div>
+						&nbsp;
+					</div>
+					
+							<ul class='navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto"'>
+								
+										<li class='nav-item'>
+											<a href='/' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-home mr-1"></i>&nbsp;首页</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/shuoshuo' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-quote-left mr-1"></i>&nbsp;说说</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/archives' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-archive mr-1"></i>&nbsp;归档</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/liuyanban' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-comment mr-1"></i>&nbsp;留言板</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/suzaku_links' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-address-book mr-1"></i>&nbsp;友人账</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/suzaku_piano' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-music mr-1"></i>&nbsp;暗梦的天空之琴</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a target="_blank" rel="noopener" href='https://www.travellings.cn/go.html' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-subway mr-1"></i>&nbsp;开往</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/about' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-user mr-1"></i>&nbsp;关于我</span>
+											</a>
+											
+										</li>
+									
+							</ul>
+						
+				
+			</div>
+			<ul class="navbar-nav align-items-lg-center ml-lg-auto">
+				<li id="navbar_search_container" class="nav-item" data-toggle="modal">
+					<div id="navbar_search_input_container" class="">
+						<div class="input-group input-group-alternative">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-search"></i></span>
+							</div>
+							<input id="local-search-input" class="form-control" placeholder="搜索文章 & 说说" type="text" autocomplete="off" data-search.path="search.xml" data-config.root="/">
+							<div id="local-search-result" class="modal-content"></div>
+						</input>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</nav>
+	</header>
+</div>
+
+<!--Banner-->
+<section id="banner" class="banner section section-lg section-shaped">
+	
+	<div class="shape shape-style-1 shape-default">
+	
+	</div>
+
+	
+	<div id="banner_container" class="banner-container container text-center">
+		<div class="banner-title text-white"><span class="banner-title-inner">FantasyLand の 暗梦</span>
+		<script src="/assets/vendor/typed.js/typed.js"></script>
+		<span class="banner-subtitle d-block">
+			<span id="typed"></span>
+		</span>
+		<script>
+	  		var typed = new Typed('#typed', {
+	    		"strings":["Hello，来自异乡的旅行者，I'm 暗梦，你也可以叫我沉默Ace</br>来坐坐吧，让我们来观赏夜空，来回忆曾经的诗与远方。","在都市里一些阴暗的角落中，也有人人心系的梦想<br>但我们仍旧可以保持善良与友爱。","我们看错了这个世界，却说这个世界欺骗了我们。","或许人生没有Ctrl+Z，或者在Mac上的Command+Z，有时候你需要</br>“[root@Your's Life]# reboot ”","有时侯明白人的一生当中，深刻的思念是维系自己与记忆的纽带</br>它维系着所有的过往，悲喜，亦指引我们深入茫茫命途<br>这是我们宿命的背负，但我始终甘之如饴地承受它的沉沉重量，用以平衡轻浮的生。","人最怕的不是失去，而是没有面对失去的勇气</br>人生，得失聚散，坦然处之，得到未必是福，失去未必是祸。","人生如戏，故事如诗。"],"typeSpeed":140,"backSpeed":50,"loop":false,"showCursor":true,cursorChar: ' ✦'
+	  		});
+			</script>
+
+	</div>
+	</div>
+	
+		<style>
+			section.banner{
+				background-image: url(/background.jpg) !important;
+			}
+		</style>
+	
+	<div class="cover-scroll-down">
+		<i class="fa fa-angle-down" id="cover-scroll-down-icon" aria-hidden="true"></i>
+	</div>
+</section>
+
+
+	<style>
+		#content.scrolled::after,
+		#content.scrolled::before {
+                   filter: blur(6px);
+                   transform: scale(1.02);
+		}
+
+		#content:before {
+			transition: filter .3s ease, transform .3s ease !important;
+			content: '';
+			display: block;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -2;
+			background: url(/background.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 1;
+			transition: opacity .5s ease;
+		}
+		html.darkmode #content:before{
+			filter: brightness(0var(--theme-opacity));
+		}
+		
+			#content:after {
+				content: '';
+				transition: filter .3s ease, transform .3s ease !important;
+				display: block;
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: -2;
+				background: url(/background_darkmode.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: opacity .5s ease;
+			}
+			html.darkmode #content:after {
+				opacity: 1;
+			}
+			html.darkmode #content:before {
+				opacity: 0;
+			}
+		
+		
+			#banner, #banner .shape {
+				background: transparent !important;
+			}
+		
+	</style>
+
+
+
+	<style>
+		#banner:after {
+			content: '';
+			width: 100vw;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 120px;
+			background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0) 100%);
+			display: block;
+			z-index: -1;
+		}
+		.banner-title {
+			text-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+		}
+	</style>
+
+
+<div id="float_action_buttons" class="float-action-buttons fabtns-unloaded">
+	<button id="fabtn_toggle_sides" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip-move-to-left="移至左侧" tooltip-move-to-right="移至右侧">
+		<span class="btn-inner--icon fabtn-show-on-right"><i class="fa fa-caret-left"></i></span>
+		<span class="btn-inner--icon fabtn-show-on-left"><i class="fa fa-caret-right"></i></span>
+	</button>
+	<button id="fabtn_back_to_top" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" aria-label="Back To Top" tooltip="回到顶部">
+		<span class="btn-inner--icon"><i class="fa fa-angle-up"></i></span>
+	</button>
+	
+	<button id="fabtn_toggle_aplayer" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" tooltip="音乐播放器">
+		<span class="btn-inner--icon"><i class="fa fa-music"></i></span>
+	</button>
+	
+	<button id="fabtn_toggle_darkmode" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" <-% theme.fab_show_darkmode_button ? "" : "style='display: none;'  aria-label="Toggle Darkmode" tooltip-darkmode="夜间模式" tooltip-blackmode="暗黑模式" tooltip-lightmode="日间模式">
+		<span class="btn-inner--icon"><i class="fa fa-moon-o"></i><i class='fa fa-lightbulb-o'></i></span>
+	</button>
+	
+	<button id="fabtn_goto_randompost" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" aria-label="goto_randompost" tooltip="随机文章">
+		<span class="btn-inner--icon"><i class="fa fa-random"></i></span>
+	</button>
+	
+	<button id="fabtn_go_to_comment" class="btn btn-icon btn-neutral fabtn shadow-sm d-none" type="button" style="height: 30px !important;" <-% theme.fab_show_gotocomment_button ? "" : "style='display: none;'"  aria-label="Comment" tooltip="评论">
+		<span class="btn-inner--icon"><i class="fa fa-comment-o"></i></span>
+	</button>
+	<button id="fabtn_toggle_blog_settings_popup" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" <-% theme.fab_show_settings_button ? "" : "style='display: none;'"  aria-label="Open Blog Settings Menu" tooltip="设置">
+		<span class="btn-inner--icon"><i class="fa fa-cog"></i></span>
+	</button>
+	<div id="fabtn_blog_settings_popup" class="card shadow-sm" style="opacity: 0;" aria-hidden="true">
+		<div id="close_blog_settings"><i class="fa fa-close"></i></div>
+		<div class="blog-setting-item mt-3">
+			<div style="transform: translateY(-4px);"><div id="blog_setting_toggle_darkmode_and_amoledarkmode" tooltip-switch-to-darkmode="切换到夜间模式" tooltip-switch-to-blackmode="切换到暗黑模式"><i class="fa fa-moon-o"></i>&nbsp;&nbsp;<span>夜间模式</span><span>暗黑模式</span></div></div>
+			<div style="flex: 1;"></div>
+			<label id="blog_setting_darkmode_switch" class="custom-toggle">
+				<span class="custom-toggle-slider rounded-circle"></span>
+			</label>
+		</div>
+		
+		<div class="blog-setting-item mt-3 toggle_readingmode">
+			<div style="transform: translateY(-4px);"><div id="blog_setting_toggle_readingmode"><i class="fa fa-book"></i>&nbsp;&nbsp;<span>阅读模式布局 <i>(单栏布局)</i></span></div></div>
+			<div style="flex: 1;"></div>
+			<label id="blog_setting_readingmode_switch" class="custom-toggle">
+				<span class="custom-toggle-slider rounded-circle"></span>
+			</label>
+		</div>
+		
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;"><i class="fa fa-font"></i>&nbsp;&nbsp;字体</div>
+			<div>
+				<button id="blog_setting_font_sans_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-left">Sans Serif</button><button id="blog_setting_font_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-right">Serif</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;"></div>
+			<div>
+				<button id="blog_setting_font_lxgw_wk" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-left">霞鹜文楷</button><button id="blog_setting_font_myzymyqx" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-single">满眼醉意梦屿千寻</button><button id="blog_setting_font_unifont" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-right">GNU Unifont</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;"><i class="fa fa-clone"></i>&nbsp;&nbsp;阴影</div>
+			<div>
+				<button id="blog_setting_shadow_small" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-left">浅阴影</button><button id="blog_setting_shadow_big" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-right">深阴影</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3 mb-3">
+			<div style="flex: 1;"><i class="fa fa-desktop"></i>&nbsp;&nbsp;滤镜</div>
+			<div id="blog_setting_filters" class="ml-3">
+				<button id="blog_setting_filter_off" type="button" class="blog-setting-filter-btn ml-0" filter-name="off">关闭</button>
+				<button id="blog_setting_filter_sunset" type="button" class="blog-setting-filter-btn" filter-name="sunset">日落</button>
+				<button id="blog_setting_filter_darkness" type="button" class="blog-setting-filter-btn" filter-name="darkness">暗化</button>
+				<button id="blog_setting_filter_grayscale" type="button" class="blog-setting-filter-btn" filter-name="grayscale">灰度</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mb-3">
+			<div id="blog_setting_card_radius_to_default" style="cursor: pointer;" tooltip="恢复默认"><i class="fa fa-circle"></i>&nbsp;&nbsp;圆角</div>
+			<div style="flex: 1;margin-left: 20px;margin-right: 8px;transform: translateY(2px);">
+				<div id="blog_setting_card_radius"></div>
+			</div>
+		</div>
+		
+			<div class="blog-setting-item mt-1 mb-3">
+				<div style="flex: 1;"><i class="fa fa-eyedropper"></i>&nbsp;&nbsp;主题色</div>
+				<div id="theme-color-picker" class="ml-3"></div>
+			</div>
+		
+	</div>
+	<button id="fabtn_open_sidebar" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" aria-label="Open Sidebar Menu" tooltip="菜单">
+		<span class="btn-inner--icon"><i class="fa fa-bars"></i></span>
+	</button>
+	
+	<button id="fabtn_blog_fps" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" style="height: 30px !important;" tooltip="博客帧率 (FPS)">
+		<div id="fabtn_fps_progress_bar" style="width: 0%;"></div>
+		<span>0</span>
+	</button>
+	
+	<button id="fabtn_reading_progress" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip="阅读进度">
+		<div id="fabtn_reading_progress_bar" style="width: 0%;"></div>
+		<span id="fabtn_reading_progress_details">0%</span>
+	</button>
+</div>
+
+<div id="content" class="site-content">
+
+
+
+
+
+<div class="page-information-card-container">
+	
+</div>
+
+
+<div id="sidebar_mask"></div>
+<aside id="leftbar" class="leftbar widget-area" role="complementary">
+		
+
+		<div id="leftbar_part1" class="widget widget_search card bg-white shadow-sm border-0">
+			<div class="leftbar-banner card-body">
+				<span class="leftbar-banner-title text-white">FantasyLand の 暗梦</span>
+				<span class="leftbar-banner-subtitle text-white"><i class="fa fa-pencil"></i>&nbsp;&nbsp;人生如戏，故事如诗。</span>
+			</div>
+                                
+
+			
+                                <ul id='leftbar_part1_menu' class='leftbar-menu'>
+                                        <li class='leftbar-menu-item current'><a href='/'><i class="fa fa-home"></i> 首页</a></li><li class='leftbar-menu-item'><a href='/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/'><i class="fa fa-code"></i> 技术分享</a></li><li class='leftbar-menu-item'><a href='/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/'><i class="fa fa-book"></i> 喵星使者的自我修养</a></li><li class='leftbar-menu-item'><a href='/categories/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4%E4%B9%90%E8%B0%B1%E5%88%86%E4%BA%AB/'><i class="fa fa-music"></i> 天空之琴乐谱分享</a></li><li class='leftbar-menu-item'><a href='/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4'><i class="fa fa-star"></i> 暗梦&nbsp;の&nbsp;随心说</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://mygame.anmeng.asia'><i class="fa fa-database"></i> 暗梦&nbsp;の&nbsp;自制游戏库</a></li><li class='leftbar-menu-item'><a href='/archives'><i class="fa fa-archive"></i> 都市看客暗梦&nbsp;の&nbsp;归档</a></li>
+                                </ul>
+                        
+                </div>
+
+                <div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
+                        <div id="leftbar_part2_inner" class="card-body">
+                                
+                                
+                                        <div class="nav-wrapper" id="sidebar_tab" style="padding-top: 5px;">
+                                
+                        <ul class="nav nav-pills nav-fill" role="tablist">
+                                                
+                                                <li class="nav-item sidebar-tab-switcher">
+                                                        <a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax><i class="fa fa-id-card-o"></i>&nbsp;&nbsp;站点概览</a>
+                                                </li>
+                                                
+                                                <li class="nav-item sidebar-tab-switcher">
+                                                        <a onclick="$('#leftbar_tab_overview').removeClass('show');$('#leftbar_tab_overview').removeClass('active');" class="" id="leftbar_tab_functions_btn" data-toggle="tab" href="#leftbar_tab_functions" role="tab" aria-controls="leftbar_tab_overview" no-pjax><i class="fa fa-wrench"></i>&nbsp;&nbsp;功能</a>
+                                                </li>
+                                                
+                        </ul>
+                                </div>
+                                <div>
+                                        <div class="tab-content" style="padding: 10px 10px 0 10px;">
+                                                
+
+                                                <div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<!-- 站点概览页 -->
+                                                        <img id="leftbar_overview_author_image" src="/icon.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
+							<h6 id="leftbar_overview_author_name">暗梦先生呀~ </h6>
+							<p style="font-size:12px;">一枚众神眷恋的都市看客 & 吟游诗人</p>
+							<nav class="site-state">
+                                                                <div class="site-state-item site-state-posts">
+                                                                        <a href="/archives">
+                                                                                <span class="site-state-item-count">
+                                                                                
+                                                                                52
+                                                                                </span>
+                                                                                <span class="site-state-item-name">文章</span>
+                                                                        </a>
+                                                                </div>
+								<div class="site-state-item site-state-shuoshuo">
+									<a href="/shuoshuo">
+                                                                                <span class="site-state-item-count">8</span>
+                                                                                <span class="site-state-item-name">说说</span>
+                                                                	</a>
+								</div>
+                                                                <div class="site-state-item site-state-categories">
+                                                                        <a data-toggle="modal" data-target="#blog_categories">
+                                                                                <span class="site-state-item-count">4</span>
+                                                                                <span class="site-state-item-name">分类</span>
+                                                                        </a>
+                                                                </div>      
+                                                                <div class="site-state-item site-state-tags">
+                                                                        <a data-toggle="modal" data-target="#blog_tags">
+                                                                                <span class="site-state-item-count">14</span>
+                                                                                <span class="site-state-item-name">标签</span>
+                                                                        </a>
+                                                                </div>
+                                                        </nav>
+
+
+
+                                                        
+                                                                        <div class="site-author-links">
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="tencent://message/?uin=1879857489" rel='noopener' target='_blank'><span style="color:#2196F3;"><i class="fa fa-qq"></i></span></a>
+                                                                                                <div class="site-author-links-item-tooltip">QQ</div>
+                                                                                        </div>
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="mailto://dreamstar906@126.com" rel='noopener' target='_blank'><span style="color:#FCB44C;"><i class="fa fa-envelope"></i></span></a>
+                                                                                                <div class="site-author-links-item-tooltip">E-mail</div>
+                                                                                        </div>
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="https://github.com/LuminousDream/" rel='noopener' target='_blank'><i class="fa fa-github"></i></a>
+                                                                                                <div class="site-author-links-item-tooltip">GitHub</div>
+                                                                                        </div>
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="https://keys.openpgp.org/search?q=4C1B5377CDF813F3E0771E829CC6C2CEC729058D" rel='noopener' target='_blank'><span style="color:#82ABBF;"><i class="fa fa-key"></i></span></a>
+                                                                                                <div class="site-author-links-item-tooltip">OpenPGP &amp; GnuPG 公钥</div>
+                                                                                        </div>
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="/atom.xml" rel='noopener' target='_blank'><span style="color:#FF9700;"><i class="fa fa-rss"></i></span></a>
+                                                                                                <div class="site-author-links-item-tooltip">RSS</div>
+                                                                                        </div>
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="/atom_shuoshuo.xml" rel='noopener' target='_blank'><span style="color:#F05B85;"><i class="fa fa-rss"></i></span></a>
+                                                                                                <div class="site-author-links-item-tooltip">说说 RSS</div>
+                                                                                        </div>
+                                                                                
+                                                                        </div>
+                                                                
+                                                        
+                                                                        <div style="height: 20px;"></div>
+                                                                
+                                                    </div>
+
+                                                        
+                                                        <div class="tab-pane fade" id="leftbar_tab_functions" role="tabpanel" aria-labelledby="leftbar_tab_functions_btn">
+								<h6 class="font-weight-bold text-black"><i class="fa fa-clock-o"></i>&nbsp;Time Travel Machine</h6>
+									<div id="roman_clock"></div>
+                                                                        <script>init_darkdream_roman_clock("#roman_clock");</script>
+									<i class="fa fa-calendar-o"></i>&nbsp;<span style="font-size:12px;" id="solar_calendar_label"></span>									<p><i class="fa fa-calendar"></i>&nbsp;<span style="font-size:12px;" id="lunar_calendar_label"></span></p>
+
+									<div class="progress-wrapper" style="padding:0;">
+										<div class="progress-info">
+											<div class="progress-label">
+												<span id="yearprogress_yearname"></span>
+											</div>
+											<div id="yearprogress_text_container" class="progress-percentage">
+												<span id="yearprogress_progresstext">42.34%</span>
+												<span id="yearprogress_progresstext_full"></span>
+											</div>
+										</div>
+										<div class="progress">
+											<div id="yearprogress_progressbar" class="progress-bar bg-primary" style=""></div>
+										</div>
+									</div>
+									<script>
+									var lunar = calendar.solar2lunar();
+									var timer_started = false;
+									if (timer_started == false) {
+									    document.getElementById("solar_calendar_label").innerHTML="公历 "+lunar.cYear+" 年 "+lunar.cMonth+" 月 "+lunar.cDay+" 号 ["+lunar.astro+"]";
+									    document.getElementById("lunar_calendar_label").innerHTML="农历 "+lunar.lYear+" ["+lunar.Animal+"] 年 "+lunar.IMonthCn+lunar.IDayCn;
+									    timer_started=true;
+									}
+								</script><br>
+								<h6 class="font-weight-bold text-black"><i class="fa fa-pencil"></i>&nbsp;最新文章 & 说说</h6>
+								
+									
+										<p><span class="badge badge-primary" id="shuoshuo_label"><i class="fa fa-quote-left"></i> 说说 </span>&nbsp;<a href="/shuoshuo/87899d1/">心有 “渔” 力不足的都市看客兼吟游诗人</a><br><span class="post_meta_info"><i class="fa fa-clock-o"></i> 2024-8-7</span></p>	
+									
+								
+									
+										<p><a href="/bdcdc9f9/">一枚 2024 暑期解谜游戏 · 远坂凛给你的一封祝福信</a><br><span class="post_meta_info"><i class="fa fa-clock-o"></i> 2024-7-6</span></p>	
+									
+								
+									
+										<p><span class="badge badge-primary" id="shuoshuo_label"><i class="fa fa-quote-left"></i> 说说 </span>&nbsp;<a href="/shuoshuo/609e4e76/">都市看客暗梦 の 在龙舟之章 · 端午前的随笔</a><br><span class="post_meta_info"><i class="fa fa-clock-o"></i> 2024-6-9</span></p>	
+									
+								
+									
+										<p><a href="/cad9d0fd/">Re. 从零开始在 Deta Space 部署 Twikoo 评论系统的过程</a><br><span class="post_meta_info"><i class="fa fa-clock-o"></i> 2024-6-2</span></p>	
+									
+								
+									
+										<p><a href="/27fff63c/">「随心说」都市看客暗梦 の 浅谈不应依赖的答案之书</a><br><span class="post_meta_info"><i class="fa fa-clock-o"></i> 2024-5-3</span></p>	
+									
+								
+								<h6 class="font-weight-bold text-black"><i class="fa fa-tags"></i>&nbsp;标签云</h6>	
+								<p></p><div class="tagcloud">
+								<a class="badge badge-secondary tag" href="/tags/Hackintosh/" rel="tag">Hackintosh <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/Hexo/" rel="tag">Hexo <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/Linux/" rel="tag">Linux <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/tags/MySQL/" rel="tag">MySQL <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/RPG-MAKER/" rel="tag">RPG MAKER <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Typecho/" rel="tag">Typecho <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/WordPress/" rel="tag">WordPress <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人 <span class="tag-num">8</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9A%97%E6%A2%A6%E7%9A%84%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4/" rel="tag">暗梦的天空之琴 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵 <span class="tag-num">10</span></a><a class="badge badge-secondary tag" href="/tags/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/" rel="tag">电子游戏 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E9%92%A2%E7%90%B4%E7%AE%80%E8%B0%B1/" rel="tag">钢琴简谱 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说 <span class="tag-num">27</span></a>
+								<h6 class="font-weight-bold text-black"><i class="fa fa-info"></i>&nbsp;FantasyLand Status</h6>
+								
+								
+								<label id="blog-post-and-shuoshuo-count">文章 & 说说数目： 52 / 8</label>
+								<label id="blog-total-wordcount">博客总字数：64.7k 字</label>
+								<label id="blog-last-updated">最近更新时间：2024-08-07</label>
+
+								</div>							
+							</div>
+                                                        
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+</aside>
+
+
+
+<div class="modal fade" id="blog_categories" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" id="categories_dialog_content">
+                        <div class="modal-header">
+                                <h5 class="modal-title">分类</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                </button>
+                        </div>
+                        <div class="modal-body">
+                                <a class="badge badge-secondary tag" href="/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/" rel="tag">喵星使者的自我修养 <span class="tag-num">8</span></a><a class="badge badge-secondary tag" href="/categories/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4%E4%B9%90%E8%B0%B1%E5%88%86%E4%BA%AB/" rel="tag">天空之琴乐谱分享 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" rel="tag">技术分享 <span class="tag-num">22</span></a><a class="badge badge-secondary tag" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">暗梦 の 随心说 <span class="tag-num">27</span></a>
+                        </div>
+                </div>
+        </div>
+</div>
+<div class="modal fade" id="blog_tags" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" id="tagcloud_dialog_content">
+                        <div class="modal-header">
+                                <h5 class="modal-title">标签</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                </button>
+                        </div>
+                        <div class="modal-body">
+                                <a class="badge badge-secondary tag" href="/tags/Hackintosh/" rel="tag">Hackintosh <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/Hexo/" rel="tag">Hexo <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/Linux/" rel="tag">Linux <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/tags/MySQL/" rel="tag">MySQL <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/RPG-MAKER/" rel="tag">RPG MAKER <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Typecho/" rel="tag">Typecho <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/WordPress/" rel="tag">WordPress <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人 <span class="tag-num">8</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9A%97%E6%A2%A6%E7%9A%84%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4/" rel="tag">暗梦的天空之琴 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵 <span class="tag-num">10</span></a><a class="badge badge-secondary tag" href="/tags/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/" rel="tag">电子游戏 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E9%92%A2%E7%90%B4%E7%AE%80%E8%B0%B1/" rel="tag">钢琴简谱 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说 <span class="tag-num">27</span></a>
+                        </div>
+                </div>
+        </div>
+</div>
+
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main article-list article-list-home" role="main">
+		
+		<!-- 待定首页顶栏 -->
+			
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/29a55fff/"><font color="#F05B85"><i class="fa fa-star"></i>&nbsp;&nbsp;「随心说 の 真 · 喵星使者的自我修养」 从零开始的新手养猫教程&nbsp;&nbsp;<i class="fa fa-star"></i></font></a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-11-2
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/">喵星使者的自我修养</a> , <a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.6k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				在都市中有部分人不喜欢交朋友或者对不认识的人心生警惕但又觉得很孤单，或者随着时间流逝，有的人已经不在...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/3b42a900/"><font color="#F05B85"><i class="fa fa-star"></i>&nbsp;&nbsp;「随心说」都市看客暗梦 の 在 2023 迎来终章后的年度总结&nbsp;&nbsp;<i class="fa fa-star"></i></font></a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2024-1-2
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.6k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言Hi，I’m 暗梦，em……当我们乘坐在时之列车上，在车厢的最后一节车厢看过 202...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+<div class="shuoshuo-preview-container shuoshuo-foldable card bg-white shadow-sm border-0" id="shuoshuo_preview" style="transition: none 0s ease 0s;">
+		
+		  <a class="shuoshuo-title" href="/shuoshuo/87899d1/">心有 “渔” 力不足的都市看客兼吟游诗人</a>
+                
+		<div class="shuoshuo-content">
+			<p>em…… 本来生日的时候 (上个月) 想买块树莓派 Zero W 来玩的 (比如说折腾轻 NAS，密码管理器之类的，偶尔也可以拿来玩玩 RetroPie)<br>不过听 <a target="_blank" rel="noopener" href="https://vinking.top/">@Vinking</a> 说他的树莓派 4 Model B 都是理财产品，目前已经出掉了，仔细想想也没什么实质性用途 <sup>[还容易吃灰]</sup>， 最后还是选择不买<br>直到现在有了一个想法，准备买一台三星的 Galaxy Z Flip3 <sup>[SM-F7110]</sup> 来做备用 &amp; 小游戏机用，虽然这种折叠屏有点贵，性能和小米相比也没什么性价比</p>
+<blockquote>
+<p><em><strong>暗梦：但也能解 BL 锁啦，只要买的不是美版就好 <sup>[况且美版无法使用电信卡，暗梦我一般收到那种机器都会选择7天无理由退掉]</sup>，但也有的商品介绍页面写着非国行</strong></em><br>总觉得和 “听君一席话，如听一席话。” 差不多来着，说了又当没说，还倒不如买韩版刷国行系统，或者直接买国行版  (o-ωｑ)).oO [梦之无奈]<br>但话说前面，这种解 BL 锁之后暗梦我还是能玩类原生系统 <sup>[只是需要自己编译 LineageOS]</sup><br>但 Knox 会触发熔断机制导致售后服务失效 &amp; Samsung Pay 功能无法使用，所以会先考虑好再解 BL 锁。</p>
+</blockquote>
+<p>本来暗梦我这部小米 Mix 4 的性能都够用了，还要买这部手机的最主要原因嘛 ……<br>也是方便主力机在维修的时候，为了自备一部备用机的一种方案，虽然师傅可能一天修不好，提供了备用机让你暂时用会儿：</p>
+<blockquote>
+<p><em><strong>但用着的感觉，总没有自己的手机习惯，或者师傅忙不过来没仔细检查备用机就交给你了，第二天还说你造成了机器损坏。</strong></em><br>绕了一圈，还不如自己准备一台备用机呢，虽然花销多少还是有点，不过暗梦我还是买二手，另外，型号还是别选太老比较好<br>不然打开微信和 QQ 耗电都很大，当然，<em><strong>在平常不忙的时候也可以拿出来玩一玩，或者应急充当无线充电宝，这不比树莓派更有实质性多了。</strong></em><br>这个，二手折叠屏有点缺陷还可以接受啦，<strong>只要不太严重</strong>，到时候要买的话再发篇测评文章，就当是给旅行者们来做一个参考哈~</p>
+</blockquote>
+<div class="alert alert-themecolor"><span class="alert-inner--text"><i class="fa fa-comment-o"></i>&nbsp;<strong>暗梦：</strong>&nbsp;em...... 要是实在没货，就等到双 11 再看，或者选 Galaxy S20 FE 也行哒，希望不要吃灰，而是发挥真正的实质性用途<br>
+Oray，暗梦我得先去休息会儿了，最近天气真的很热，再加上状态不佳，才看完医生回来，那亲爱的旅行者们，再会  (ﾉ´ヮ`)ﾉ*:･ﾟ✧~</span></div>
+		</div>
+		
+	
+	<div class="shuoshuo-preview-meta">
+		<span>
+			<i class="fa fa-user" aria-hidden="true"></i>
+			暗梦先生呀~
+			<div class="post-meta-devide">|</div>
+			<i class="fa fa-calendar-o" aria-hidden="true"></i> 
+			2024-8-7
+			<div class="post-meta-devide">|</div>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        21:24
+						
+		</span>
+
+        <a class="shuoshuo-preview-link btn btn-outline-primary btn-icon-only rounded-circle" type="button" href="/shuoshuo/87899d1/">
+		<span class="btn-inner--icon"><i class="fa fa-arrow-right"></i></span>
+	    </a>
+
+	</div>
+</div>
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/bdcdc9f9/">一枚 2024 暑期解谜游戏 · 远坂凛给你的一封祝福信</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2024-7-6
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.7k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				受到 Vinking & 电脑星人 的启发，设计的一枚 2024 暑期解谜游戏~
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Linux/" rel="tag">Linux</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+<div class="shuoshuo-preview-container shuoshuo-foldable card bg-white shadow-sm border-0" id="shuoshuo_preview" style="transition: none 0s ease 0s;">
+		
+		  <a class="shuoshuo-title" href="/shuoshuo/609e4e76/">都市看客暗梦 の 在龙舟之章 · 端午前的随笔</a>
+                
+		<div class="shuoshuo-content">
+			<p>em…… 一个月前，夏天还没到就热得无可奈何了呢，<del>索性在空余时间，制作了一部游戏</del> <sup>《都市挚爱者物语》</sup> <del>哈，诶嘿~</del></p>
+<blockquote>
+<p>Tip: 准确来说应该是视觉小说，<del>大概 16 年的时候，在 <a target="_blank" rel="noopener" href="https://66rpg.com/">橙光 (原 66RPG，帐号已注销)</a> 制作过游戏，很久的事情了，旅行者们应该也不知道吧</del><br><font color="#F05B85"><strong>✦ 就是 Ren’Py Launcher 生成的 Web 静态资源没有预加载机制，所以说可能会出现背景短暂马赛克的 Bug (o-ωｑ)).oO [梦之无奈] ✦</strong></font><br>关于游戏的剧情介绍及注意事项请见 <a target="_blank" rel="noopener" href="https://mygame.anmeng.asia/">我的自制游戏库</a>，暗梦我不会在博客中的任何一篇文章和说说阐述关于自制游戏的剧情介绍。</p>
+</blockquote>
+<p>目前也只是测试版，有一些剧情还没有做完，就先放一个 Web 端，但也并非长久之计，毕竟 Github 的仓库存储空间有限，有的时候 commit 都要等很久。<br>等到暗梦我后续做完了，再删除 Web 端并构建发行版 <sup>[Windows &amp; Macintosh]</sup> 并压缩成 tar.xz 压缩档，放在我的自制游戏库里面好了，到时另写说说通知~</p>
+<p>然后嘛，就是暗梦我那部小米 Mix 4，用了 3 个多月电源键的底座断了，导致按键脱落 <sup>(Tip: 按键默认为塑料底座)</sup></p>
+<blockquote>
+<p>暗梦: 虽然说有金属底座的按键再卖，本来想要自己换的，至于为什么选择自己修嘛，这么说吧<br><strong>这部手机拆机的方式，和我的之前那部小米 6X 完全不同</strong>，担心镇里的维修师傅不熟悉构造<br>再加上因为双电池和主板构造的独特性，就怕更换时细节不到位，导致 Soc 芯片损坏而彻底变砖。</p>
+</blockquote>
+<p>不过最后还是没有选择自己动手啦，索性就先在类原生系统的设置里面设置了下，点按屏幕亮屏 &amp; 息屏，勉强用一下<br>就是没电的时候除了需要充电，还需要借助取卡针，轻轻触发微动开关才能开机，至于更换按键的事儿之后再说吧，诶嘿~</p>
+<blockquote>
+<p>猫猫：<font color="#F05B85"><strong>✦ 最后提前祝愿各位旅行者们端午节快乐，能够考上理想的大学 / 找到理想的工作喵 ✦</strong></font>，先休息会儿……<br>对了喵~ 暗梦你忙完之后别对生活的事情太过于担心，等会儿我们来玩躲喵喵，你来找本喵就行~</p>
+</blockquote>
+<div class="anmeng_conversations"><img src="/icon.jpg" class="anmeng_conversations_avatar no-fancybox"/><div class="card">先不说在家里的角落能否找到你呢，猫猫，只求你不要在家里捣蛋，安安稳稳地也就足够了，好吧~</div></div>
+
+<center>
+<img alt="为了明日份的美好，而选择暂时休憨的猫猫" src="/static/20240609_09420.webp">
+</center>
+		</div>
+		
+	
+	<div class="shuoshuo-preview-meta">
+		<span>
+			<i class="fa fa-user" aria-hidden="true"></i>
+			暗梦先生呀~
+			<div class="post-meta-devide">|</div>
+			<i class="fa fa-calendar-o" aria-hidden="true"></i> 
+			2024-6-9
+			<div class="post-meta-devide">|</div>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        19:16
+						
+		</span>
+
+        <a class="shuoshuo-preview-link btn btn-outline-primary btn-icon-only rounded-circle" type="button" href="/shuoshuo/609e4e76/">
+		<span class="btn-inner--icon"><i class="fa fa-arrow-right"></i></span>
+	    </a>
+
+	</div>
+</div>
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center post-header-with-thumbnail">
+		
+				<img class='post-thumbnail lazyload' src='/static/20240601_07596.webp' alt='thumbnail'></img>
+				</header>
+			
+		<div class='post-header-text-container with-thumbnail-post-header-text-container'>
+		<a class="post-title" href="/cad9d0fd/">Re. 从零开始在 Deta Space 部署 Twikoo 评论系统的过程</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2024-6-2
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							758 字
+						</div>
+					
+		</div>
+		
+				</div>
+			
+	</header>
+
+	<div class="post-content">
+		
+			
+				给旅行者们从零讲述部署 Twikoo 评论系统到 Deta Space 的过程哈，诶嘿~<br><br><font color="#F05B85"><strong>✦ 此部署方式涉及终端操作等高级操作，如果部分旅行者们对这些不太了解，还请不要参照此方式部署 Twikoo，谢谢~ ✦</strong></font>
+			
+		
+	</div>
+
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center post-header-with-thumbnail">
+		
+				<img class='post-thumbnail lazyload' src='/static/20240502_32554.webp' alt='thumbnail'></img>
+				</header>
+			
+		<div class='post-header-text-container with-thumbnail-post-header-text-container'>
+		<a class="post-title" href="/27fff63c/">「随心说」都市看客暗梦 の 浅谈不应依赖的答案之书</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2024-5-3
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.2k 字
+						</div>
+					
+		</div>
+		
+				</div>
+			
+	</header>
+
+	<div class="post-content">
+		
+			
+				人生虽然不能通过答案之书剧透，但对于理想，暗梦我希望旅行者们，宁可信其有，也不要太担心不可能哈，诶嘿~
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center post-header-with-thumbnail">
+		
+				<img class='post-thumbnail lazyload' src='/static/20240419_13236.webp' alt='thumbnail'></img>
+				</header>
+			
+		<div class='post-header-text-container with-thumbnail-post-header-text-container'>
+		<a class="post-title" href="/9f498195/">「随心说」浅谈使用 macOS Ventura (Hackintosh) 的感受</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2024-4-16
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.6k 字
+						</div>
+					
+		</div>
+		
+				</div>
+			
+	</header>
+
+	<div class="post-content">
+		
+			
+				Macintosh 价格太高花销不起，Windows 的广告 & 软件捆绑不习惯，也不追求于大型游戏的体验，现在暗梦我只想安安静静地折腾 Hackintosh，只求在最纯净的地方写下属于自己的诗与远方~
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Hackintosh/" rel="tag">Hackintosh</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+<div class="shuoshuo-preview-container shuoshuo-foldable card bg-white shadow-sm border-0" id="shuoshuo_preview" style="transition: none 0s ease 0s;">
+		
+		  <a class="shuoshuo-title" href="/shuoshuo/38512e86/">都市看客暗梦 の 在花海之章 · 春季的随笔</a>
+                
+		<div class="shuoshuo-content">
+			<p>em…… <em><strong>自从在前几天 (大概是 3 月 28 号) EU.Org 无法在国内访问的时候，暗梦我也早猜到了这个免费域名，因为其他人滥用而导致的结局</strong></em><br><strong>不过暗梦我要说的是，我的博客不会有任何违反法律法规的内容</strong>，于是购入了一个 .asia 域名，即便是需要实名认证也可以接受嘛，为了维护网络安全。</p>
+<blockquote>
+<p>Tip: 期限 10 年，本来的价格是 275 块，不过好在的是，因为昨年 &amp; 今年参与了 <a target="_blank" rel="noopener" href="https://vinking.top/">@Vinking</a> 的新年游戏，间接折扣了 42 块，实际花销为 233 (。-ω-)<br>虽说钱也不是大风刮来的呢，暗梦我也都在工作，但再怎么忙，在闲暇之余都不会放弃在都市角落中的幻想之地，续写人生的每一场邂逅 &amp; 历练。</p>
+</blockquote>
+<p>还有就是，忙碌起来，先不说没时间烦恼了，也没时间发现一些新的机遇，来作为之后博客文章的序篇呢，就犹如此时仍在教书育人的 <a target="_blank" rel="noopener" href="https://vinking.top/">@Vinking</a> 一样<br>每天不是和同学们传授知识 &amp; 基本道德，就是在下课时间的作业批改 &amp; 接下来课程的备课，还需要时不时到学校的会议室开会讨论教育事宜呢 (o-ωｑ)).oO</p>
+<blockquote>
+<p>暗梦：这本来都已经很艰辛了，再加上学生不遵守秩序的情况也让老师倍感苦恼，他最近也就没怎么写博客了，不过，暗梦 · 杜其米亚我想告诉他的是<br>教师并非只是人类灵魂的工程师 &amp; 传授知识的使者，也同样是这些同学们在学习期间，能够短暂陪伴在他们身边的知心朋友（<em>＾-＾</em>）<br>学会了解他们的真实想法 &amp; 兴趣爱好，并在合理的范围内 &amp; 工作之余，适当融入他们的圈子并给予帮助<br>也算是解决了老师 &amp; 同学们的问题，毕竟，到毕业的时候也会万般留恋呢~ (。-ω-)</p>
+</blockquote>
+<p>另外，最近这几天都一点点不舒服，这么说吧，前天晚上去餐厅品尝了下重庆西北部的特色菜 · 尖椒兔<br>虽然说美味，但厨师做的也是辣味十足，就连作为本地人的我嘛，也从前天吃完到昨天下午，都被辣得状态都不太好  ╮(╯_╰)╭ [梦之无奈] </p>
+<div class="alert alert-themecolor"><span class="alert-inner--text"><i class="fa fa-comment-o"></i>&nbsp;<strong>暗梦：</strong>&nbsp;Oray，最近嘛，暗梦我的猫猫也开始换毛了，得去给它梳一下哈，那亲爱的旅行者们，再会啦~</span></div>
+
+		</div>
+		
+	
+	<div class="shuoshuo-preview-meta">
+		<span>
+			<i class="fa fa-user" aria-hidden="true"></i>
+			暗梦先生呀~
+			<div class="post-meta-devide">|</div>
+			<i class="fa fa-calendar-o" aria-hidden="true"></i> 
+			2024-4-1
+			<div class="post-meta-devide">|</div>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        20:19
+						
+		</span>
+
+        <a class="shuoshuo-preview-link btn btn-outline-primary btn-icon-only rounded-circle" type="button" href="/shuoshuo/38512e86/">
+		<span class="btn-inner--icon"><i class="fa fa-arrow-right"></i></span>
+	    </a>
+
+	</div>
+</div>
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center post-header-with-thumbnail">
+		
+				<img class='post-thumbnail lazyload' src='/static/20240310_26168.webp' alt='thumbnail'></img>
+				</header>
+			
+		<div class='post-header-text-container with-thumbnail-post-header-text-container'>
+		<a class="post-title" href="/5d5eb4fd/">「随心说」重回多年不见的提瓦特，但是国际服。</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2024-3-11
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.5k 字
+						</div>
+					
+		</div>
+		
+				</div>
+			
+	</header>
+
+	<div class="post-content">
+		
+			
+				在国际服准备看遍提瓦特风景的一枚都市看客兼吟游诗人。
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/" rel="tag">电子游戏</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center post-header-with-thumbnail">
+		
+				<img class='post-thumbnail lazyload' src='/static/20240223_10666.webp' alt='thumbnail'></img>
+				</header>
+			
+		<div class='post-header-text-container with-thumbnail-post-header-text-container'>
+		<a class="post-title" href="/6958ef11/">「随心说」关于 Vinking 2024 新年游戏的解析</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2024-2-23
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a> , <a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.4k 字
+						</div>
+					
+		</div>
+		
+				</div>
+			
+	</header>
+
+	<div class="post-content">
+		
+			
+				愿你化作一缕东方的晨曦，不求刺目的光芒，不恋人间的无常。
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/2493498c/">✦ 「随心说」都市看客暗梦 の 一枚小米 Mix 4 的使用计划与体验 ✦</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2024-2-2
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.9k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				这里主要浅谈都市看客暗梦对 Hyper OS 的碎碎念与小米 Mix 4 的使用计划 & 体验
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/c34131c8/">「随心说」都市看客暗梦 の Re. 再度遇见凛寒之冬的随笔</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2024-1-30
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.7k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				暗梦：em...... 在这里主要讲述我为 Twikoo 提交 Pull Request 的经历，以及其他的日常随笔哈，诶嘿~
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+<div class="shuoshuo-preview-container shuoshuo-foldable card bg-white shadow-sm border-0" id="shuoshuo_preview" style="transition: none 0s ease 0s;">
+		
+		  <a class="shuoshuo-title" href="/shuoshuo/b84c7f76/">都市看客暗梦 の 关于简单修理机械键盘的那些事儿</a>
+                
+		<div class="shuoshuo-content">
+			<div class="post-outdated-info"><i class="fa fa-info-circle" aria-hidden="true"></i> Tip：此处的经历仅供旅行者们参考，请旅行者们在实际使用电烙铁时需要注意安全，也请在操作的时候做好防护哈~ (o′ω`o)ノ</div>
+<p>em……<br>快到 2024 跨年了，暗梦我本来想写篇文章，就在距离这篇说说发布的 6 小时前准备打字的时候，键盘上面的部分按键总是按下不会触发 [梦之无语] (?-ω-)<br>当时，就在被这件琐事所苦恼的时候，忽然想到早在一年前的时候，暗梦我在 <a target="_blank" rel="noopener" href="https://kira.cool/">@Kira Blog</a> 中读到的这篇 <a target="_blank" rel="noopener" href="https://kira.cool/daily/31-add-backlight-to-keyboard">关于给机械键盘加灯的文章</a> <i>( Tip: 虽然暗梦我并没有自己尝试过 DIY 机械键盘 )</i> ，索性嘛，就决定尝试一下自己修复哈，诶嘿~</p>
+<p>首先嘛，暗梦我也并没有拔轴器之类的工具，倒是有一把电烙铁 &amp; 镊子，准备将镊子轻轻卡在键轴的一侧，等电烙铁加热焊点并出现松动之后，拔出镊子再卡在另一侧继续加热焊点来拆掉故障的轴  <strong>(暗梦: 虽然说也怕键轴上下两侧的卡扣会断掉 [(o-ωｑ)).oO] )</strong>  ，然后再将上面的旧锡清理干净。</p>
+<p>em…… ，因为此时没有买新轴，此时暗梦我就在想一个问题，这种情况下又该如何修理呢，索性想了一个办法 の 移花接木，怎么说呢？</p>
+<blockquote>
+<p>暗梦：在 Hackintosh 中有些按键对于暗梦我而言嘛，也派不上用场，索性就找其他不常用的键来替换，好吧，旅行者们可以看一下下面这张图，同时也请谅解下照片没有拍全哈。</p>
+</blockquote>
+<p><img src="/static/20231230_29942.webp" alt="修好之后略微潦草的机械键盘"></p>
+<p>然后将故障的三枚红轴调换位置 &amp; 重新进行焊接，如此一来，再重新装好之后连接电脑测试即可。</p>
+<blockquote>
+<p><del><em>暗梦: 可惜的是，技术有点不好，虽然减号键高出了一点点，至少在焊接的时候没有短路嘛，诶嘿~</em></del></p>
+</blockquote>
+<p>但暗梦我在 <a target="_blank" rel="noopener" href="https://usevia.app/test">VIA</a> 测试了下，也完美解决了这个问题，毕竟要换新键盘的话嘛，现在机械键盘的价格也不便宜，总觉得没什么性价比呢，好吧 (ˉ▽ˉ；)</p>
+<p><img src="/static/20231230_18432.webp" alt="在都市看客暗梦的博客写作 &amp; 编程之旅中，走向退休生活的三枚红轴。"></p>
+<p>其实嘛，暗梦我也本身也对电子也不是很精通，也不算是什么都不懂，只是，怎么说呢，在简单修理 &amp; DIY 机械键盘的过程就和小时候玩的积木的过程差不多。</p>
+<blockquote>
+<p>暗梦：就好比购入一个成品机械键盘的价格都要几百到上千，而对于动手能力 &amp; 安全意识好的旅行者嘛，可以根据情况购入 PCB + 外壳 + 键轴 + 键帽 来自己组装 <em>(Tip: 如果不是很注重外观 &amp; 使用体验的话嘛，也可以从废旧的机械键盘当中，选择能够正常使用的配件来使用)</em> ，或者不舍得买很多材料而选择修复旧键盘继续使用，也能节省一部分开销，好吧。</p>
+</blockquote>
+<p>Oray，到这里简单的修理工作就结束了，猫猫在叫我呢，那暗梦我得陪猫猫玩啦 (｡◕ˇ∀ˇ◕），回见~</p>
+<div class="alert alert-primary"><span class="alert-inner--text"><i class="fa fa-commenting-o"></i>&nbsp;<strong>暗梦：</strong>&nbsp;或许在人生的旅途当中总会遇见阴霾，这固然是现实中应该去面对的，但暗梦我同样相信的是，我们也终能遇见，照亮我们内心世界的那片璀璨星空。</span></div>
+		</div>
+		
+	
+	<div class="shuoshuo-preview-meta">
+		<span>
+			<i class="fa fa-user" aria-hidden="true"></i>
+			暗梦先生呀~
+			<div class="post-meta-devide">|</div>
+			<i class="fa fa-calendar-o" aria-hidden="true"></i> 
+			2023-12-30
+			<div class="post-meta-devide">|</div>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        20:58
+						
+		</span>
+
+        <a class="shuoshuo-preview-link btn btn-outline-primary btn-icon-only rounded-circle" type="button" href="/shuoshuo/b84c7f76/">
+		<span class="btn-inner--icon"><i class="fa fa-arrow-right"></i></span>
+	    </a>
+
+	</div>
+</div>
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/3da5ba11/">「随心说 の 怀旧向」浅谈维系着守旧之人的纽带 の 明信片</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-12-13
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							2.2k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言Hi，各位旅行者们，I’m 暗梦，em……
+
+暗梦：本来嘛，暗梦我也在 之前写的说说...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+<div class="shuoshuo-preview-container shuoshuo-foldable card bg-white shadow-sm border-0" id="shuoshuo_preview" style="transition: none 0s ease 0s;">
+		
+		  <a class="shuoshuo-title" href="/shuoshuo/69e69f5a/">都市看客暗梦 の 浅谈告别往年烦恼的那些事儿</a>
+                
+		<div class="shuoshuo-content">
+			<p>em……<br>最近时间过的还挺快呢，旅行者们，没过多久，这趟时之列车，就到达名为 2024 的车站了。<br>每个旅行者们都在这段时间内在都市中忙碌而奔波，总为生活 &amp; 目标而努力工作着，在这段旅途当中，也需要面对一些在生活 &amp; 工作中的烦恼 &amp; 琐事<br><br>怎么说呢？ 暗梦我还是先来说以前的那些事儿哈，大概 3 个月前，探访旅行者们的个人博客的时候，发现 <a target="_blank" rel="noopener" href="https://sweetjing.cc/">@小刘同学</a> 的博客打不开，于是列入了失联友链，<em><strong>或许随着时间的流逝，他想起后，仍然还会回来，暗梦我也会默默等待，只要，他从未放弃过写作，哪怕在此时此刻。</strong></em><br></p>
+<blockquote>
+<p>[当你在生活 &amp; 工作当中，无法直接面对烦恼的时候，一段熟悉的音乐声响起~]<br><strong>……，你会没事的，旅行者，保持你的决心。<del>(Undertale GameOver 页面)</del></strong><br>[然后，你又继续振作了起来，你也选择与时间一起，慢慢去瓦解这些零碎的烦恼。]</p>
+</blockquote>
+<p>直到前天 (12 月 1 号)，他在留言板告诉我，最近他前段时间因为考公，所以也没时间管理他的个人博客导致暂时无法承担服务器的开支<br>而现在也恢复了，最后，暗梦我也欢迎旅行者能够重返个人博客的宁静当中，继续书写属于自己的诗篇~</p>
+<blockquote>
+<p>暗梦：虽然他目前暂时没有写他关于考公期间的日常，但也算是不想让他人知道他的艰辛吧，选择一笑而过，然而，到达旅途终点之时，就可以彻底走出烦恼，与以往的烦恼擦肩而过。</p>
+</blockquote>
+<p>愿我们能在 2024 年新年到来之时，与以往的烦恼挥手告别，感谢它们帮助旅行者们成长 <em>(Tip: 当然，暗梦我在之前的文章也说过，适当的烦恼 &amp; 琐事能够让人锻炼勇气 &amp; 决心，但太多也会令人烦躁)</em>  ，但也庆幸旅行者们能够告别这些苦恼，而快乐地迎来新篇章的开始。<br><br></p>
+<div class="alert alert-primary"><span class="alert-inner--text"><i class="fa fa-info-circle"></i>&nbsp;<strong>Tip：</strong>&nbsp;Oray，后续暗梦我的博客也会停更一段时间，来让自己清净一下，毕竟我自己也有一部分烦恼呢，诶嘿~<br>
+另外，我也得去给猫猫买猫粮去咯，亲爱的旅行者们，2024 年再会 (`･ω･´)ฅ</span></div>
+		</div>
+		
+	
+	<div class="shuoshuo-preview-meta">
+		<span>
+			<i class="fa fa-user" aria-hidden="true"></i>
+			暗梦先生呀~
+			<div class="post-meta-devide">|</div>
+			<i class="fa fa-calendar-o" aria-hidden="true"></i> 
+			2023-12-3
+			<div class="post-meta-devide">|</div>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        17:02
+						
+		</span>
+
+        <a class="shuoshuo-preview-link btn btn-outline-primary btn-icon-only rounded-circle" type="button" href="/shuoshuo/69e69f5a/">
+		<span class="btn-inner--icon"><i class="fa fa-arrow-right"></i></span>
+	    </a>
+
+	</div>
+</div>
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/60bb5b1a/">都市看客暗梦 の 给 Hexo 添加 PWA 支持的新思路</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-11-15
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.4k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言Hi，I’m 暗梦，最近了解到 PWA (Progressive Web App)，...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Hexo/" rel="tag">Hexo</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/d5bff76b/">都市看客暗梦 の 浅谈曾经在 Linux 遇到的 OOM 机制</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-10-23
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.8k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First. 前言Hi，各位旅行者们，你们好，I’m 暗梦，在个人博客的运行过程中，我们有时，或许会...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Linux/" rel="tag">Linux</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/2c9586b5/">「随心说」都市看客暗梦 の 临近凛寒之冬的随笔</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-10-16
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.2k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言Hi，暗梦我又来了，em …… 
+I.都市看客暗梦 の 浅谈最近的天气昨天 (10 ...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/efdb30fe/">「随心说」都市看客暗梦 の 弹子石闲游记</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-9-3
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							921 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言Hi，I’m 暗梦，em……前几天 (8 月 31 号) 去南岸的弹子石逛了逛，顺便...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/740c95d7/">「随心说」用生活的方式浅谈 MySQL 的悲观锁与乐观锁</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-8-17
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a> , <a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.6k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First. 前言各位旅行者们，你们好，又是我，你们的都市看客兼吟游诗人暗梦 o(*≧▽≦)ツem…...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/MySQL/" rel="tag">MySQL</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/12ebe1b0/">「随心说」浅谈个人博客的宁静 And 正在快进的都市生活</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-8-4
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							824 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言Hi，各位旅行者们，你们好，又是我，你们的都市看客兼吟游诗人暗梦 (^o^)／ ，e...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/536096c0/">「随心说」 都市看客暗梦 の 关于 MBTI 测试的日常</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-7-16
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							729 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First. 前言Hi，I’m 暗梦，em……最近没事儿逛逛 “开往 · 友链接力” ，发现很多博主...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/9a15a626/">Re. 从零开始的 FastAPI 探索之旅 の Deta 篇</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-6-28
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.3k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First. 前言Hi，I’m 暗梦，自从暗梦我用 Deta 搭建了博客留言板的评论系统之后突然想着...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Python/" rel="tag">Python</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/b7b7087/">「随心说」 Sancta Maria，让暗梦的博客平息吧~</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-6-21
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.2k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				
+此文章与宗教无关，请各位旅行者们知悉~
+
+
+First. 前言Hi，各位旅行者们好，还是我，你们的...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+<div class="shuoshuo-preview-container shuoshuo-foldable card bg-white shadow-sm border-0" id="shuoshuo_preview" style="transition: none 0s ease 0s;">
+		
+		  <a class="shuoshuo-title" href="/shuoshuo/1cf2add0/">都市看客暗梦 の 给予旅行者们的中考 & 高考祝福</a>
+                
+		<div class="shuoshuo-content">
+			<p>Hi，亲爱的旅行者，或许你们曾面对过每一篇作文，每一条公式，每一段单词和每一份刻苦。<br> <em>(Tip: 暗梦我为什么要说曾面对过呢，因为暗梦我看了下时间，可能中考 &amp; 高考差不多都考完了，这也算是迟到的祝福吧。)</em><br>也许你们曾经感到过无助 &amp; 焦虑，但是你们没有放弃，暗梦我相信你们能够成功坚持下来，并能够实现自己的梦想。</p>
+<div class="admonition shadow-sm admonition-warning"><div class="admonition-body">em......<br>
+旅行者们不妨回想一下，刚走出考场之后，或许会感到疲惫 & 担心。<br>
+<strong>但不论如何，都不要太纠结于结局了，你们至少，曾经刻苦努力过，并朝着所选择的人生方向而拼搏过，<i>2023 中考 & 高考加油！</i></strong></div></div>
+
+<div class="alert alert-warning"><span class="alert-inner--text">暗梦我想再说最后一句话，无论结局如何，至少你们在之前而努力拼搏过，祝愿旅行者们能够考上自己梦想中的高中 & 大学，在那里继续追逐你自己的梦想。<br>
+哦，对了，没多少天就是端午节了，旅行者们，愿你们在经历了中考 & 高考的风雨之后能够有一个愉快的假期，端午快乐 (ﾉ´ヮ`)ﾉ*:･ﾟ✧~</span></div>
+		</div>
+		
+	
+	<div class="shuoshuo-preview-meta">
+		<span>
+			<i class="fa fa-user" aria-hidden="true"></i>
+			暗梦先生呀~
+			<div class="post-meta-devide">|</div>
+			<i class="fa fa-calendar-o" aria-hidden="true"></i> 
+			2023-6-11
+			<div class="post-meta-devide">|</div>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        21:11
+						
+		</span>
+
+        <a class="shuoshuo-preview-link btn btn-outline-primary btn-icon-only rounded-circle" type="button" href="/shuoshuo/1cf2add0/">
+		<span class="btn-inner--icon"><i class="fa fa-arrow-right"></i></span>
+	    </a>
+
+	</div>
+</div>
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/41b04205/">「随心说」都市看客兼吟游诗人 の 自我修养</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-5-18
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							2.2k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言Hi，I’m 暗梦，各位旅行者们好呀 （￣▽￣）/ 
+
+Tip: em …… 虽然说...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+<div class="shuoshuo-preview-container shuoshuo-foldable card bg-white shadow-sm border-0" id="shuoshuo_preview" style="transition: none 0s ease 0s;">
+		
+		  <a class="shuoshuo-title" href="/shuoshuo/da27f805/">都市看客暗梦 の 在五一假期的那些邂逅</a>
+                
+		<div class="shuoshuo-content">
+			<p>em ……<br>在劳动节假期的前一天，本来计划着去巴中旅游的，但是暗梦我觉得嘛<br>五一假期可能会赶上道路拥堵，而且路途遥远，所以就没到那里去。<br><br></p>
+<p><i>也许吧，重要的不是放假了去哪里旅游看风景这些，而是在假期中做什么放松来自己 (Tip:当然，旅行爱好者们除外哈~ )。</i><br><br></p>
+<p>暗梦我嘛，虽然还是和以往一样，陪着我的黑猫玩耍，或者没事玩玩 3DS，但还是想着做一些猫饭给我的黑猫吃，当然，暗梦我也会做点其他能充实假期的事儿，比方说，在镇里散散步，陪亲戚们聊聊五一假期的那些事儿，或者在家逛逛 B 站之类的，好吧。<br><br></p>
+<p>随着时间的流逝，假期慢慢过去，又迎来了该上学 &amp; 工作的时候咯~ ヾ(^▽^*=)&gt; <br><br>加油吧，各位旅行者们，愿之后的生活也因你而璀璨。</p>
+
+		</div>
+		
+	
+	<div class="shuoshuo-preview-meta">
+		<span>
+			<i class="fa fa-user" aria-hidden="true"></i>
+			暗梦先生呀~
+			<div class="post-meta-devide">|</div>
+			<i class="fa fa-calendar-o" aria-hidden="true"></i> 
+			2023-5-3
+			<div class="post-meta-devide">|</div>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        20:38
+						
+		</span>
+
+        <a class="shuoshuo-preview-link btn btn-outline-primary btn-icon-only rounded-circle" type="button" href="/shuoshuo/da27f805/">
+		<span class="btn-inner--icon"><i class="fa fa-arrow-right"></i></span>
+	    </a>
+
+	</div>
+</div>
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/c1e42d95/">「随心说」都市看客暗梦 の 来自四月间的随笔</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-4-22
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							973 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First. 前言Hi，I’m 暗梦，今天来讲一下关于最近我的那些事儿哈，诶嘿 [o(￣▽￣)ブ]
+...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/78c6ea47/">在 Termux / Raspberry Pi 的 Linux 下编译安装 Rime 输入法框架</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-3-19
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.6k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言Hi，旅行者们好，又是我，你们的都市看客兼吟游诗人暗梦 q(≧▽≦q) ~
+然而呢，...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Linux/" rel="tag">Linux</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+<div class="shuoshuo-preview-container shuoshuo-foldable card bg-white shadow-sm border-0" id="shuoshuo_preview" style="transition: none 0s ease 0s;">
+		
+		  <a class="shuoshuo-title" href="/shuoshuo/50850f5a/">貌似从未平息过的那场暴风雪 & 关于我的猫猫</a>
+                
+		<div class="shuoshuo-content">
+			<p>在之前的博客的话嘛，刚才暗梦我在今天 (2 月 28 号)已经把 ICP 备案的主体给注销成功了，这么说吧<br>就当暗梦我提交申请后准备吃午饭的时候嘛，就收到了来自工信部的短信，说我注销成功了，不得不说当地管局的效率还是高的 ↖(^ω^)↗<br><br><img src="/static/20230228_12476.webp" alt="ICP备案注销成功短信通知"><br><br>然而，这到了另一边的话嘛，又变了一个维度，公安备案却依旧不为所动<br>自从2月4号提交注销申请之后，一直没有通知，这是在之前( 2 月 22 号 ) 在另一台笔记本电脑上的截图<br><br><img src="/static/20230218_30063.webp" alt="公安备案后台页面"><br><br>当时还在审核中，再到现在看了下，还能通过我原来的域名查到公安备案的信息<br>如此一来，搞得暗梦我现在都懒得再去截图了，好吧，只是在想之后该怎样去解决这件事儿。<br><br><del>怎么说呢，注销了，但也没完全注销，总而言之，原来的域名已经不能再访问了。</del><br><br>另外我的猫在晚上的时候老是在叫，在昨晚 11 点半之前一直有喵喵叫，在这之前的时间段中，暗梦我总是睡不着。<br>然后到实在没办法了，暗梦我索性拿出玩具让猫猫自己玩，等它自己玩累了回到猫窝休息之后<br>暗梦我才安安稳稳地睡上了一觉，并准备着第二天的到来。</p>
+
+		</div>
+		
+	
+	<div class="shuoshuo-preview-meta">
+		<span>
+			<i class="fa fa-user" aria-hidden="true"></i>
+			暗梦先生呀~
+			<div class="post-meta-devide">|</div>
+			<i class="fa fa-calendar-o" aria-hidden="true"></i> 
+			2023-2-28
+			<div class="post-meta-devide">|</div>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        14:44
+						
+		</span>
+
+        <a class="shuoshuo-preview-link btn btn-outline-primary btn-icon-only rounded-circle" type="button" href="/shuoshuo/50850f5a/">
+		<span class="btn-inner--icon"><i class="fa fa-arrow-right"></i></span>
+	    </a>
+
+	</div>
+</div>
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/ed2ab52c/">「随心说」 都市看客暗梦 の 在今天停电的一篇随笔</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-2-18
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.1k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言Hi,I’m 暗梦，最近没什么写的，来写一篇日常水一下哈，请各位旅行者们凑合着看哈
+...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/153650c/">「随心说」 梦开始的地方 の 都市看客暗梦的新博客</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-2-4
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.2k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First. 前言Hi,I’m 暗梦，马上过完元宵节就是新的一天啦。我目前呢已经给原博客里面的数据全...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/81c40aed/">「随心说」都市看客暗梦 の 驾考回忆录</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-1-17
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							905 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言Hi，I’m 暗梦，最近不知道该写什么文章，来讲讲以前考驾照的那些经历哈，让我们把时...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/fa038589/">「随心说」 浅谈一下在2023年的那些事</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2023-1-3
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							2k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言Hi，各位旅行者们，你们的都市看客兼吟游诗人暗梦来咯，但这次我要跟各位旅行者们说一些...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/be102642/">「随心说 の 真・喵星使者的自我修养」 临近过年的你，如何带你的小可爱回家</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-12-29
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/">喵星使者的自我修养</a> , <a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							671 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				Hi，I’m 暗梦，快过年了，祝各位旅行者们2023年跨年快乐哈，诶，等等，说早了点，毕竟还有两天才...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/afea83d/">安利几首怀旧游戏歌曲，送给童年的你 ~</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-12-6
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4%E4%B9%90%E8%B0%B1%E5%88%86%E4%BA%AB/">天空之琴乐谱分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							302 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				Hi，I’m 暗梦，em……，暂时还没想到要写什么文章，这次就写几首乐谱吧。其实我们都有属于自己的童...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%9A%97%E6%A2%A6%E7%9A%84%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4/" rel="tag">暗梦的天空之琴</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%92%A2%E7%90%B4%E7%AE%80%E8%B0%B1/" rel="tag">钢琴简谱</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/9a107844/">「随心说」浅谈一下关于黑猫的那些八卦事</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-11-23
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/">喵星使者的自我修养</a> , <a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							758 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				Hi，又是我，你们的喵星使者暗梦，这次换个称号来叫自己，因为总觉得都市看客和吟游诗人这两个的话总觉得...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/3f5e9913/">如何给你的 Typecho / Hexo 文章添加短代码支持</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-11-14
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.2k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				I.Typecho 文章添加短代码支持在之前使用 WordPress 的时候我们习惯于使用短代码来表...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Hexo/" rel="tag">Hexo</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Typecho/" rel="tag">Typecho</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/7f22a087/">习惯之前在WordPress置顶文章？教你如何在 Typecho 置顶你的文章</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-10-27
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.1k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				Hi，I’m 暗梦，em……这种开场白不知道说了多少遍了啦 (-.-;)y-~~~记得去年的时候用的...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Typecho/" rel="tag">Typecho</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/83a98f88/">「随心说」 在冬天如何给你的小可爱搭建猫窝</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-10-12
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/">喵星使者的自我修养</a> , <a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.1k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				
+暗梦：还是挺冷的，先唱首歌吧。暗梦：心里苦就吃颗糖，身体冷就添衣裳～H[DG]DGH[HZ]H H...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/db0daa9f/">「Hackintosh」解决升级到 macOS 12 之后 Xcode Simulator 黑屏的那些事</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-9-29
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							478 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				Hi，I’m 暗梦，最近呢在升级到 macOS 12 之后在打开 Xcode Simulator 时...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Hackintosh/" rel="tag">Hackintosh</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/8020d73a/">「Hackintosh」macOS升级后悔了如何保留数据退回旧版本</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-9-16
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							691 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				这次来讲讲Hackintosh的那些事 (也就是我们所说的黑苹果嘛，有时需要写代码或者剪辑视频时需要...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Hackintosh/" rel="tag">Hackintosh</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/9edfc8c7/">Typecho后台页面添加深色模式</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-9-6
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.1k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				Hi ， 你们的都市看客兼吟游诗人暗梦又来啦，祝大家中秋节快乐哈。em…..总觉得Typecho自带...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Typecho/" rel="tag">Typecho</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/9e353a30/">「随心说」 在夏天,来自一名博主的自述。</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-8-29
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4%E4%B9%90%E8%B0%B1%E5%88%86%E4%BA%AB/">天空之琴乐谱分享</a> , <a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.5k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				Hi，I’m 暗梦，因为服务器带宽有点低，所以我把天空之琴的声音转换了格式，方便弹奏(至于为什么不用...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%9A%97%E6%A2%A6%E7%9A%84%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4/" rel="tag">暗梦的天空之琴</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%92%A2%E7%90%B4%E7%AE%80%E8%B0%B1/" rel="tag">钢琴简谱</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/42cc5bb9/">「随心说」教你如何给你的小可爱过生日</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-8-20
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/">喵星使者的自我修养</a> , <a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							695 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				
+猫:喵~暗梦:天气太热了，还得给你买猫粮，唉~&lt;于是乎，暗梦出去买完猫粮回来之后……&gt;...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/3c3f650c/">WordPress主题Sakurairo移动端页面菜单美化</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-8-8
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							867 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				这次又来来聊聊关于Sakurairo的那些事，就是暗梦我认为呢em……总觉得这个主题在移动端的菜单稍...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/WordPress/" rel="tag">WordPress</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/3d8e3836/">Hexo主题Nexmoe添加公告小工具组件及自定义社交区域图标</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-8-1
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							590 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				Hi，暗梦我又来咯。这次又来讲讲关于博客主题的美化教程不过这次呢不讲WordPress，来讲讲Nex...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Hexo/" rel="tag">Hexo</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/583256b2/">Re.从零开始搭建的Alist个人云网盘</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-7-26
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							726 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				有的小伙伴呢，想保存自己家的美好照片，却苦于手机空间不足而止步于此。
+tip:其实暗梦我从来都不用什...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Linux/" rel="tag">Linux</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/1d7969b6/">教你如何给你的小可爱做好吃的猫饭</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-7-23
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/">喵星使者的自我修养</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							277 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First. 前言所谓猫饭，Capcom以前的热门游戏《怪物猎人》中，艾露猫们做出来的料理…
+
+[此...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/5132bf84/">安利几首适合在晚上听的歌曲，送给夏季的你</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-7-12
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4%E4%B9%90%E8%B0%B1%E5%88%86%E4%BA%AB/">天空之琴乐谱分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							216 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				
+
+enable_keypiano();
+echo_inject_tips();
+
+
+
+I.外婆的澎...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%9A%97%E6%A2%A6%E7%9A%84%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4/" rel="tag">暗梦的天空之琴</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%92%A2%E7%90%B4%E7%AE%80%E8%B0%B1/" rel="tag">钢琴简谱</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/f9910d43/">WordPress主题Sakurairo文章添加字数统计及预计阅读时间</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-7-7
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.3k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				Hi，暗梦我又来咯，说真的，最近呢天气太热，让我们难以静下心来思考，都不知道写什么除非有空调嘛，空调...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/WordPress/" rel="tag">WordPress</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/6c7cded/">Re. 从零开始的 Linux SSH Term Blog 搭建</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-6-17
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.7k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言&nbsp;&nbsp;
+2022年上半年后，又迎来暑假的炎热，来讲讲如何搭建一个属...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Linux/" rel="tag">Linux</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Python/" rel="tag">Python</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/e1cfb062/">「随心说」假如全世界7天没有猫咪，会怎样？</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-6-11
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/">喵星使者的自我修养</a> , <a class="post-meta-detail-catagory-link" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/">暗梦 の 随心说</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							597 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				Hi，I’m 暗梦，最近一直在用罗马数字来标注序号，总觉得数字太单调，em……我们来想一下，如果来自...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/536e38d0/">「怀旧向」那些曾经被人遗忘的 RPG MAKER XP 脚本</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-6-8
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							2k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				First.前言在现在的2022年，RPG Maker Mv/Mz(基于HTML/JavaScrip...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/RPG-MAKER/" rel="tag">RPG MAKER</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/c3464ddc/">WordPress主题Sakurairo封面加入文章信息 &amp; 自定义社交区域图标</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-6-5
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.5k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				I.封面加入文章信息
+打开网站主题根目录，在 ./layouts/imgbox.php 文件中
+前添...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/WordPress/" rel="tag">WordPress</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/29682406/">Linux搭建PPSSPP外网联机服务器</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-5-29
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							487 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				有的时候很多小伙伴在手机上用小鸡模拟器之类的模拟器进行PSP外网或局域网联机，但这样的话必须登录他们...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Linux/" rel="tag">Linux</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/" rel="tag">电子游戏</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/4dfc8d36/">Re.安利几首适合晚上听的歌曲</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-5-29
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4%E4%B9%90%E8%B0%B1%E5%88%86%E4%BA%AB/">天空之琴乐谱分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.2k 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				
+
+enable_keypiano();
+echo_inject_tips();
+
+
+
+I. 《删了...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%9A%97%E6%A2%A6%E7%9A%84%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4/" rel="tag">暗梦的天空之琴</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%92%A2%E7%90%B4%E7%AE%80%E8%B0%B1/" rel="tag">钢琴简谱</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/80a705f8/">Re.聊聊猫的那些八卦事</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2022-5-26
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/">喵星使者的自我修养</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							156 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				I.每只猫的鼻纹和人的指纹一样，独一无二，可以辨别是不是你的猫tip:也可以试着用猫咪的鼻纹来给手机...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵</a>
+		</div>
+	
+</article>
+
+
+
+
+	
+
+
+<article class="post card bg-white shadow-sm post-content-container border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<div class='post-header-text-container '>
+		<a class="post-title" href="/8f034b5/">教你五分钟，在Linux系统搭建frp内网穿透环境</a>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time>2021-9-7
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+						
+						
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							685 字
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				我们都知道，家里面的网络都是一个内部的局域网，但是在外面，急需要访问家里的设备时，又该怎么办呢？
+就...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Linux/" rel="tag">Linux</a>
+		</div>
+	
+</article>
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+					<footer id="footer" class="site-footer card shadow-sm border-0">
+						<font id="footer_copyright">CopyRight © 2021 暗梦先生呀~ All Rights Reserved.</font>
+						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> By solstice23 | Powered by <a target="_blank" rel="noopener" href="https://hexo.io"><strong>Hexo</strong></a> | 
+							<a onclick='changetime();' id='datetime' style="font-size:15px;" class='serif'>
+								</a>
+								<a id='fantasy_time_help'></a>
+								<script>
+								var sw = 0;
+								var zqhelp=0;
+								</script>
+								<script type="text/javascript">
+								function time_help()
+								{
+								switch(zqhelp)
+								{
+								
+								case 0:
+								swal("关于鸥历的历法[1/3]","鸥历是在奥利恩斯世界通用的时间\n例如：鸥历842年为公历2011年(因为那是游戏的发布的那一年，剧情全部走完了)\n所以它的元年为1169年\n【另外，鸥历和公历的24小时制(24小时一天)不同，它一天则为12小时制(12小时一天)】","info");
+								zqhelp=zqhelp+1;
+								break;
+								
+								case 1:
+								swal("关于鸥历的历法[2/3]","鸥历月份换算表：\n1月份  火之月 ｜7月份 土之月\n2月份 水之月｜8月份 岚之月\n3月份 岩之月｜9月份 热之月\n4月份 风之月｜10月份 冷之月\n5月份 炎之月｜11月份 岩之月\n6月份 冰之月｜12月份 空之月","info");
+								zqhelp=zqhelp+1;
+								break;
+								
+								case 2:
+								swal("关于鸥历的历法[3/3]","\n\n该历法来源于PSP游戏《最终幻想·零式》，如有雷同纯属巧合","info",{buttons: {
+								button1:
+								{
+								text: "Get In RomsFun!",
+								value:"get"
+								},
+								button2:
+								{
+								text: "了解游戏剧情",
+								value:"info"
+								},
+								button3:
+								{
+								text: "OK",
+								value:"ok"
+								},
+								
+								},}).then(function(value){
+								if(value == "get"){
+								  window.open("https://romsfun.com/roms/playstation-portable/final-fantasy-reishiki.html");
+								}
+								else if(value == "info"){
+								  window.open("http://www.k73.com/psp/39029.html");
+								}
+								});
+								zqhelp=0;
+								break;
+								
+								}
+								
+								}
+								function changetime()
+								{
+								if(sw == 0)
+								{
+								document.getElementById("datetime").innerHTML = pangu.spacing(Fantasy_Now());
+								document.getElementById("fantasy_time_help").innerHTML = "<a onclick='time_help();' id='fantasy_time_help' style='font-size:15px;' class='serif'> [说明] </a>";
+								sw=1;
+								}else
+								{
+								document.getElementById("datetime").innerHTML = pangu.spacing(Real_Now());
+								document.getElementById("fantasy_time_help").innerHTML = "";
+								
+								sw=0;
+								}
+								}
+								
+								document.getElementById("datetime").innerHTML = pangu.spacing(Real_Now());
+								document.getElementById("fantasy_time_help").innerHTML = "";
+
+								</script>
+						</a>
+						</div>
+
+					</footer>
+				</main>
+			</div>
+		</div>
+
+		<script>
+		document.body.addEventListener('copy', function (e) {
+ 		   if (window.getSelection().toString() && window.getSelection().toString().length > 10) {
+   		     setClipboardText(e);
+  		  }
+		}); 
+
+		function setClipboardText(event) {
+			var clipboardData = event.clipboardData || window.clipboardData;
+			if (clipboardData) {
+				event.preventDefault();
+				var htmlData = ''
+					+ '*-----------------------------------------------------------------------*<br>'
+					+ '# 商业转载请联系作者获得授权，非商业转载请注明出处<br>'
+					+ '# For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source.<br>'
+					+ '# 协议(License)：署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)<br>'
+					+ '# 作者(Author)：暗梦先生呀~ <br>'
+					+ '# 链接(URL)：' + window.location.href + '<br>'
+					+ '# 来源(Source)： '+ window.location.hostname +' <br>'
+					+ '*-----------------------------------------------------------------------*<br><br>'
+					+ window.getSelection().toString();
+				var textData = ''
+					+ '*-----------------------------------------------------------------------*\n'
+					+ '# 商业转载请联系作者获得授权，非商业转载请注明出处\n'
+					+ '# For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source.\n'
+					+ '# 协议(License)：署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)\n'
+					+ '# 作者(Author)：暗梦先生呀~ \n'
+					+ '# 链接(URL)：' + window.location.href + '\n'
+					+ '# 来源(Source)： '+ window.location.hostname +' \n'
+					+ '*-----------------------------------------------------------------------*\n\n'
+					+ window.getSelection().toString();
+				  clipboardData.setData('text/html', htmlData);
+				  clipboardData.setData('text/plain',textData);
+				  mdui.snackbar({message: '<strong>Copied!</strong><br><i>tip:请尊重原创文章，非商业转载请注明出处。</i><br>作者(Author)：暗梦先生呀~ ',position: 'right-top'});
+			}
+		}
+
+		if (window.location.hostname === "anmeng.eu.org") {
+		  checkblogpush_and_print_lastmessage();
+		}
+		
+		</script>
+		
+<script src="/argontheme.js"></script>
+
+		
+		
+		
+
+		
+			<script>
+				var argonEnableCodeHighlight = true;
+			</script>
+			
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015_anmeng.css">
+
+		
+
+	</div>
+</div>
+<noscript>
+	<style>
+		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+		.comment-item-text .comment-sticker.lazyload{display: none;}
+	</style>
+</noscript>
+</body>
+
+
+
+
+
+<div class="blog_musicbox_control no-pjax" style="z-index:100000;position:relative;">
+<div id="aplayer" class="blog_musicbox no-pjax hidden" style="display:none;"></div>
+</div>
+
+<script no-pjax>
+try {
+var metingapi_url="https://api.injahow.cn/meting/?server=netease&type=song&id=";
+var songid_data = ['531253053','687506','33682739','22636640','447303772','1942909267','1404596131','520242026','29017078','34613438','1928521973','1458664808','1915699293','1915700989','191252','537787665','1500439504']
+
+const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+	fixed: false,
+	lrcType: 3,
+	order: 'list',
+	preload: 'none',
+	theme: '#F05B85',
+	listFolded: true
+});
+
+songid_data.forEach((item) => {
+fetch(metingapi_url+item)
+  .then(function(response) {
+      var temp_songdata = [];
+      temp_songdata.push(response.json())
+      Promise.all(temp_songdata).then(function(results) {
+      for (i = 0 ;i < results.length;i++)
+	{
+	    ap.list.add({
+   	      name: results[i][0].name,
+   	      artist: results[i][0].artist,
+  	      url: results[i][0].url,
+   	      cover: results[i][0].pic,
+   	      lrc: results[i][0].lrc,
+	      theme: '#ebd0c2'
+	    });
+	}
+    });
+  })
+});
+
+if ($("#float_action_buttons").hasClass("fabtns-float-left")){
+	$("#aplayer").addClass("align-left");
+}
+$("#aplayer").addClass("mdui-shadow-6");
+}catch(err){}
+</script>
+
+</html>
+<!-- 随机文章功能 -->
+             <script>
+              var posts=["3d8e3836/","29682406/","6c7cded/","583256b2/","4dfc8d36/","80a705f8/","9edfc8c7/","c3464ddc/","f9910d43/","3c3f650c/","6958ef11/","3b42a900/","efdb30fe/","81c40aed/","5d5eb4fd/","2493498c/","d5bff76b/","3da5ba11/","9f498195/","9a15a626/","cad9d0fd/","78c6ea47/","fa038589/","41b04205/","b7b7087/","27fff63c/","536096c0/","12ebe1b0/","2c9586b5/","c34131c8/","60bb5b1a/","bdcdc9f9/","740c95d7/","c1e42d95/","153650c/","ed2ab52c/","8020d73a/","db0daa9f/","536e38d0/","29a55fff/","be102642/","83a98f88/","9e353a30/","e1cfb062/","42cc5bb9/","9a107844/","7f22a087/","3f5e9913/","afea83d/","5132bf84/","8f034b5/","1d7969b6/"];
+	      posts.splice(posts.indexOf(/shuoshuo/g),1)
+             function toRandomPost() {
+               $.pjax({
+         　　    url: '/'+posts[Math.floor(Math.random() * posts.length)]
+                })
+              }</script>
+    

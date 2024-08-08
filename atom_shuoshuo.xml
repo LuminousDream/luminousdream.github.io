@@ -1,0 +1,125 @@
+
+    <feed xmlns="http://www.w3.org/2005/Atom">
+        <title>FantasyLand の 暗梦 的说说</title>
+        <subtitle>人生如戏，故事如诗。</subtitle>
+        <link href="https://anmeng.asia/atom_shuoshuo.xml" rel="self"/>
+        <link href="https://anmeng.asia"/>
+        <updated>2024-08-07T13:40:28.400Z</updated>
+        <id>https://anmeng.asia</id>
+        <author>暗梦先生呀~</author>
+    <entry>
+            <title>心有 “渔” 力不足的都市看客兼吟游诗人</title>
+            <link href="https://anmeng.asia/shuoshuo/87899d1/"/>
+            <id>https://anmeng.asia/shuoshuo/87899d1/</id>
+            <published>2024-08-07T13:24:34.000Z</published>
+            <updated>2024-08-07T13:40:28.400Z</updated>
+            <content type="html">
+                <![CDATA[ <p>em…… 本来生日的时候 (上个月) 想买块树莓派 Zero W 来玩的 (比如说折腾轻 NAS，密码管理器之类的，偶尔也可以拿来玩玩 RetroPie)<br>不过听 <a href="https://vinking.top/">@Vinking</a> 说他的树莓派 4 Model B 都是理财产品，目前已经出掉了，仔细想想也没什么实质性用途 <sup>[还容易吃灰]</sup>， 最后还是选择不买<br>直到现在有了一个想法，准备买一台三星的 Galaxy Z Flip3 <sup>[SM-F7110]</sup> 来做备用 &amp; 小游戏机用，虽然这种折叠屏有点贵，性能和小米相比也没什么性价比</p>
+<blockquote>
+<p><em><strong>暗梦：但也能解 BL 锁啦，只要买的不是美版就好 <sup>[况且美版无法使用电信卡，暗梦我一般收到那种机器都会选择7天无理由退掉]</sup>，但也有的商品介绍页面写着非国行</strong></em><br>总觉得和 “听君一席话，如听一席话。” 差不多来着，说了又当没说，还倒不如买韩版刷国行系统，或者直接买国行版  (o-ωｑ)).oO [梦之无奈]<br>但话说前面，这种解 BL 锁之后暗梦我还是能玩类原生系统 <sup>[只是需要自己编译 LineageOS]</sup><br>但 Knox 会触发熔断机制导致售后服务失效 &amp; Samsung Pay 功能无法使用，所以会先考虑好再解 BL 锁。</p>
+</blockquote>
+<p>本来暗梦我这部小米 Mix 4 的性能都够用了，还要买这部手机的最主要原因嘛 ……<br>也是方便主力机在维修的时候，为了自备一部备用机的一种方案，虽然师傅可能一天修不好，提供了备用机让你暂时用会儿：</p>
+<blockquote>
+<p><em><strong>但用着的感觉，总没有自己的手机习惯，或者师傅忙不过来没仔细检查备用机就交给你了，第二天还说你造成了机器损坏。</strong></em><br>绕了一圈，还不如自己准备一台备用机呢，虽然花销多少还是有点，不过暗梦我还是买二手，另外，型号还是别选太老比较好<br>不然打开微信和 QQ 耗电都很大，当然，<em><strong>在平常不忙的时候也可以拿出来玩一玩，或者应急充当无线充电宝，这不比树莓派更有实质性多了。</strong></em><br>这个，二手折叠屏有点缺陷还可以接受啦，<strong>只要不太严重</strong>，到时候要买的话再发篇测评文章，就当是给旅行者们来做一个参考哈~</p>
+</blockquote>
+<div class="alert alert-themecolor"><span class="alert-inner--text"><i class="fa fa-comment-o"></i>&nbsp;<strong>暗梦：</strong>&nbsp;em...... 要是实在没货，就等到双 11 再看，或者选 Galaxy S20 FE 也行哒，希望不要吃灰，而是发挥真正的实质性用途<br>
+Oray，暗梦我得先去休息会儿了，最近天气真的很热，再加上状态不佳，才看完医生回来，那亲爱的旅行者们，再会  (ﾉ´ヮ`)ﾉ*:･ﾟ✧~</span></div> ]]>
+            </content>
+        </entry>
+        <entry>
+            <title>都市看客暗梦 の 在龙舟之章 · 端午前的随笔</title>
+            <link href="https://anmeng.asia/shuoshuo/609e4e76/"/>
+            <id>https://anmeng.asia/shuoshuo/609e4e76/</id>
+            <published>2024-06-09T11:16:39.000Z</published>
+            <updated>2024-06-09T11:17:18.000Z</updated>
+            <content type="html">
+                <![CDATA[ <p>em…… 一个月前，夏天还没到就热得无可奈何了呢，<del>索性在空余时间，制作了一部游戏</del> <sup>《都市挚爱者物语》</sup> <del>哈，诶嘿~</del></p>
+<blockquote>
+<p>Tip: 准确来说应该是视觉小说，<del>大概 16 年的时候，在 <a href="https://66rpg.com/">橙光 (原 66RPG，帐号已注销)</a> 制作过游戏，很久的事情了，旅行者们应该也不知道吧</del><br><font color="#F05B85"><strong>✦ 就是 Ren’Py Launcher 生成的 Web 静态资源没有预加载机制，所以说可能会出现背景短暂马赛克的 Bug (o-ωｑ)).oO [梦之无奈] ✦</strong></font><br>关于游戏的剧情介绍及注意事项请见 <a href="https://mygame.anmeng.asia/">我的自制游戏库</a>，暗梦我不会在博客中的任何一篇文章和说说阐述关于自制游戏的剧情介绍。</p>
+</blockquote>
+<p>目前也只是测试版，有一些剧情还没有做完，就先放一个 Web 端，但也并非长久之计，毕竟 Github 的仓库存储空间有限，有的时候 commit 都要等很久。<br>等到暗梦我后续做完了，再删除 Web 端并构建发行版 <sup>[Windows &amp; Macintosh]</sup> 并压缩成 tar.xz 压缩档，放在我的自制游戏库里面好了，到时另写说说通知~</p>
+<p>然后嘛，就是暗梦我那部小米 Mix 4，用了 3 个多月电源键的底座断了，导致按键脱落 <sup>(Tip: 按键默认为塑料底座)</sup></p>
+<blockquote>
+<p>暗梦: 虽然说有金属底座的按键再卖，本来想要自己换的，至于为什么选择自己修嘛，这么说吧<br><strong>这部手机拆机的方式，和我的之前那部小米 6X 完全不同</strong>，担心镇里的维修师傅不熟悉构造<br>再加上因为双电池和主板构造的独特性，就怕更换时细节不到位，导致 Soc 芯片损坏而彻底变砖。</p>
+</blockquote>
+<p>不过最后还是没有选择自己动手啦，索性就先在类原生系统的设置里面设置了下，点按屏幕亮屏 &amp; 息屏，勉强用一下<br>就是没电的时候除了需要充电，还需要借助取卡针，轻轻触发微动开关才能开机，至于更换按键的事儿之后再说吧，诶嘿~</p>
+<blockquote>
+<p>猫猫：<font color="#F05B85"><strong>✦ 最后提前祝愿各位旅行者们端午节快乐，能够考上理想的大学 / 找到理想的工作喵 ✦</strong></font>，先休息会儿……<br>对了喵~ 暗梦你忙完之后别对生活的事情太过于担心，等会儿我们来玩躲喵喵，你来找本喵就行~</p>
+</blockquote>
+<div class="anmeng_conversations"><img src="/icon.jpg" class="anmeng_conversations_avatar no-fancybox"/><div class="card">先不说在家里的角落能否找到你呢，猫猫，只求你不要在家里捣蛋，安安稳稳地也就足够了，好吧~</div></div>
+
+<center>
+<img alt="为了明日份的美好，而选择暂时休憨的猫猫" src="/static/20240609_09420.webp">
+</center> ]]>
+            </content>
+        </entry>
+        <entry>
+            <title>都市看客暗梦 の 在花海之章 · 春季的随笔</title>
+            <link href="https://anmeng.asia/shuoshuo/38512e86/"/>
+            <id>https://anmeng.asia/shuoshuo/38512e86/</id>
+            <published>2024-04-01T12:19:50.000Z</published>
+            <updated>2024-04-01T12:22:23.000Z</updated>
+            <content type="html">
+                <![CDATA[ <p>em…… <em><strong>自从在前几天 (大概是 3 月 28 号) EU.Org 无法在国内访问的时候，暗梦我也早猜到了这个免费域名，因为其他人滥用而导致的结局</strong></em><br><strong>不过暗梦我要说的是，我的博客不会有任何违反法律法规的内容</strong>，于是购入了一个 .asia 域名，即便是需要实名认证也可以接受嘛，为了维护网络安全。</p>
+<blockquote>
+<p>Tip: 期限 10 年，本来的价格是 275 块，不过好在的是，因为昨年 &amp; 今年参与了 <a href="https://vinking.top/">@Vinking</a> 的新年游戏，间接折扣了 42 块，实际花销为 233 (。-ω-)<br>虽说钱也不是大风刮来的呢，暗梦我也都在工作，但再怎么忙，在闲暇之余都不会放弃在都市角落中的幻想之地，续写人生的每一场邂逅 &amp; 历练。</p>
+</blockquote>
+<p>还有就是，忙碌起来，先不说没时间烦恼了，也没时间发现一些新的机遇，来作为之后博客文章的序篇呢，就犹如此时仍在教书育人的 <a href="https://vinking.top/">@Vinking</a> 一样<br>每天不是和同学们传授知识 &amp; 基本道德，就是在下课时间的作业批改 &amp; 接下来课程的备课，还需要时不时到学校的会议室开会讨论教育事宜呢 (o-ωｑ)).oO</p>
+<blockquote>
+<p>暗梦：这本来都已经很艰辛了，再加上学生不遵守秩序的情况也让老师倍感苦恼，他最近也就没怎么写博客了，不过，暗梦 · 杜其米亚我想告诉他的是<br>教师并非只是人类灵魂的工程师 &amp; 传授知识的使者，也同样是这些同学们在学习期间，能够短暂陪伴在他们身边的知心朋友（<em>＾-＾</em>）<br>学会了解他们的真实想法 &amp; 兴趣爱好，并在合理的范围内 &amp; 工作之余，适当融入他们的圈子并给予帮助<br>也算是解决了老师 &amp; 同学们的问题，毕竟，到毕业的时候也会万般留恋呢~ (。-ω-)</p>
+</blockquote>
+<p>另外，最近这几天都一点点不舒服，这么说吧，前天晚上去餐厅品尝了下重庆西北部的特色菜 · 尖椒兔<br>虽然说美味，但厨师做的也是辣味十足，就连作为本地人的我嘛，也从前天吃完到昨天下午，都被辣得状态都不太好  ╮(╯_╰)╭ [梦之无奈] </p>
+<div class="alert alert-themecolor"><span class="alert-inner--text"><i class="fa fa-comment-o"></i>&nbsp;<strong>暗梦：</strong>&nbsp;Oray，最近嘛，暗梦我的猫猫也开始换毛了，得去给它梳一下哈，那亲爱的旅行者们，再会啦~</span></div>
+ ]]>
+            </content>
+        </entry>
+        <entry>
+            <title>都市看客暗梦 の 关于简单修理机械键盘的那些事儿</title>
+            <link href="https://anmeng.asia/shuoshuo/b84c7f76/"/>
+            <id>https://anmeng.asia/shuoshuo/b84c7f76/</id>
+            <published>2023-12-30T12:58:01.000Z</published>
+            <updated>2024-02-02T17:05:27.000Z</updated>
+            <content type="html">
+                <![CDATA[ <div class="post-outdated-info"><i class="fa fa-info-circle" aria-hidden="true"></i> Tip：此处的经历仅供旅行者们参考，请旅行者们在实际使用电烙铁时需要注意安全，也请在操作的时候做好防护哈~ (o′ω`o)ノ</div>
+<p>em……<br>快到 2024 跨年了，暗梦我本来想写篇文章，就在距离这篇说说发布的 6 小时前准备打字的时候，键盘上面的部分按键总是按下不会触发 [梦之无语] (?-ω-)<br>当时，就在被这件琐事所苦恼的时候，忽然想到早在一年前的时候，暗梦我在 <a href="https://kira.cool/">@Kira Blog</a> 中读到的这篇 <a href="https://kira.cool/daily/31-add-backlight-to-keyboard">关于给机械键盘加灯的文章</a> <i>( Tip: 虽然暗梦我并没有自己尝试过 DIY 机械键盘 )</i> ，索性嘛，就决定尝试一下自己修复哈，诶嘿~</p>
+<p>首先嘛，暗梦我也并没有拔轴器之类的工具，倒是有一把电烙铁 &amp; 镊子，准备将镊子轻轻卡在键轴的一侧，等电烙铁加热焊点并出现松动之后，拔出镊子再卡在另一侧继续加热焊点来拆掉故障的轴  <strong>(暗梦: 虽然说也怕键轴上下两侧的卡扣会断掉 [(o-ωｑ)).oO] )</strong>  ，然后再将上面的旧锡清理干净。</p>
+<p>em…… ，因为此时没有买新轴，此时暗梦我就在想一个问题，这种情况下又该如何修理呢，索性想了一个办法 の 移花接木，怎么说呢？</p>
+<blockquote>
+<p>暗梦：在 Hackintosh 中有些按键对于暗梦我而言嘛，也派不上用场，索性就找其他不常用的键来替换，好吧，旅行者们可以看一下下面这张图，同时也请谅解下照片没有拍全哈。</p>
+</blockquote>
+<p><img src="/static/20231230_29942.webp" alt="修好之后略微潦草的机械键盘"></p>
+<p>然后将故障的三枚红轴调换位置 &amp; 重新进行焊接，如此一来，再重新装好之后连接电脑测试即可。</p>
+<blockquote>
+<p><del><em>暗梦: 可惜的是，技术有点不好，虽然减号键高出了一点点，至少在焊接的时候没有短路嘛，诶嘿~</em></del></p>
+</blockquote>
+<p>但暗梦我在 <a href="https://usevia.app/test">VIA</a> 测试了下，也完美解决了这个问题，毕竟要换新键盘的话嘛，现在机械键盘的价格也不便宜，总觉得没什么性价比呢，好吧 (ˉ▽ˉ；)</p>
+<p><img src="/static/20231230_18432.webp" alt="在都市看客暗梦的博客写作 &amp; 编程之旅中，走向退休生活的三枚红轴。"></p>
+<p>其实嘛，暗梦我也本身也对电子也不是很精通，也不算是什么都不懂，只是，怎么说呢，在简单修理 &amp; DIY 机械键盘的过程就和小时候玩的积木的过程差不多。</p>
+<blockquote>
+<p>暗梦：就好比购入一个成品机械键盘的价格都要几百到上千，而对于动手能力 &amp; 安全意识好的旅行者嘛，可以根据情况购入 PCB + 外壳 + 键轴 + 键帽 来自己组装 <em>(Tip: 如果不是很注重外观 &amp; 使用体验的话嘛，也可以从废旧的机械键盘当中，选择能够正常使用的配件来使用)</em> ，或者不舍得买很多材料而选择修复旧键盘继续使用，也能节省一部分开销，好吧。</p>
+</blockquote>
+<p>Oray，到这里简单的修理工作就结束了，猫猫在叫我呢，那暗梦我得陪猫猫玩啦 (｡◕ˇ∀ˇ◕），回见~</p>
+<div class="alert alert-primary"><span class="alert-inner--text"><i class="fa fa-commenting-o"></i>&nbsp;<strong>暗梦：</strong>&nbsp;或许在人生的旅途当中总会遇见阴霾，这固然是现实中应该去面对的，但暗梦我同样相信的是，我们也终能遇见，照亮我们内心世界的那片璀璨星空。</span></div> ]]>
+            </content>
+        </entry>
+        <entry>
+            <title>都市看客暗梦 の 浅谈告别往年烦恼的那些事儿</title>
+            <link href="https://anmeng.asia/shuoshuo/69e69f5a/"/>
+            <id>https://anmeng.asia/shuoshuo/69e69f5a/</id>
+            <published>2023-12-03T09:02:12.000Z</published>
+            <updated>2024-02-02T17:05:27.000Z</updated>
+            <content type="html">
+                <![CDATA[ <p>em……<br>最近时间过的还挺快呢，旅行者们，没过多久，这趟时之列车，就到达名为 2024 的车站了。<br>每个旅行者们都在这段时间内在都市中忙碌而奔波，总为生活 &amp; 目标而努力工作着，在这段旅途当中，也需要面对一些在生活 &amp; 工作中的烦恼 &amp; 琐事<br><br>怎么说呢？ 暗梦我还是先来说以前的那些事儿哈，大概 3 个月前，探访旅行者们的个人博客的时候，发现 <a href="https://sweetjing.cc/">@小刘同学</a> 的博客打不开，于是列入了失联友链，<em><strong>或许随着时间的流逝，他想起后，仍然还会回来，暗梦我也会默默等待，只要，他从未放弃过写作，哪怕在此时此刻。</strong></em><br></p>
+<blockquote>
+<p>[当你在生活 &amp; 工作当中，无法直接面对烦恼的时候，一段熟悉的音乐声响起~]<br><strong>……，你会没事的，旅行者，保持你的决心。<del>(Undertale GameOver 页面)</del></strong><br>[然后，你又继续振作了起来，你也选择与时间一起，慢慢去瓦解这些零碎的烦恼。]</p>
+</blockquote>
+<p>直到前天 (12 月 1 号)，他在留言板告诉我，最近他前段时间因为考公，所以也没时间管理他的个人博客导致暂时无法承担服务器的开支<br>而现在也恢复了，最后，暗梦我也欢迎旅行者能够重返个人博客的宁静当中，继续书写属于自己的诗篇~</p>
+<blockquote>
+<p>暗梦：虽然他目前暂时没有写他关于考公期间的日常，但也算是不想让他人知道他的艰辛吧，选择一笑而过，然而，到达旅途终点之时，就可以彻底走出烦恼，与以往的烦恼擦肩而过。</p>
+</blockquote>
+<p>愿我们能在 2024 年新年到来之时，与以往的烦恼挥手告别，感谢它们帮助旅行者们成长 <em>(Tip: 当然，暗梦我在之前的文章也说过，适当的烦恼 &amp; 琐事能够让人锻炼勇气 &amp; 决心，但太多也会令人烦躁)</em>  ，但也庆幸旅行者们能够告别这些苦恼，而快乐地迎来新篇章的开始。<br><br></p>
+<div class="alert alert-primary"><span class="alert-inner--text"><i class="fa fa-info-circle"></i>&nbsp;<strong>Tip：</strong>&nbsp;Oray，后续暗梦我的博客也会停更一段时间，来让自己清净一下，毕竟我自己也有一部分烦恼呢，诶嘿~<br>
+另外，我也得去给猫猫买猫粮去咯，亲爱的旅行者们，2024 年再会 (`･ω･´)ฅ</span></div> ]]>
+            </content>
+        </entry>
+        </feed>

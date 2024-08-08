@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+
+
+<html class="use-lxgw_wk banner-as-cover article-header-style-2">
+<head>
+	
+	<title>「怀旧向」那些曾经被人遗忘的 RPG MAKER XP 脚本 - FantasyLand の 暗梦</title>
+	<meta charset="utf-8">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<meta name="description" content="First.前言在现在的2022年，RPG Maker Mv&#x2F;Mz(基于HTML&#x2F;JavaScript)的出现让某些单机游戏拥有了新的转机，玩家们可以自己制作属于自己的单机RPG(角色扮演)游戏。(或许单机正在被手机网游替代)，但这些发展都离不开曾经被众人遗忘的 RPG Maker XP &amp;nbsp;&amp;nbsp;曾经的代表作： 《热血物语RM》 《口袋妖怪重生》《迷宫———阿尔西斯的末日》等 那来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「怀旧向」那些曾经被人遗忘的 RPG MAKER XP 脚本">
+<meta property="og:url" content="https://anmeng.asia/536e38d0/index.html">
+<meta property="og:site_name" content="FantasyLand の 暗梦">
+<meta property="og:description" content="First.前言在现在的2022年，RPG Maker Mv&#x2F;Mz(基于HTML&#x2F;JavaScript)的出现让某些单机游戏拥有了新的转机，玩家们可以自己制作属于自己的单机RPG(角色扮演)游戏。(或许单机正在被手机网游替代)，但这些发展都离不开曾经被众人遗忘的 RPG Maker XP &amp;nbsp;&amp;nbsp;曾经的代表作： 《热血物语RM》 《口袋妖怪重生》《迷宫———阿尔西斯的末日》等 那来">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-08T13:13:00.000Z">
+<meta property="article:modified_time" content="2024-02-02T17:05:27.000Z">
+<meta property="article:author" content="暗梦先生呀~">
+<meta property="article:tag" content="RPG MAKER">
+<meta name="twitter:card" content="summary">
+	
+	<meta name="theme-color" content="#F05B85">
+	<meta name="theme-color-rgb" content="240,91,133">
+	<meta name="theme-color-origin" content="#F05B85">
+	<meta name="argon-enable-custom-theme-color" content="true">
+	<meta name="theme-card-radius" content="15">
+	<meta name="theme-version" content="1.0.2">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<script src="/assets/vendor/mdui/mdui.min.js"></script>
+    <script src="/assets/vendor/sweetalert/sweetalert.min.js"></script>
+	<script src="/assets/vendor/marked/marked.min.js"></script>
+	<script src="/assets/js/APlayer.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/APlayer.min.css" />
+	<script src="/assets/vendor/echarts/echarts.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/twikoo.anmeng.css"/>
+	<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.7.0/style.css">
+	<script src="/assets/js/darkdream_piano.js"></script>
+	<script src="/assets/js/ff_clock.js"></script>
+	<script src="/assets/js/darkdream_blog.js"></script>
+	<script src="/assets/js/darkdream_roman_clock.js"></script>
+	<script src="/assets/js/calendar.js"></script>
+	<script src="/assets/js/echarts.min.js"></script>
+	<script src="/assets/vendor/twikoo/twikoo.all.anmeng.min.js"></script>
+	
+		<script async src="/assets/js/darkdream_blog_fps.js"></script>
+	
+	<div id="fps"></div>
+	<style id="fancybox-style-noscroll" type="text/css">
+		.compensate-for-scrollbar{
+			margin-right:15px;
+		}
+	</style>
+	
+<link rel="stylesheet" href="/assets/vendor/mdui/mdui.min.css">
+
+	
+<link rel="stylesheet" href="/assets/argon_css_merged.css">
+
+	
+<link rel="stylesheet" href="/style.css">
+
+	
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Noto+Serif+SC:300,600&display=swap.css">
+
+	
+<script src="/assets/argon_js_merged.js"></script>
+
+	
+<script src="/assets/js/argon.min.js"></script>
+
+
+	
+	
+
+	<script>
+		var argonConfig = {
+			language: "zh_CN",
+			
+				zoomify: false,
+			
+			
+				fancybox: {},
+			
+			pangu: "false",
+			
+				lazyload: false,
+			
+			disable_pjax: false,
+			headroom: false,
+			
+				waterflow_columns: "2and3"
+			
+		}
+
+		
+		
+		
+		var anmeng_blog_config = {
+			twikoo: {
+				twikoo_url: "https://twikoo.anmeng.asia"
+			},
+			blog_last_update_time: "2024-08-07"
+		};
+	</script>
+	<script no-pjax="">
+	function yearprogress_refresh(){
+		let year = new Date().getFullYear();
+		$("#yearprogress_yearname").text(year);
+		let from = new Date(year, 0, 1, 0, 0, 0);
+		let to = new Date(year, 11, 31, 23, 59, 59);
+		let now = new Date();
+		let progress = ((now - from) / (to - from + 1) * 100).toFixed(7);
+		let progressshort = ((now - from) / (to - from + 1) * 100).toFixed(2);
+		$("#yearprogress_progresstext").text(progressshort + "%");
+		$("#yearprogress_progresstext_full").text(progress + "%");
+		$("#yearprogress_progressbar").css("width" , progress + "%");
+	}
+		yearprogress_refresh();
+		if (typeof(yearProgressIntervalHasSet) == "undefined"){
+   		 var yearProgressIntervalHasSet = true;
+   		 setInterval(function(){yearprogress_refresh();},500);
+	}
+</script>
+	<script>
+		window.addEventListener("scroll", function (e) {
+		  if (window.scrollY > window.innerHeight * 0.3) {
+		    document.querySelector("#content").classList.add("scrolled");
+		  } else {
+		    document.querySelector("#content").classList.remove("scrolled");
+		  }
+		});
+	</script>
+	<script>
+		var darkmodeAutoSwitch = "system";
+		
+ 		function setDarkmode(enable){
+			if (enable == true){
+				$("html").addClass("darkmode");
+			}else{
+				$("html").removeClass("darkmode");
+			}
+			$(window).trigger("scroll");
+		}
+		function toggleDarkmode(){
+			if ($("html").hasClass("darkmode")){
+				setDarkmode(false);
+				$("#cc_info").removeClass("cc_info_darkmode");
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "false");
+			}else{
+				setDarkmode(true);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "true");
+				$("#cc_info").addClass("cc_info_darkmode");
+			}
+		}
+		if (sessionStorage.getItem("Argon_Enable_Dark_Mode") == "true"){
+			setDarkmode(true);
+		}
+		function toggleDarkmodeByPrefersColorScheme(media){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			if (media.matches){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		
+		if (darkmodeAutoSwitch == 'system'){
+			var darkmodeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			darkmodeMediaQuery.addListener(toggleDarkmodeByPrefersColorScheme);
+			toggleDarkmodeByPrefersColorScheme(darkmodeMediaQuery);
+		}
+		
+		if (darkmodeAutoSwitch == 'alwayson'){
+			setDarkmode(true);
+		}
+
+		function toggleAmoledDarkMode(){
+			$("html").toggleClass("amoled-dark");
+			if ($("html").hasClass("amoled-dark")){
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "true");
+			}else{
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "false");
+			}
+		}
+		if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "true"){
+			$("html").addClass("amoled-dark");
+		}else if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "false"){
+			$("html").removeClass("amoled-dark");
+		}
+	</script>
+	<script>
+		if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1){
+			$("html").addClass("using-safari");
+		}
+	</script>
+
+	
+		
+<script src="/assets/vendor/smoothscroll/smoothscroll1.js"></script>
+
+	
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+
+<style id="themecolor_css">
+	
+	:root{
+		--themecolor: #F05B85;
+		--themecolor-dark0: #EF4F7C;
+		--themecolor-dark: #EE4474;
+		--themecolor-dark2: #EC2C62;
+		--themecolor-dark3: #E91551;
+		--themecolor-light: #F48AA8;
+		--themecolor-R: 240;
+		--themecolor-G: 91;
+		--themecolor-B: 133;
+		--themecolor-rgbstr: 240,91,133;
+		--theme-opacity: .65;
+		--themecolor-gradient: linear-gradient(150deg,var(--themecolor-light) 15%, var(--themecolor) 70%, var(--themecolor-dark0) 94%);
+
+	}
+</style>
+<style id="theme_cardradius_css">
+	:root{
+		--card-radius: 15px;
+	}
+</style>
+<body>
+
+<div id="toolbar">
+	<header class="header-global">
+		<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light bg-primary headroom--not-bottom headroom--not-top headroom--pinned">
+			<div class="container">
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="/">FantasyLand の 暗梦</a>
+				<div class="navbar-collapse collapse" id="navbar_global">
+					<div class="navbar-collapse-header">
+						<div class="row">
+							<div class="col-6 collapse-brand"></div>
+							<div class="col-6 collapse-close">
+								<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+									<span></span>
+									<span></span>
+								</button>
+							</div>
+						</div>
+						&nbsp;
+					</div>
+					
+							<ul class='navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto"'>
+								
+										<li class='nav-item'>
+											<a href='/' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-home mr-1"></i>&nbsp;首页</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/shuoshuo' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-quote-left mr-1"></i>&nbsp;说说</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/archives' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-archive mr-1"></i>&nbsp;归档</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/liuyanban' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-comment mr-1"></i>&nbsp;留言板</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/suzaku_links' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-address-book mr-1"></i>&nbsp;友人账</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/suzaku_piano' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-music mr-1"></i>&nbsp;暗梦的天空之琴</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a target="_blank" rel="noopener" href='https://www.travellings.cn/go.html' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-subway mr-1"></i>&nbsp;开往</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/about' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-user mr-1"></i>&nbsp;关于我</span>
+											</a>
+											
+										</li>
+									
+							</ul>
+						
+				
+			</div>
+			<ul class="navbar-nav align-items-lg-center ml-lg-auto">
+				<li id="navbar_search_container" class="nav-item" data-toggle="modal">
+					<div id="navbar_search_input_container" class="">
+						<div class="input-group input-group-alternative">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-search"></i></span>
+							</div>
+							<input id="local-search-input" class="form-control" placeholder="搜索文章 & 说说" type="text" autocomplete="off" data-search.path="search.xml" data-config.root="/">
+							<div id="local-search-result" class="modal-content"></div>
+						</input>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</nav>
+	</header>
+</div>
+
+<!--Banner-->
+<section id="banner" class="banner section section-lg section-shaped">
+	
+	<div class="shape shape-style-1 shape-default">
+	
+	</div>
+
+	
+	<div id="banner_container" class="banner-container container text-center">
+		<div class="banner-title text-white"><span class="banner-title-inner">FantasyLand の 暗梦</span>
+		<script src="/assets/vendor/typed.js/typed.js"></script>
+		<span class="banner-subtitle d-block">
+			<span id="typed"></span>
+		</span>
+		<script>
+	  		var typed = new Typed('#typed', {
+	    		"strings":["Hello，来自异乡的旅行者，I'm 暗梦，你也可以叫我沉默Ace</br>来坐坐吧，让我们来观赏夜空，来回忆曾经的诗与远方。","在都市里一些阴暗的角落中，也有人人心系的梦想<br>但我们仍旧可以保持善良与友爱。","我们看错了这个世界，却说这个世界欺骗了我们。","或许人生没有Ctrl+Z，或者在Mac上的Command+Z，有时候你需要</br>“[root@Your's Life]# reboot ”","有时侯明白人的一生当中，深刻的思念是维系自己与记忆的纽带</br>它维系着所有的过往，悲喜，亦指引我们深入茫茫命途<br>这是我们宿命的背负，但我始终甘之如饴地承受它的沉沉重量，用以平衡轻浮的生。","人最怕的不是失去，而是没有面对失去的勇气</br>人生，得失聚散，坦然处之，得到未必是福，失去未必是祸。","人生如戏，故事如诗。"],"typeSpeed":140,"backSpeed":50,"loop":false,"showCursor":true,cursorChar: ' ✦'
+	  		});
+			</script>
+
+	</div>
+	</div>
+	
+		<style>
+			section.banner{
+				background-image: url(/background.jpg) !important;
+			}
+		</style>
+	
+	<div class="cover-scroll-down">
+		<i class="fa fa-angle-down" id="cover-scroll-down-icon" aria-hidden="true"></i>
+	</div>
+</section>
+
+
+	<style>
+		#content.scrolled::after,
+		#content.scrolled::before {
+                   filter: blur(6px);
+                   transform: scale(1.02);
+		}
+
+		#content:before {
+			transition: filter .3s ease, transform .3s ease !important;
+			content: '';
+			display: block;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -2;
+			background: url(/background.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 1;
+			transition: opacity .5s ease;
+		}
+		html.darkmode #content:before{
+			filter: brightness(0var(--theme-opacity));
+		}
+		
+			#content:after {
+				content: '';
+				transition: filter .3s ease, transform .3s ease !important;
+				display: block;
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: -2;
+				background: url(/background_darkmode.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: opacity .5s ease;
+			}
+			html.darkmode #content:after {
+				opacity: 1;
+			}
+			html.darkmode #content:before {
+				opacity: 0;
+			}
+		
+		
+			#banner, #banner .shape {
+				background: transparent !important;
+			}
+		
+	</style>
+
+
+
+	<style>
+		#banner:after {
+			content: '';
+			width: 100vw;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 120px;
+			background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0) 100%);
+			display: block;
+			z-index: -1;
+		}
+		.banner-title {
+			text-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+		}
+	</style>
+
+
+<div id="float_action_buttons" class="float-action-buttons fabtns-unloaded">
+	<button id="fabtn_toggle_sides" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip-move-to-left="移至左侧" tooltip-move-to-right="移至右侧">
+		<span class="btn-inner--icon fabtn-show-on-right"><i class="fa fa-caret-left"></i></span>
+		<span class="btn-inner--icon fabtn-show-on-left"><i class="fa fa-caret-right"></i></span>
+	</button>
+	<button id="fabtn_back_to_top" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" aria-label="Back To Top" tooltip="回到顶部">
+		<span class="btn-inner--icon"><i class="fa fa-angle-up"></i></span>
+	</button>
+	
+	<button id="fabtn_toggle_aplayer" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" tooltip="音乐播放器">
+		<span class="btn-inner--icon"><i class="fa fa-music"></i></span>
+	</button>
+	
+	<button id="fabtn_toggle_darkmode" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" <-% theme.fab_show_darkmode_button ? "" : "style='display: none;'  aria-label="Toggle Darkmode" tooltip-darkmode="夜间模式" tooltip-blackmode="暗黑模式" tooltip-lightmode="日间模式">
+		<span class="btn-inner--icon"><i class="fa fa-moon-o"></i><i class='fa fa-lightbulb-o'></i></span>
+	</button>
+	
+	<button id="fabtn_goto_randompost" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" aria-label="goto_randompost" tooltip="随机文章">
+		<span class="btn-inner--icon"><i class="fa fa-random"></i></span>
+	</button>
+	
+	<button id="fabtn_go_to_comment" class="btn btn-icon btn-neutral fabtn shadow-sm d-none" type="button" style="height: 30px !important;" <-% theme.fab_show_gotocomment_button ? "" : "style='display: none;'"  aria-label="Comment" tooltip="评论">
+		<span class="btn-inner--icon"><i class="fa fa-comment-o"></i></span>
+	</button>
+	<button id="fabtn_toggle_blog_settings_popup" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" <-% theme.fab_show_settings_button ? "" : "style='display: none;'"  aria-label="Open Blog Settings Menu" tooltip="设置">
+		<span class="btn-inner--icon"><i class="fa fa-cog"></i></span>
+	</button>
+	<div id="fabtn_blog_settings_popup" class="card shadow-sm" style="opacity: 0;" aria-hidden="true">
+		<div id="close_blog_settings"><i class="fa fa-close"></i></div>
+		<div class="blog-setting-item mt-3">
+			<div style="transform: translateY(-4px);"><div id="blog_setting_toggle_darkmode_and_amoledarkmode" tooltip-switch-to-darkmode="切换到夜间模式" tooltip-switch-to-blackmode="切换到暗黑模式"><i class="fa fa-moon-o"></i>&nbsp;&nbsp;<span>夜间模式</span><span>暗黑模式</span></div></div>
+			<div style="flex: 1;"></div>
+			<label id="blog_setting_darkmode_switch" class="custom-toggle">
+				<span class="custom-toggle-slider rounded-circle"></span>
+			</label>
+		</div>
+		
+		<div class="blog-setting-item mt-3 toggle_readingmode">
+			<div style="transform: translateY(-4px);"><div id="blog_setting_toggle_readingmode"><i class="fa fa-book"></i>&nbsp;&nbsp;<span>阅读模式布局 <i>(单栏布局)</i></span></div></div>
+			<div style="flex: 1;"></div>
+			<label id="blog_setting_readingmode_switch" class="custom-toggle">
+				<span class="custom-toggle-slider rounded-circle"></span>
+			</label>
+		</div>
+		
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;"><i class="fa fa-font"></i>&nbsp;&nbsp;字体</div>
+			<div>
+				<button id="blog_setting_font_sans_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-left">Sans Serif</button><button id="blog_setting_font_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-right">Serif</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;"></div>
+			<div>
+				<button id="blog_setting_font_lxgw_wk" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-left">霞鹜文楷</button><button id="blog_setting_font_myzymyqx" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-single">满眼醉意梦屿千寻</button><button id="blog_setting_font_unifont" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-right">GNU Unifont</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;"><i class="fa fa-clone"></i>&nbsp;&nbsp;阴影</div>
+			<div>
+				<button id="blog_setting_shadow_small" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-left">浅阴影</button><button id="blog_setting_shadow_big" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-right">深阴影</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3 mb-3">
+			<div style="flex: 1;"><i class="fa fa-desktop"></i>&nbsp;&nbsp;滤镜</div>
+			<div id="blog_setting_filters" class="ml-3">
+				<button id="blog_setting_filter_off" type="button" class="blog-setting-filter-btn ml-0" filter-name="off">关闭</button>
+				<button id="blog_setting_filter_sunset" type="button" class="blog-setting-filter-btn" filter-name="sunset">日落</button>
+				<button id="blog_setting_filter_darkness" type="button" class="blog-setting-filter-btn" filter-name="darkness">暗化</button>
+				<button id="blog_setting_filter_grayscale" type="button" class="blog-setting-filter-btn" filter-name="grayscale">灰度</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mb-3">
+			<div id="blog_setting_card_radius_to_default" style="cursor: pointer;" tooltip="恢复默认"><i class="fa fa-circle"></i>&nbsp;&nbsp;圆角</div>
+			<div style="flex: 1;margin-left: 20px;margin-right: 8px;transform: translateY(2px);">
+				<div id="blog_setting_card_radius"></div>
+			</div>
+		</div>
+		
+			<div class="blog-setting-item mt-1 mb-3">
+				<div style="flex: 1;"><i class="fa fa-eyedropper"></i>&nbsp;&nbsp;主题色</div>
+				<div id="theme-color-picker" class="ml-3"></div>
+			</div>
+		
+	</div>
+	<button id="fabtn_open_sidebar" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style="height: 30px !important;" aria-label="Open Sidebar Menu" tooltip="菜单">
+		<span class="btn-inner--icon"><i class="fa fa-bars"></i></span>
+	</button>
+	
+	<button id="fabtn_blog_fps" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" style="height: 30px !important;" tooltip="博客帧率 (FPS)">
+		<div id="fabtn_fps_progress_bar" style="width: 0%;"></div>
+		<span>0</span>
+	</button>
+	
+	<button id="fabtn_reading_progress" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip="阅读进度">
+		<div id="fabtn_reading_progress_bar" style="width: 0%;"></div>
+		<span id="fabtn_reading_progress_details">0%</span>
+	</button>
+</div>
+
+<div id="content" class="site-content">
+
+
+
+
+
+<div class="page-information-card-container">
+	
+</div>
+
+
+<div id="sidebar_mask"></div>
+<aside id="leftbar" class="leftbar widget-area" role="complementary">
+		
+
+		<div id="leftbar_part1" class="widget widget_search card bg-white shadow-sm border-0">
+			<div class="leftbar-banner card-body">
+				<span class="leftbar-banner-title text-white">FantasyLand の 暗梦</span>
+				<span class="leftbar-banner-subtitle text-white"><i class="fa fa-pencil"></i>&nbsp;&nbsp;人生如戏，故事如诗。</span>
+			</div>
+                                
+
+			
+                                <ul id='leftbar_part1_menu' class='leftbar-menu'>
+                                        <li class='leftbar-menu-item'><a href='/'><i class="fa fa-home"></i> 首页</a></li><li class='leftbar-menu-item'><a href='/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/'><i class="fa fa-code"></i> 技术分享</a></li><li class='leftbar-menu-item'><a href='/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/'><i class="fa fa-book"></i> 喵星使者的自我修养</a></li><li class='leftbar-menu-item'><a href='/categories/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4%E4%B9%90%E8%B0%B1%E5%88%86%E4%BA%AB/'><i class="fa fa-music"></i> 天空之琴乐谱分享</a></li><li class='leftbar-menu-item'><a href='/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4'><i class="fa fa-star"></i> 暗梦&nbsp;の&nbsp;随心说</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://mygame.anmeng.asia'><i class="fa fa-database"></i> 暗梦&nbsp;の&nbsp;自制游戏库</a></li><li class='leftbar-menu-item'><a href='/archives'><i class="fa fa-archive"></i> 都市看客暗梦&nbsp;の&nbsp;归档</a></li>
+                                </ul>
+                        
+                </div>
+
+                <div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
+                        <div id="leftbar_part2_inner" class="card-body">
+                                
+                                
+                                        <div class="nav-wrapper" id="sidebar_tab" style="padding-top: 5px;">
+                                
+                        <ul class="nav nav-pills nav-fill" role="tablist">
+                                                
+                                                        <li class="nav-item sidebar-tab-switcher" id="post-toc-switcher">
+                                                                <a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax><i class="fa fa-th-list"></i>&nbsp;&nbsp;文章目录 </a>
+                                                        </li>
+                                                
+                                                <li class="nav-item sidebar-tab-switcher">
+                                                        <a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax><i class="fa fa-id-card-o"></i>&nbsp;&nbsp;站点概览</a>
+                                                </li>
+                                                
+                                                <li class="nav-item sidebar-tab-switcher">
+                                                        <a onclick="$('#leftbar_tab_overview').removeClass('show');$('#leftbar_tab_overview').removeClass('active');" class="" id="leftbar_tab_functions_btn" data-toggle="tab" href="#leftbar_tab_functions" role="tab" aria-controls="leftbar_tab_overview" no-pjax><i class="fa fa-wrench"></i>&nbsp;&nbsp;功能</a>
+                                                </li>
+                                                
+                        </ul>
+                                </div>
+                                <div>
+                                        <div class="tab-content" style="padding: 10px 10px 0 10px;">
+                                                
+                                                        <div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+                                                                <div id="leftbar_catalog"></div>
+
+                                                                <script type="text/javascript">
+                                                                        var gened_toc = false;
+                                                                        $(function () {
+                                                                                $(document).headIndex({
+                                                                                        articleWrapSelector: '#post_content',
+                                                                                        indexBoxSelector: '#leftbar_catalog',
+                                                                                        subItemBoxClass: "index-subItem-box",
+                                                                                        itemClass: "index-item",
+                                                                                        linkClass: "index-link",
+                                                                                        offset: 80,
+                                                                                });
+                                                                                
+                                                                                if(document.getElementById("leftbar_catalog").innerHTML == "")
+                                                                                {
+											//如果文章没有任何目录的话，则不显示文章目录。
+                                                                                        gened_toc = false;
+                                                                                        document.getElementById("post-toc-switcher").style.display = "none";
+                                                                                        
+                                                                                        $("#leftbar_tab_catalog_btn").removeClass("active");
+                                                                                        $("#leftbar_tab_catalog_btn").removeClass("show");
+                                                                                        $("#leftbar_tab_overview").addClass("active");
+                                                                                        $("#leftbar_tab_overview").addClass("show");
+                                                                                        $("#leftbar_tab_overview_btn").addClass("active");
+                                                                                        $("#leftbar_tab_overview_btn").addClass("show");
+											$("#leftbar_tab_overview_btn").attr('Aria-selected','true');
+                                                                                }else{
+                                                                                        gened_toc = true;
+                                                                                }
+                                                                        })
+                                                                </script>
+                                                                
+                                                        </div>
+                                                
+
+                                                <div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<!-- 站点概览页 -->
+                                                        <img id="leftbar_overview_author_image" src="/icon.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
+							<h6 id="leftbar_overview_author_name">暗梦先生呀~ </h6>
+							<p style="font-size:12px;">一枚众神眷恋的都市看客 & 吟游诗人</p>
+							<nav class="site-state">
+                                                                <div class="site-state-item site-state-posts">
+                                                                        <a href="/archives">
+                                                                                <span class="site-state-item-count">
+                                                                                
+                                                                                52
+                                                                                </span>
+                                                                                <span class="site-state-item-name">文章</span>
+                                                                        </a>
+                                                                </div>
+								<div class="site-state-item site-state-shuoshuo">
+									<a href="/shuoshuo">
+                                                                                <span class="site-state-item-count">8</span>
+                                                                                <span class="site-state-item-name">说说</span>
+                                                                	</a>
+								</div>
+                                                                <div class="site-state-item site-state-categories">
+                                                                        <a data-toggle="modal" data-target="#blog_categories">
+                                                                                <span class="site-state-item-count">4</span>
+                                                                                <span class="site-state-item-name">分类</span>
+                                                                        </a>
+                                                                </div>      
+                                                                <div class="site-state-item site-state-tags">
+                                                                        <a data-toggle="modal" data-target="#blog_tags">
+                                                                                <span class="site-state-item-count">14</span>
+                                                                                <span class="site-state-item-name">标签</span>
+                                                                        </a>
+                                                                </div>
+                                                        </nav>
+
+
+
+                                                        
+                                                                        <div class="site-author-links">
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="tencent://message/?uin=1879857489" rel='noopener' target='_blank'><span style="color:#2196F3;"><i class="fa fa-qq"></i></span></a>
+                                                                                                <div class="site-author-links-item-tooltip">QQ</div>
+                                                                                        </div>
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="mailto://dreamstar906@126.com" rel='noopener' target='_blank'><span style="color:#FCB44C;"><i class="fa fa-envelope"></i></span></a>
+                                                                                                <div class="site-author-links-item-tooltip">E-mail</div>
+                                                                                        </div>
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="https://github.com/LuminousDream/" rel='noopener' target='_blank'><i class="fa fa-github"></i></a>
+                                                                                                <div class="site-author-links-item-tooltip">GitHub</div>
+                                                                                        </div>
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="https://keys.openpgp.org/search?q=4C1B5377CDF813F3E0771E829CC6C2CEC729058D" rel='noopener' target='_blank'><span style="color:#82ABBF;"><i class="fa fa-key"></i></span></a>
+                                                                                                <div class="site-author-links-item-tooltip">OpenPGP &amp; GnuPG 公钥</div>
+                                                                                        </div>
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="/atom.xml" rel='noopener' target='_blank'><span style="color:#FF9700;"><i class="fa fa-rss"></i></span></a>
+                                                                                                <div class="site-author-links-item-tooltip">RSS</div>
+                                                                                        </div>
+                                                                                
+                                                                                        <div class='site-author-links-item'>
+                                                                                                <a href="/atom_shuoshuo.xml" rel='noopener' target='_blank'><span style="color:#F05B85;"><i class="fa fa-rss"></i></span></a>
+                                                                                                <div class="site-author-links-item-tooltip">说说 RSS</div>
+                                                                                        </div>
+                                                                                
+                                                                        </div>
+                                                                
+                                                        
+                                                                        <div style="height: 20px;"></div>
+                                                                
+                                                    </div>
+
+                                                        
+                                                        <div class="tab-pane fade" id="leftbar_tab_functions" role="tabpanel" aria-labelledby="leftbar_tab_functions_btn">
+								<h6 class="font-weight-bold text-black"><i class="fa fa-clock-o"></i>&nbsp;Time Travel Machine</h6>
+									<div id="roman_clock"></div>
+                                                                        <script>init_darkdream_roman_clock("#roman_clock");</script>
+									<i class="fa fa-calendar-o"></i>&nbsp;<span style="font-size:12px;" id="solar_calendar_label"></span>									<p><i class="fa fa-calendar"></i>&nbsp;<span style="font-size:12px;" id="lunar_calendar_label"></span></p>
+
+									<div class="progress-wrapper" style="padding:0;">
+										<div class="progress-info">
+											<div class="progress-label">
+												<span id="yearprogress_yearname"></span>
+											</div>
+											<div id="yearprogress_text_container" class="progress-percentage">
+												<span id="yearprogress_progresstext">42.34%</span>
+												<span id="yearprogress_progresstext_full"></span>
+											</div>
+										</div>
+										<div class="progress">
+											<div id="yearprogress_progressbar" class="progress-bar bg-primary" style=""></div>
+										</div>
+									</div>
+									<script>
+									var lunar = calendar.solar2lunar();
+									var timer_started = false;
+									if (timer_started == false) {
+									    document.getElementById("solar_calendar_label").innerHTML="公历 "+lunar.cYear+" 年 "+lunar.cMonth+" 月 "+lunar.cDay+" 号 ["+lunar.astro+"]";
+									    document.getElementById("lunar_calendar_label").innerHTML="农历 "+lunar.lYear+" ["+lunar.Animal+"] 年 "+lunar.IMonthCn+lunar.IDayCn;
+									    timer_started=true;
+									}
+								</script><br>
+								<h6 class="font-weight-bold text-black"><i class="fa fa-pencil"></i>&nbsp;最新文章 & 说说</h6>
+								
+									
+										<p><span class="badge badge-primary" id="shuoshuo_label"><i class="fa fa-quote-left"></i> 说说 </span>&nbsp;<a href="/shuoshuo/87899d1/">心有 “渔” 力不足的都市看客兼吟游诗人</a><br><span class="post_meta_info"><i class="fa fa-clock-o"></i> 2024-8-7</span></p>	
+									
+								
+									
+										<p><a href="/bdcdc9f9/">一枚 2024 暑期解谜游戏 · 远坂凛给你的一封祝福信</a><br><span class="post_meta_info"><i class="fa fa-clock-o"></i> 2024-7-6</span></p>	
+									
+								
+									
+										<p><span class="badge badge-primary" id="shuoshuo_label"><i class="fa fa-quote-left"></i> 说说 </span>&nbsp;<a href="/shuoshuo/609e4e76/">都市看客暗梦 の 在龙舟之章 · 端午前的随笔</a><br><span class="post_meta_info"><i class="fa fa-clock-o"></i> 2024-6-9</span></p>	
+									
+								
+									
+										<p><a href="/cad9d0fd/">Re. 从零开始在 Deta Space 部署 Twikoo 评论系统的过程</a><br><span class="post_meta_info"><i class="fa fa-clock-o"></i> 2024-6-2</span></p>	
+									
+								
+									
+										<p><a href="/27fff63c/">「随心说」都市看客暗梦 の 浅谈不应依赖的答案之书</a><br><span class="post_meta_info"><i class="fa fa-clock-o"></i> 2024-5-3</span></p>	
+									
+								
+								<h6 class="font-weight-bold text-black"><i class="fa fa-tags"></i>&nbsp;标签云</h6>	
+								<p></p><div class="tagcloud">
+								<a class="badge badge-secondary tag" href="/tags/Hackintosh/" rel="tag">Hackintosh <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/Hexo/" rel="tag">Hexo <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/Linux/" rel="tag">Linux <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/tags/MySQL/" rel="tag">MySQL <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/RPG-MAKER/" rel="tag">RPG MAKER <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Typecho/" rel="tag">Typecho <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/WordPress/" rel="tag">WordPress <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人 <span class="tag-num">8</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9A%97%E6%A2%A6%E7%9A%84%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4/" rel="tag">暗梦的天空之琴 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵 <span class="tag-num">10</span></a><a class="badge badge-secondary tag" href="/tags/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/" rel="tag">电子游戏 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E9%92%A2%E7%90%B4%E7%AE%80%E8%B0%B1/" rel="tag">钢琴简谱 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说 <span class="tag-num">27</span></a>
+								<h6 class="font-weight-bold text-black"><i class="fa fa-info"></i>&nbsp;FantasyLand Status</h6>
+								
+								
+								<label id="blog-post-and-shuoshuo-count">文章 & 说说数目： 52 / 8</label>
+								<label id="blog-total-wordcount">博客总字数：64.7k 字</label>
+								<label id="blog-last-updated">最近更新时间：2024-08-07</label>
+
+								</div>							
+							</div>
+                                                        
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+</aside>
+
+
+
+<div class="modal fade" id="blog_categories" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" id="categories_dialog_content">
+                        <div class="modal-header">
+                                <h5 class="modal-title">分类</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                </button>
+                        </div>
+                        <div class="modal-body">
+                                <a class="badge badge-secondary tag" href="/categories/%E5%96%B5%E6%98%9F%E4%BD%BF%E8%80%85%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/" rel="tag">喵星使者的自我修养 <span class="tag-num">8</span></a><a class="badge badge-secondary tag" href="/categories/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4%E4%B9%90%E8%B0%B1%E5%88%86%E4%BA%AB/" rel="tag">天空之琴乐谱分享 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" rel="tag">技术分享 <span class="tag-num">22</span></a><a class="badge badge-secondary tag" href="/categories/%E6%9A%97%E6%A2%A6-%E3%81%AE-%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">暗梦 の 随心说 <span class="tag-num">27</span></a>
+                        </div>
+                </div>
+        </div>
+</div>
+<div class="modal fade" id="blog_tags" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" id="tagcloud_dialog_content">
+                        <div class="modal-header">
+                                <h5 class="modal-title">标签</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                </button>
+                        </div>
+                        <div class="modal-body">
+                                <a class="badge badge-secondary tag" href="/tags/Hackintosh/" rel="tag">Hackintosh <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/Hexo/" rel="tag">Hexo <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/Linux/" rel="tag">Linux <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/tags/MySQL/" rel="tag">MySQL <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/RPG-MAKER/" rel="tag">RPG MAKER <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Typecho/" rel="tag">Typecho <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/WordPress/" rel="tag">WordPress <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人 <span class="tag-num">8</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9A%97%E6%A2%A6%E7%9A%84%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%90%B4/" rel="tag">暗梦的天空之琴 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/tags/%E6%B2%BB%E6%84%88%E5%BF%83%E7%81%B5/" rel="tag">治愈心灵 <span class="tag-num">10</span></a><a class="badge badge-secondary tag" href="/tags/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/" rel="tag">电子游戏 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E9%92%A2%E7%90%B4%E7%AE%80%E8%B0%B1/" rel="tag">钢琴简谱 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/tags/%E9%9A%8F%E5%BF%83%E8%AF%B4/" rel="tag">随心说 <span class="tag-num">27</span></a>
+                        </div>
+                </div>
+        </div>
+</div>
+
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main article-list article-list-home" role="main">
+		
+		
+			
+	
+		<article class="post post-full card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" id="post-title"></a>
+		<script>
+	  		var typed1 = new Typed('#post-title', {
+			    "strings":['「怀旧向」那些曾经被人遗忘的 RPG MAKER XP 脚本'],"typeSpeed":70,"loop":false,"showCursor":false
+			  });
+		</script>
+		<div class="post-meta">
+			<div class="post-meta-detail">
+				<i class="fa fa-user" aria-hidden="true"></i> <font>暗梦先生呀~</font> <div class="post-meta-devide">|</div>
+			</div>
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time id="post_date">2022-6-8
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+						</div>
+					
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							2k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							预计阅读时间 9 分钟
+						</div>
+					
+						
+                     			
+		</div>
+		
+	</header>
+
+	<div class="post-content" id="post_content">
+	    <h4 id="First-前言"><a href="#First-前言" class="headerlink" title="First.前言"></a>First.前言</h4><p>在现在的2022年，RPG Maker Mv/Mz<del datetime="2022-06-08T13:14:20+00:00">(基于HTML/JavaScript)</del>的出现让某些单机游戏拥有了新的转机，玩家们可以自己制作属于自己的单机RPG<del datetime="2022-06-08T13:26:26+00:00">(角色扮演)</del>游戏。<br><del datetime="2022-06-08T12:35:52+00:00">(或许单机正在被手机网游替代)</del>，但这些发展都离不开曾经被众人遗忘的 RPG Maker XP</p>
+<div class="mdui-hoverable shortcodestyle" style="background: #9dd7e8 !important;color: #03536b !important;text-indent: 0 !important;"><i class="fa fa-check-square"></i>&nbsp;&nbsp;曾经的代表作： 《热血物语RM》 《口袋妖怪重生》《迷宫———阿尔西斯的末日》等</div>
+那来讲讲以前的RGSS 1代脚本(基于Ruby，暗梦我还记得以前的66rpg的Rpg Maker论坛，现在好像已经关闭了十几年了来着，嗯...... ，还是挺喜欢它 RGSS-RTP 自带的音乐)
+<div class="mdui-hoverable shortcodestyle" style="background: #9dd7e8 !important;color: #03536b !important;text-indent: 0 !important;"><i class="fa fa-check-square"></i>&nbsp;&nbsp;使用方法：<br>
+(I). 打开脚本编辑器，右键左侧菜单插入空白脚本，输入名称并复制以下脚本 <del datetime="2022-06-08T13:20:28+00:00">(不适用单条语句运行)</del><br>
+(II). 编辑模式调到事件(按下F8)，点击执行内容，第三页最后一排脚本，输入你想调用的语句 <del datetime="2022-06-08T13:20:28+00:00">(不适用整段脚本运行)</del>
+</div>
+
+<h4 id="I-跳过标题画面直接开始游戏"><a href="#I-跳过标题画面直接开始游戏" class="headerlink" title="I.跳过标题画面直接开始游戏"></a>I.跳过标题画面直接开始游戏</h4><pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment">#==============================================================================</span>
+<span class="token comment"># ■ Scene_Title</span>
+<span class="token comment">#------------------------------------------------------------------------------</span>
+<span class="token comment"># 　处理标题画面的类。</span>
+<span class="token comment">#==============================================================================</span>
+<span class="token keyword">class</span> <span class="token class-name">Scene_Title</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● 主处理</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">main</span></span>
+<span class="token comment"># 战斗测试的情况下</span>
+<span class="token keyword">if</span> <span class="token variable">$BTEST</span>
+battle_test
+<span class="token keyword">return</span>
+<span class="token keyword">end</span>
+<span class="token comment"># 载入数据库</span>
+<span class="token variable">$data_actors</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/Actors.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_classes</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/Classes.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_skills</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/Skills.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_items</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/Items.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_weapons</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/Weapons.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_armors</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/Armors.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_enemies</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/Enemies.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_troops</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/Troops.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_states</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/States.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_animations</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/Animations.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_tilesets</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/Tilesets.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_common_events</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/CommonEvents.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_system</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/System.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 生成系统对像</span>
+<span class="token variable">$game_system</span> <span class="token operator">=</span> <span class="token class-name">Game_System</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token comment"># 调用新游戏的内容</span>
+command_new_game
+<span class="token comment"># 生成标题图形</span>
+<span class="token comment">#@sprite = Sprite.new</span>
+<span class="token comment">#@sprite.bitmap = RPG::Cache.title($data_system.title_name)</span>
+<span class="token comment"># 生成命令窗口</span>
+s1 <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"新游戏"</span></span>
+s2 <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"继续"</span></span>
+s3 <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"退出"</span></span>
+<span class="token variable">@command_window</span> <span class="token operator">=</span> <span class="token class-name">Window_Command</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span><span class="token number">192</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>s1<span class="token punctuation">,</span> s2<span class="token punctuation">,</span> s3<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token variable">@command_window</span><span class="token punctuation">.</span>back_opacity <span class="token operator">=</span> <span class="token number">160</span>
+<span class="token variable">@command_window</span><span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">500</span> <span class="token operator">-</span> <span class="token variable">@command_window</span><span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">2</span>
+<span class="token variable">@command_window</span><span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">500</span>
+<span class="token comment"># 判定继续的有效性</span>
+<span class="token comment"># 存档文件一个也不存在的时候也调查</span>
+<span class="token comment"># 有効为 @continue_enabled 为 true、无效为 false</span>
+<span class="token variable">@continue_enabled</span> <span class="token operator">=</span> <span class="token boolean">false</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token number">0.</span><span class="token number">.3</span>
+<span class="token keyword">if</span> FileTest<span class="token punctuation">.</span>exist<span class="token operator">?</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Save</span><span class="token interpolation"><span class="token delimiter punctuation">#&#123;</span><span class="token content">i<span class="token operator">+</span><span class="token number">1</span></span><span class="token delimiter punctuation">&#125;</span></span><span class="token string">.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">@continue_enabled</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span class="token comment"># 继续为有效的情况下、光标停止在继续上</span>
+<span class="token comment"># 无效的情况下、继续的文字显示为灰色</span>
+<span class="token keyword">if</span> <span class="token variable">@continue_enabled</span>
+<span class="token variable">@command_window</span><span class="token punctuation">.</span>index <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">else</span>
+<span class="token variable">@command_window</span><span class="token punctuation">.</span>disable_item<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+<span class="token comment"># 演奏标题 BGM</span>
+<span class="token comment">#$game_system.bgm_play($data_system.title_bgm)</span>
+<span class="token comment"># 停止演奏 ME、BGS</span>
+Audio<span class="token punctuation">.</span>me_stop
+Audio<span class="token punctuation">.</span>bgs_stop
+<span class="token comment"># 执行过渡</span>
+Graphics<span class="token punctuation">.</span>transition
+<span class="token comment"># 主循环</span>
+loop <span class="token keyword">do</span>
+<span class="token comment"># 刷新游戏画面</span>
+Graphics<span class="token punctuation">.</span>update
+<span class="token comment"># 刷新输入信息</span>
+Input<span class="token punctuation">.</span>update
+<span class="token comment"># 刷新画面</span>
+update
+<span class="token comment"># 如果画面被切换就中断循环</span>
+<span class="token keyword">if</span> <span class="token variable">$scene</span> <span class="token operator">!=</span> <span class="token keyword">self</span>
+<span class="token keyword">break</span>
+<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span class="token comment"># 装备过渡</span>
+Graphics<span class="token punctuation">.</span>freeze
+<span class="token comment"># 释放命令窗口</span>
+<span class="token variable">@command_window</span><span class="token punctuation">.</span>dispose
+<span class="token comment"># 释放标题图形</span>
+<span class="token comment">#@sprite.bitmap.dispose</span>
+<span class="token comment">#@sprite.dispose</span>
+<span class="token keyword">end</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● 刷新画面</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">update</span></span>
+<span class="token comment"># 刷新命令窗口</span>
+<span class="token variable">@command_window</span><span class="token punctuation">.</span>update
+<span class="token comment"># 按下 C 键的情况下</span>
+<span class="token keyword">if</span> Input<span class="token punctuation">.</span>trigger<span class="token operator">?</span><span class="token punctuation">(</span>Input<span class="token double-colon punctuation">::</span><span class="token constant">C</span><span class="token punctuation">)</span>
+<span class="token comment"># 命令窗口的光标位置的分支</span>
+<span class="token keyword">case</span> <span class="token variable">@command_window</span><span class="token punctuation">.</span>index
+<span class="token keyword">when</span> <span class="token number">0</span> <span class="token comment"># 新游戏</span>
+command_new_game
+<span class="token keyword">when</span> <span class="token number">1</span> <span class="token comment"># 继续</span>
+command_continue
+<span class="token keyword">when</span> <span class="token number">2</span> <span class="token comment"># 退出</span>
+command_shutdown
+<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● 命令 : 新游戏</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">command_new_game</span></span>
+<span class="token comment"># 演奏确定 SE</span>
+<span class="token comment">#$game_system.se_play($data_system.decision_se)</span>
+<span class="token comment"># 停止 BGM</span>
+Audio<span class="token punctuation">.</span>bgm_stop
+<span class="token comment"># 重置测量游戏时间用的画面计数器</span>
+Graphics<span class="token punctuation">.</span>frame_count <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token comment"># 生成各种游戏对像</span>
+<span class="token variable">$game_temp</span> <span class="token operator">=</span> <span class="token class-name">Game_Temp</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_system</span> <span class="token operator">=</span> <span class="token class-name">Game_System</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_switches</span> <span class="token operator">=</span> <span class="token class-name">Game_Switches</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_variables</span> <span class="token operator">=</span> <span class="token class-name">Game_Variables</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_self_switches</span> <span class="token operator">=</span> <span class="token class-name">Game_SelfSwitches</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_screen</span> <span class="token operator">=</span> <span class="token class-name">Game_Screen</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_actors</span> <span class="token operator">=</span> <span class="token class-name">Game_Actors</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_party</span> <span class="token operator">=</span> <span class="token class-name">Game_Party</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_troop</span> <span class="token operator">=</span> <span class="token class-name">Game_Troop</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_map</span> <span class="token operator">=</span> <span class="token class-name">Game_Map</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_player</span> <span class="token operator">=</span> <span class="token class-name">Game_Player</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token comment"># 设置初期同伴位置</span>
+<span class="token variable">$game_party</span><span class="token punctuation">.</span>setup_starting_members
+<span class="token comment"># 设置初期位置的地图</span>
+<span class="token variable">$game_map</span><span class="token punctuation">.</span>setup<span class="token punctuation">(</span><span class="token variable">$data_system</span><span class="token punctuation">.</span>start_map_id<span class="token punctuation">)</span>
+<span class="token comment"># 主角向初期位置移动</span>
+<span class="token variable">$game_player</span><span class="token punctuation">.</span>moveto<span class="token punctuation">(</span><span class="token variable">$data_system</span><span class="token punctuation">.</span>start_x<span class="token punctuation">,</span> <span class="token variable">$data_system</span><span class="token punctuation">.</span>start_y<span class="token punctuation">)</span>
+<span class="token comment"># 刷新主角</span>
+<span class="token variable">$game_player</span><span class="token punctuation">.</span>refresh
+<span class="token comment"># 执行地图设置的 BGM 与 BGS 的自动切换</span>
+<span class="token variable">$game_map</span><span class="token punctuation">.</span>autoplay
+<span class="token comment"># 刷新地图 (执行并行事件)</span>
+<span class="token variable">$game_map</span><span class="token punctuation">.</span>update
+<span class="token comment"># 切换地图画面</span>
+<span class="token variable">$scene</span> <span class="token operator">=</span> <span class="token class-name">Scene_Map</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token keyword">end</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● 命令 : 继续</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">command_continue</span></span>
+<span class="token comment"># 继续无效的情况下</span>
+<span class="token keyword">unless</span> <span class="token variable">@continue_enabled</span>
+<span class="token comment"># 演奏无效 SE</span>
+<span class="token variable">$game_system</span><span class="token punctuation">.</span>se_play<span class="token punctuation">(</span><span class="token variable">$data_system</span><span class="token punctuation">.</span>buzzer_se<span class="token punctuation">)</span>
+<span class="token keyword">return</span>
+<span class="token keyword">end</span>
+<span class="token comment"># 演奏确定 SE</span>
+<span class="token variable">$game_system</span><span class="token punctuation">.</span>se_play<span class="token punctuation">(</span><span class="token variable">$data_system</span><span class="token punctuation">.</span>decision_se<span class="token punctuation">)</span>
+<span class="token comment"># 切换到读档画面</span>
+<span class="token variable">$scene</span> <span class="token operator">=</span> <span class="token class-name">Scene_Load</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token keyword">end</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● 命令 : 退出</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">command_shutdown</span></span>
+<span class="token comment"># 演奏确定 SE</span>
+<span class="token variable">$game_system</span><span class="token punctuation">.</span>se_play<span class="token punctuation">(</span><span class="token variable">$data_system</span><span class="token punctuation">.</span>decision_se<span class="token punctuation">)</span>
+<span class="token comment"># BGM、BGS、ME 的淡入淡出</span>
+Audio<span class="token punctuation">.</span>bgm_fade<span class="token punctuation">(</span><span class="token number">800</span><span class="token punctuation">)</span>
+Audio<span class="token punctuation">.</span>bgs_fade<span class="token punctuation">(</span><span class="token number">800</span><span class="token punctuation">)</span>
+Audio<span class="token punctuation">.</span>me_fade<span class="token punctuation">(</span><span class="token number">800</span><span class="token punctuation">)</span>
+<span class="token comment"># 退出</span>
+<span class="token variable">$scene</span> <span class="token operator">=</span> <span class="token keyword">nil</span>
+<span class="token keyword">end</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● 战斗测试</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">battle_test</span></span>
+<span class="token comment"># 载入数据库 (战斗测试用)</span>
+<span class="token variable">$data_actors</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_Actors.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_classes</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_Classes.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_skills</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_Skills.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_items</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_Items.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_weapons</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_Weapons.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_armors</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_Armors.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_enemies</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_Enemies.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_troops</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_Troops.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_states</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_States.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_animations</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_Animations.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_tilesets</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_Tilesets.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_common_events</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_CommonEvents.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token variable">$data_system</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/BT_System.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 重置测量游戏时间用的画面计数器</span>
+Graphics<span class="token punctuation">.</span>frame_count <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token comment"># 生成各种游戏对像</span>
+<span class="token variable">$game_temp</span> <span class="token operator">=</span> <span class="token class-name">Game_Temp</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_system</span> <span class="token operator">=</span> <span class="token class-name">Game_System</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_switches</span> <span class="token operator">=</span> <span class="token class-name">Game_Switches</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_variables</span> <span class="token operator">=</span> <span class="token class-name">Game_Variables</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_self_switches</span> <span class="token operator">=</span> <span class="token class-name">Game_SelfSwitches</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_screen</span> <span class="token operator">=</span> <span class="token class-name">Game_Screen</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_actors</span> <span class="token operator">=</span> <span class="token class-name">Game_Actors</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_party</span> <span class="token operator">=</span> <span class="token class-name">Game_Party</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_troop</span> <span class="token operator">=</span> <span class="token class-name">Game_Troop</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_map</span> <span class="token operator">=</span> <span class="token class-name">Game_Map</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">$game_player</span> <span class="token operator">=</span> <span class="token class-name">Game_Player</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token comment"># 设置战斗测试用同伴</span>
+<span class="token variable">$game_party</span><span class="token punctuation">.</span>setup_battle_test_members
+<span class="token comment"># 设置队伍 ID、可以逃走标志、战斗背景</span>
+<span class="token variable">$game_temp</span><span class="token punctuation">.</span>battle_troop_id <span class="token operator">=</span> <span class="token variable">$data_system</span><span class="token punctuation">.</span>test_troop_id
+<span class="token variable">$game_temp</span><span class="token punctuation">.</span>battle_can_escape <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token variable">$game_map</span><span class="token punctuation">.</span>battleback_name <span class="token operator">=</span> <span class="token variable">$data_system</span><span class="token punctuation">.</span>battleback_name
+<span class="token comment"># 演奏战斗开始 BGM</span>
+<span class="token variable">$game_system</span><span class="token punctuation">.</span>se_play<span class="token punctuation">(</span><span class="token variable">$data_system</span><span class="token punctuation">.</span>battle_start_se<span class="token punctuation">)</span>
+<span class="token comment"># 演奏战斗 BGM</span>
+<span class="token variable">$game_system</span><span class="token punctuation">.</span>bgm_play<span class="token punctuation">(</span><span class="token variable">$game_system</span><span class="token punctuation">.</span>battle_bgm<span class="token punctuation">)</span>
+<span class="token comment"># 切换到战斗画面</span>
+<span class="token variable">$scene</span> <span class="token operator">=</span> <span class="token class-name">Scene_Battle</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token keyword">end</span>
+<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="II-地图名显示脚本"><a href="#II-地图名显示脚本" class="headerlink" title="II.地图名显示脚本"></a>II.地图名显示脚本</h4><pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment">#==============================================================================</span>
+<span class="token comment"># ■ Window_Map_Name</span>
+<span class="token comment">#------------------------------------------------------------------------------</span>
+<span class="token comment"># マップ名を表示するウィンドウです。</span>
+<span class="token comment">#==============================================================================</span>
+<span class="token keyword">class</span> <span class="token class-name">Window_Map_Name</span> <span class="token operator">&lt;</span> Window_Base
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● オブジェクト初期</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">initialize</span></span>
+<span class="token keyword">super</span><span class="token punctuation">(</span><span class="token number">460</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">)</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents <span class="token operator">=</span> <span class="token class-name">Bitmap</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span>width<span class="token operator">-</span><span class="token number">32</span><span class="token punctuation">,</span> height<span class="token operator">-</span><span class="token number">32</span><span class="token punctuation">)</span>
+<span class="token variable">@showing_time</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token variable">@text_color</span> <span class="token operator">=</span> <span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token comment"># 地名：描写文字色</span>
+<span class="token keyword">end</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● テキスト设定</span>
+<span class="token comment"># text : ウィンドウに表示する文字列</span>
+<span class="token comment"># align : アラインメント (0..左揃え、1..中央揃え、2..右揃え)</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">set_text</span></span><span class="token punctuation">(</span>text<span class="token punctuation">,</span> align <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment"># テキストとアラインメントの少なくとも一方が前回と违っている场合</span>
+<span class="token keyword">if</span> text <span class="token operator">!=</span> <span class="token variable">@text</span> <span class="token keyword">or</span> align <span class="token operator">!=</span> <span class="token variable">@align</span>
+<span class="token comment"># テキストを再描画</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents<span class="token punctuation">.</span>clear
+<span class="token variable">@showing_time</span> <span class="token operator">=</span> <span class="token number">100</span>
+<span class="token variable">@text</span> <span class="token operator">=</span> text
+<span class="token variable">@align</span> <span class="token operator">=</span> align
+<span class="token variable">@actor</span> <span class="token operator">=</span> <span class="token keyword">nil</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents_opacity <span class="token operator">=</span> <span class="token number">255</span>
+x <span class="token operator">=</span> <span class="token number">4</span>
+y <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents<span class="token punctuation">.</span>font<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">192</span><span class="token punctuation">)</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents<span class="token punctuation">.</span>draw_text<span class="token punctuation">(</span>x<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">,</span> y<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token keyword">self</span><span class="token punctuation">.</span>width <span class="token operator">-</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"-"</span></span><span class="token operator">+</span>text<span class="token operator">+</span><span class="token string-literal"><span class="token string">"-"</span></span><span class="token punctuation">,</span>align<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents<span class="token punctuation">.</span>font<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span> <span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">192</span><span class="token punctuation">)</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents<span class="token punctuation">.</span>draw_text<span class="token punctuation">(</span>x<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> y<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">self</span><span class="token punctuation">.</span>width <span class="token operator">-</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"-"</span></span><span class="token operator">+</span>text<span class="token operator">+</span><span class="token string-literal"><span class="token string">"-"</span></span><span class="token punctuation">,</span> align<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents<span class="token punctuation">.</span>draw_text<span class="token punctuation">(</span>x<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> y<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">self</span><span class="token punctuation">.</span>width <span class="token operator">-</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"-"</span></span><span class="token operator">+</span>text<span class="token operator">+</span><span class="token string-literal"><span class="token string">"-"</span></span><span class="token punctuation">,</span> align<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents<span class="token punctuation">.</span>draw_text<span class="token punctuation">(</span>x<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> y<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">self</span><span class="token punctuation">.</span>width <span class="token operator">-</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"-"</span></span><span class="token operator">+</span>text<span class="token operator">+</span><span class="token string-literal"><span class="token string">"-"</span></span><span class="token punctuation">,</span> align<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents<span class="token punctuation">.</span>draw_text<span class="token punctuation">(</span>x<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> y<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">self</span><span class="token punctuation">.</span>width <span class="token operator">-</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"-"</span></span><span class="token operator">+</span>text<span class="token operator">+</span><span class="token string-literal"><span class="token string">"-"</span></span><span class="token punctuation">,</span> align<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents<span class="token punctuation">.</span>font<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token variable">@text_color</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents<span class="token punctuation">.</span>draw_text<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> <span class="token keyword">self</span><span class="token punctuation">.</span>width <span class="token operator">-</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"-"</span></span><span class="token operator">+</span>text<span class="token operator">+</span><span class="token string-literal"><span class="token string">"-"</span></span><span class="token punctuation">,</span> align<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span>
+<span class="token variable">@showing_time</span> <span class="token operator">-=</span> <span class="token number">1</span>
+<span class="token keyword">if</span> <span class="token variable">@showing_time</span> <span class="token operator">&lt;</span> <span class="token number">100</span>
+<span class="token comment"># フェードアウトしはじめる</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents_opacity <span class="token operator">=</span> <span class="token variable">@showing_time</span> <span class="token operator">*</span> <span class="token number">100</span>
+<span class="token keyword">elsif</span> <span class="token variable">@showing_time</span> <span class="token operator">&lt;=</span> <span class="token number">0</span>
+<span class="token comment"># 一定时间経过したので表示を消す</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>contents<span class="token punctuation">.</span>clear
+<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>visible <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span class="token comment">#==============================================================================</span>
+<span class="token comment"># ■ Scene_Map</span>
+<span class="token comment">#==============================================================================</span>
+<span class="token keyword">class</span> <span class="token class-name">Scene_Map</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● メイン処理</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">alias</span> xrxs20_main main
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">main</span></span>
+<span class="token comment"># 地名ウィンドウを作成</span>
+<span class="token variable">@map_name_window</span> <span class="token operator">=</span> <span class="token class-name">Window_Map_Name</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token variable">@map_name_window</span><span class="token punctuation">.</span>opacity <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token comment"># 戻す</span>
+xrxs20_main
+<span class="token comment"># 地名ウィンドウを解放</span>
+<span class="token variable">@map_name_window</span><span class="token punctuation">.</span>dispose
+<span class="token keyword">end</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● フレーム更新</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">alias</span> xrxs20_update update
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">update</span></span>
+<span class="token comment"># 地名ウィンドウの更新</span>
+<span class="token variable">@map_name_window</span><span class="token punctuation">.</span>set_text<span class="token punctuation">(</span><span class="token variable">$game_map</span><span class="token punctuation">.</span>name<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+xrxs20_update
+<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span class="token comment">#==============================================================================</span>
+<span class="token comment"># ■ Scene_Title</span>
+<span class="token comment">#==============================================================================</span>
+<span class="token keyword">class</span> <span class="token class-name">Scene_Title</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● メイン処理</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">alias</span> xrxs20_main main
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">main</span></span>
+<span class="token variable">$map_infos</span> <span class="token operator">=</span> load_data<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Data/MapInfos.rxdata"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> key <span class="token keyword">in</span> <span class="token variable">$map_infos</span><span class="token punctuation">.</span>keys
+<span class="token variable">$map_infos</span><span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$map_infos</span><span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">.</span>name
+<span class="token keyword">end</span>
+xrxs20_main
+<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span class="token comment">#==============================================================================</span>
+<span class="token comment"># ■ Game_Map</span>
+<span class="token comment">#==============================================================================</span>
+<span class="token keyword">class</span> <span class="token class-name">Game_Map</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● マップ名を取得</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">name</span></span>
+<span class="token variable">$map_infos</span><span class="token punctuation">[</span><span class="token variable">@map_id</span><span class="token punctuation">]</span>
+<span class="token keyword">end</span>
+<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="III-「实用向」RPG-Maker-XP-新手脚本函数讲解"><a href="#III-「实用向」RPG-Maker-XP-新手脚本函数讲解" class="headerlink" title="III.「实用向」RPG Maker XP 新手脚本函数讲解"></a>III.「实用向」RPG Maker XP 新手脚本函数讲解</h4><pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● Zero. Ruby 基础语句</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+
+<span class="token comment">#---------------------------------------------</span>
+<span class="token comment"># ▸ (I). 类 &amp; 函数定义</span>
+<span class="token comment">#---------------------------------------------</span>
+<span class="token keyword">class</span> <span class="token punctuation">[</span>类名称<span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token punctuation">[</span>父类名称 <span class="token punctuation">(</span>可选<span class="token punctuation">)</span><span class="token punctuation">]</span>
+  <span class="token keyword">def</span> <span class="token punctuation">[</span>函数名称<span class="token punctuation">]</span>
+    <span class="token operator">...</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>Objejct<span class="token punctuation">]</span> <span class="token comment"># 函数返回值 (可选)</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+
+<span class="token comment">#----------------------------------------------</span>
+<span class="token comment"># ▸ (II). 条件判断</span>
+<span class="token comment">#----------------------------------------------</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span>条件<span class="token punctuation">(</span>没有括号<span class="token punctuation">)</span><span class="token punctuation">]</span>
+ <span class="token operator">...</span>
+<span class="token keyword">elsif</span> <span class="token punctuation">[</span>条件<span class="token number">2</span> <span class="token punctuation">(</span>没有括号<span class="token punctuation">)</span><span class="token punctuation">]</span>
+  <span class="token operator">...</span>
+<span class="token keyword">else</span>
+  <span class="token operator">...</span>
+<span class="token keyword">end</span>
+
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● I. RGSS 基础语句</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token variable">$game_temp</span><span class="token punctuation">.</span>message_text <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"[您要输出的内容]"</span></span> <span class="token comment"># 显示引号中的文字内容</span>
+<span class="token variable">$game_temp</span><span class="token punctuation">.</span>common_event_id <span class="token operator">=</span> <span class="token punctuation">[</span>公共事件 <span class="token constant">ID</span><span class="token punctuation">]</span> <span class="token comment"># 调用指定 ID 的公共事件</span>
+<span class="token variable">@wait_count</span> <span class="token operator">=</span> x <span class="token comment"># 等待x帧</span>
+print<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"[你要输出的内容]"</span></span><span class="token punctuation">)</span> <span class="token comment"># 弹出一个提示框 (MessageBox)</span>
+exit <span class="token comment"># 退出</span>
+<span class="token variable">$game_system</span><span class="token punctuation">.</span>bgm_play<span class="token punctuation">(</span><span class="token punctuation">[</span>filename<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># 播放 BGM (BackGround Music)</span>
+<span class="token variable">$game_system</span><span class="token punctuation">.</span>bgs_play<span class="token punctuation">(</span><span class="token punctuation">[</span>filename<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># 播放 BGS (BackGround Sound)</span>
+<span class="token variable">$game_system</span><span class="token punctuation">.</span>me_play<span class="token punctuation">(</span><span class="token punctuation">[</span>filename<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># 播放 ME (Musicial Effect) 音效</span>
+<span class="token variable">$game_system</span><span class="token punctuation">.</span>se_play<span class="token punctuation">(</span><span class="token punctuation">[</span>sesound<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># 播放 SE (Sound Effect) 音效</span>
+<span class="token comment"># sesound = [</span>
+<span class="token comment">#  $data_system.decision_se (确定音效)</span>
+<span class="token comment">#  $data_system.buzzer_se (冻结/禁止音效)</span>
+<span class="token comment">#  $data_system.cursor_se (方向键光标音效)</span>
+<span class="token comment">#  $data_system.cancel_se (取消音效)</span>
+<span class="token comment">#  ... (其它文件名)</span>
+<span class="token comment">#]</span>
+
+bitmap <span class="token operator">=</span> <span class="token constant">RPG</span><span class="token double-colon punctuation">::</span>Cache<span class="token punctuation">.</span>icon<span class="token punctuation">(</span><span class="token punctuation">[</span>iconname<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># 创建图标缓存</span>
+
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● II. RGSS 游戏数据操作</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+
+<span class="token comment">#-----------------------------------------</span>
+<span class="token comment"># ▸ (I). 只读属性</span>
+<span class="token comment">#-----------------------------------------</span>
+<span class="token variable">$game_party</span><span class="token punctuation">.</span>gold <span class="token comment"># 获取金钱数量</span>
+<span class="token variable">$game_actors</span><span class="token punctuation">[</span>角色<span class="token constant">ID</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token punctuation">[</span>Actions<span class="token punctuation">]</span> <span class="token comment"># 获取指定角色信息(此处只能是读取，不能直接赋值)</span>
+<span class="token comment"># Tip: Actions=[</span>
+<span class="token comment">#  hp(生命值[相当于HP值])</span>
+<span class="token comment">#  sp(魔力值[相当于现在的MP(Magic Point)值])</span>
+<span class="token comment">#  ext(经验)</span>
+<span class="token comment">#  level(等级)</span>
+<span class="token comment">#  maxhp(最大生命值)</span>
+<span class="token comment">#  maxsp(最大魔力值)</span>
+<span class="token comment">#  name(角色名字)</span>
+<span class="token comment"># ]</span>
+
+<span class="token comment">#-----------------------------------------</span>
+<span class="token comment"># ▸ (II). 可读写属性</span>
+<span class="token comment">#-----------------------------------------</span>
+<span class="token variable">$game_switches</span><span class="token punctuation">[</span>开关<span class="token constant">ID</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token operator">/</span><span class="token boolean">false</span> <span class="token comment"># 开关值取值(true/false为小写)</span>
+<span class="token variable">$game_switches</span><span class="token punctuation">[</span>开关<span class="token constant">ID</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">not</span> <span class="token variable">$game_switches</span><span class="token punctuation">[</span>开关<span class="token constant">ID</span><span class="token punctuation">(</span>也可以是另一个开关<span class="token constant">ID</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># 开关值取反</span>
+<span class="token variable">$game_variables</span><span class="token punctuation">[</span>变量<span class="token constant">ID</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token comment"># 指定变量ID操作</span>
+
+<span class="token comment"># 运算符提示：减去或递加运算符不能为</span>
+<span class="token comment"># ( $game_variables[变量ID] = $game_variables[变量ID] +/- x )</span>
+<span class="token comment"># 或 ( $game_variables[变量ID] ++/-- )</span>
+<span class="token comment"># 应使用 ( $game_variables[变量ID] +=/-= x ) 代替</span>
+
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● III. RGSS 系统调用</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># 调出调试界面</span>
+<span class="token variable">$scene</span> <span class="token operator">=</span> <span class="token class-name">Scene_Debug</span><span class="token punctuation">.</span><span class="token keyword">new</span> 
+<span class="token comment"># 调出存档画面 (Tip: 需在游戏中运行)</span>
+<span class="token variable">$scene</span> <span class="token operator">=</span> <span class="token class-name">Scene_Save</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token comment"># 调出读档画面</span>
+<span class="token variable">$scene</span> <span class="token operator">=</span> <span class="token class-name">Scene_Load</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+<span class="token comment"># 返回标题画面</span>
+<span class="token variable">$scene</span> <span class="token operator">=</span> <span class="token class-name">Scene_Title</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># ● V. 注释块</span>
+<span class="token comment">#--------------------------------------------------------------------------</span>
+<span class="token comment"># 单行注释内容</span>
+
+<span class="token comment">=begin
+多行注释内容，哈哈，博主很懒，什么都没写。
+=end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+	</div>
+
+	
+
+	
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/RPG-MAKER/" rel="tag">RPG MAKER</a>
+		</div>
+	
+</article>
+	
+	
+<div class="card" id="cc_info">
+<br>
+<div id="cc_post_title" style="margin-left:20px;"><strong>「怀旧向」那些曾经被人遗忘的 RPG MAKER XP 脚本</strong></div>
+<div id="cc_post_link" style="margin-left:20px;font-size:14px;"><i class="fa fa-link"></i> <a id="localurl"></a></div>
+<div id="cc_post_info" style="margin-left:20px;font-size:14px;"><i class="fa fa-flag"></i> 商业转载请联系作者获得授权，非商业转载请注明出处，转载请注明来自 <a href="/">FantasyLand の 暗梦</a>！</div>
+
+<br>
+<table style="margin-left:20px;word-wrap: normal;" id="cc_post_table">
+<tr><td style="font-size:14px;"><i class="fa fa-user"></i> 作者</td><td style="font-size:14px;"><i class="fa fa-clock-o"></i> 发布于</td><td style="font-size:14px;"><i class="fa fa-copy"></i> 许可协议</td></tr>
+<tr><td>暗梦先生呀~ </td>
+<td>2022-6-8</td>
+<td><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" id="cc_link" title="署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) " ><i class="fa fa-creative-commons"></i> CC BY-NC-SA 4.0</a></td></tr>
+</table>
+<br>
+</div>
+
+
+<script>
+	document.querySelector("#localurl").innerHTML = window.location.href;
+	document.querySelector("#localurl").href = window.location.href;
+</script>
+<br>
+
+
+
+
+	
+<div id="post_comment" class="card shadow-sm" style="opacity: 0.87;padding:30px 30px;padding-bottom: 35px;">
+<h2 class="comments-title" style="margin-bottom:20px;"><i class="fa fa-comments"></i>评论</h2>
+<div class="mdui-progress">
+	<div class="mdui-progress-indeterminate mdui-follow-argon-color"></div>
+</div>
+<div class="post-outdated-info"><i class="fa fa-info-circle" aria-hidden="true"></i>
+Tip: 评论前请先查看<a onclick="comment_info();" class="comment_info_button"> 《本站评论特别声明》 </a> ，且所有评论均需审核后才能显示，谢谢~<br>
+</div>
+
+
+		<div id="twikoo_comments"></div>
+<script>
+  var blog_comment_object = twikoo.init({
+				envId: "https://twikoo.anmeng.asia",
+  				el: '#twikoo_comments',
+  				lang: 'zh-CN',
+				onCommentLoaded: function () {
+    			document.querySelectorAll('#twikoo a').forEach(function(aEl){
+      				if(!aEl.href.startsWith(window.location.origin) && !aEl.href.startsWith("https://anmeng.asia")){
+        				aEl.href='/go/?url='+encodeURI(aEl.href.replace(/\/$/, ''));
+      				}
+    			});
+  				}
+})
+</script>
+
+	</div>
+
+
+
+	
+
+
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span style="color:gray;font-size:12px;">Previous</span><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/e1cfb062/" rel="prev"> 「随心说」假如全世界7天没有猫咪，会怎样？</a></div><div class="post-navigation-item post-navigation-next"><span style="color:gray;font-size:12px;">Next</span><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/c3464ddc/" rel="next"> WordPress主题Sakurairo封面加入文章信息 &amp; 自定义社交区域图标</a></div></div>
+
+
+
+
+
+		
+		
+		
+		
+					<footer id="footer" class="site-footer card shadow-sm border-0">
+						<font id="footer_copyright">CopyRight © 2021 暗梦先生呀~ All Rights Reserved.</font>
+						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> By solstice23 | Powered by <a target="_blank" rel="noopener" href="https://hexo.io"><strong>Hexo</strong></a> | 
+							<a onclick='changetime();' id='datetime' style="font-size:15px;" class='serif'>
+								</a>
+								<a id='fantasy_time_help'></a>
+								<script>
+								var sw = 0;
+								var zqhelp=0;
+								</script>
+								<script type="text/javascript">
+								function time_help()
+								{
+								switch(zqhelp)
+								{
+								
+								case 0:
+								swal("关于鸥历的历法[1/3]","鸥历是在奥利恩斯世界通用的时间\n例如：鸥历842年为公历2011年(因为那是游戏的发布的那一年，剧情全部走完了)\n所以它的元年为1169年\n【另外，鸥历和公历的24小时制(24小时一天)不同，它一天则为12小时制(12小时一天)】","info");
+								zqhelp=zqhelp+1;
+								break;
+								
+								case 1:
+								swal("关于鸥历的历法[2/3]","鸥历月份换算表：\n1月份  火之月 ｜7月份 土之月\n2月份 水之月｜8月份 岚之月\n3月份 岩之月｜9月份 热之月\n4月份 风之月｜10月份 冷之月\n5月份 炎之月｜11月份 岩之月\n6月份 冰之月｜12月份 空之月","info");
+								zqhelp=zqhelp+1;
+								break;
+								
+								case 2:
+								swal("关于鸥历的历法[3/3]","\n\n该历法来源于PSP游戏《最终幻想·零式》，如有雷同纯属巧合","info",{buttons: {
+								button1:
+								{
+								text: "Get In RomsFun!",
+								value:"get"
+								},
+								button2:
+								{
+								text: "了解游戏剧情",
+								value:"info"
+								},
+								button3:
+								{
+								text: "OK",
+								value:"ok"
+								},
+								
+								},}).then(function(value){
+								if(value == "get"){
+								  window.open("https://romsfun.com/roms/playstation-portable/final-fantasy-reishiki.html");
+								}
+								else if(value == "info"){
+								  window.open("http://www.k73.com/psp/39029.html");
+								}
+								});
+								zqhelp=0;
+								break;
+								
+								}
+								
+								}
+								function changetime()
+								{
+								if(sw == 0)
+								{
+								document.getElementById("datetime").innerHTML = pangu.spacing(Fantasy_Now());
+								document.getElementById("fantasy_time_help").innerHTML = "<a onclick='time_help();' id='fantasy_time_help' style='font-size:15px;' class='serif'> [说明] </a>";
+								sw=1;
+								}else
+								{
+								document.getElementById("datetime").innerHTML = pangu.spacing(Real_Now());
+								document.getElementById("fantasy_time_help").innerHTML = "";
+								
+								sw=0;
+								}
+								}
+								
+								document.getElementById("datetime").innerHTML = pangu.spacing(Real_Now());
+								document.getElementById("fantasy_time_help").innerHTML = "";
+
+								</script>
+						</a>
+						</div>
+
+					</footer>
+				</main>
+			</div>
+		</div>
+
+		<script>
+		document.body.addEventListener('copy', function (e) {
+ 		   if (window.getSelection().toString() && window.getSelection().toString().length > 10) {
+   		     setClipboardText(e);
+  		  }
+		}); 
+
+		function setClipboardText(event) {
+			var clipboardData = event.clipboardData || window.clipboardData;
+			if (clipboardData) {
+				event.preventDefault();
+				var htmlData = ''
+					+ '*-----------------------------------------------------------------------*<br>'
+					+ '# 商业转载请联系作者获得授权，非商业转载请注明出处<br>'
+					+ '# For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source.<br>'
+					+ '# 协议(License)：署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)<br>'
+					+ '# 作者(Author)：暗梦先生呀~ <br>'
+					+ '# 链接(URL)：' + window.location.href + '<br>'
+					+ '# 来源(Source)： '+ window.location.hostname +' <br>'
+					+ '*-----------------------------------------------------------------------*<br><br>'
+					+ window.getSelection().toString();
+				var textData = ''
+					+ '*-----------------------------------------------------------------------*\n'
+					+ '# 商业转载请联系作者获得授权，非商业转载请注明出处\n'
+					+ '# For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source.\n'
+					+ '# 协议(License)：署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)\n'
+					+ '# 作者(Author)：暗梦先生呀~ \n'
+					+ '# 链接(URL)：' + window.location.href + '\n'
+					+ '# 来源(Source)： '+ window.location.hostname +' \n'
+					+ '*-----------------------------------------------------------------------*\n\n'
+					+ window.getSelection().toString();
+				  clipboardData.setData('text/html', htmlData);
+				  clipboardData.setData('text/plain',textData);
+				  mdui.snackbar({message: '<strong>Copied!</strong><br><i>tip:请尊重原创文章，非商业转载请注明出处。</i><br>作者(Author)：暗梦先生呀~ ',position: 'right-top'});
+			}
+		}
+
+		if (window.location.hostname === "anmeng.eu.org") {
+		  checkblogpush_and_print_lastmessage();
+		}
+		
+		</script>
+		
+<script src="/argontheme.js"></script>
+
+		
+		
+		
+
+		
+			<script>
+				var argonEnableCodeHighlight = true;
+			</script>
+			
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015_anmeng.css">
+
+		
+
+	</div>
+</div>
+<noscript>
+	<style>
+		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+		.comment-item-text .comment-sticker.lazyload{display: none;}
+	</style>
+</noscript>
+</body>
+
+
+
+
+
+<div class="blog_musicbox_control no-pjax" style="z-index:100000;position:relative;">
+<div id="aplayer" class="blog_musicbox no-pjax hidden" style="display:none;"></div>
+</div>
+
+<script no-pjax>
+try {
+var metingapi_url="https://api.injahow.cn/meting/?server=netease&type=song&id=";
+var songid_data = ['531253053','687506','33682739','22636640','447303772','1942909267','1404596131','520242026','29017078','34613438','1928521973','1458664808','1915699293','1915700989','191252','537787665','1500439504']
+
+const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+	fixed: false,
+	lrcType: 3,
+	order: 'list',
+	preload: 'none',
+	theme: '#F05B85',
+	listFolded: true
+});
+
+songid_data.forEach((item) => {
+fetch(metingapi_url+item)
+  .then(function(response) {
+      var temp_songdata = [];
+      temp_songdata.push(response.json())
+      Promise.all(temp_songdata).then(function(results) {
+      for (i = 0 ;i < results.length;i++)
+	{
+	    ap.list.add({
+   	      name: results[i][0].name,
+   	      artist: results[i][0].artist,
+  	      url: results[i][0].url,
+   	      cover: results[i][0].pic,
+   	      lrc: results[i][0].lrc,
+	      theme: '#ebd0c2'
+	    });
+	}
+    });
+  })
+});
+
+if ($("#float_action_buttons").hasClass("fabtns-float-left")){
+	$("#aplayer").addClass("align-left");
+}
+$("#aplayer").addClass("mdui-shadow-6");
+}catch(err){}
+</script>
+
+</html>
+<!-- 随机文章功能 -->
+             <script>
+              var posts=["3d8e3836/","29682406/","6c7cded/","583256b2/","4dfc8d36/","80a705f8/","9edfc8c7/","c3464ddc/","f9910d43/","3c3f650c/","6958ef11/","3b42a900/","efdb30fe/","81c40aed/","5d5eb4fd/","2493498c/","d5bff76b/","3da5ba11/","9f498195/","9a15a626/","cad9d0fd/","78c6ea47/","fa038589/","41b04205/","b7b7087/","27fff63c/","536096c0/","12ebe1b0/","2c9586b5/","c34131c8/","60bb5b1a/","bdcdc9f9/","740c95d7/","c1e42d95/","153650c/","ed2ab52c/","8020d73a/","db0daa9f/","536e38d0/","29a55fff/","be102642/","83a98f88/","9e353a30/","e1cfb062/","42cc5bb9/","9a107844/","7f22a087/","3f5e9913/","afea83d/","5132bf84/","8f034b5/","1d7969b6/"];
+	      posts.splice(posts.indexOf(/shuoshuo/g),1)
+             function toRandomPost() {
+               $.pjax({
+         　　    url: '/'+posts[Math.floor(Math.random() * posts.length)]
+                })
+              }</script>
+    
